@@ -1,0 +1,18 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+/home/yagz/Desktop/project {/home/yagz/Desktop/project/mips.v}
+vlog -vlog01compat -work work +incdir+/home/yagz/Desktop/project {/home/yagz/Desktop/project/register_block.v}
+vlog -vlog01compat -work work +incdir+/home/yagz/Desktop/project {/home/yagz/Desktop/project/instruction_block.v}
+vlog -vlog01compat -work work +incdir+/home/yagz/Desktop/project {/home/yagz/Desktop/project/memory_block.v}
+vlog -vlog01compat -work work +incdir+/home/yagz/Desktop/project {/home/yagz/Desktop/project/control_unit.v}
+vlog -vlog01compat -work work +incdir+/home/yagz/Desktop/project {/home/yagz/Desktop/project/alu.v}
+vlog -vlog01compat -work work +incdir+/home/yagz/Desktop/project {/home/yagz/Desktop/project/alu_control.v}
+vlog -vlog01compat -work work +incdir+/home/yagz/Desktop/project {/home/yagz/Desktop/project/sign_extend.v}
+vlog -vlog01compat -work work +incdir+/home/yagz/Desktop/project {/home/yagz/Desktop/project/shift_left_2.v}
+vlog -vlog01compat -work work +incdir+/home/yagz/Desktop/project {/home/yagz/Desktop/project/program_counter_adder.v}
+

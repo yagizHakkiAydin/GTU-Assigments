@@ -1,0 +1,20 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+C:/HW2 {C:/HW2/ALU32.v}
+vlog -vlog01compat -work work +incdir+C:/HW2 {C:/HW2/ADDER.v}
+vlog -vlog01compat -work work +incdir+C:/HW2 {C:/HW2/SUBTRACTOR.v}
+vlog -vlog01compat -work work +incdir+C:/HW2 {C:/HW2/AND32.v}
+vlog -vlog01compat -work work +incdir+C:/HW2 {C:/HW2/OR32.v}
+vlog -vlog01compat -work work +incdir+C:/HW2 {C:/HW2/NOR32.v}
+vlog -vlog01compat -work work +incdir+C:/HW2 {C:/HW2/XOR32.v}
+vlog -vlog01compat -work work +incdir+C:/HW2 {C:/HW2/SLT32.v}
+vlog -vlog01compat -work work +incdir+C:/HW2 {C:/HW2/ONE_TO_32_EXTENDER.v}
+vlog -vlog01compat -work work +incdir+C:/HW2 {C:/HW2/mod.v}
+vlog -vlog01compat -work work +incdir+C:/HW2 {C:/HW2/mod_dp.v}
+vlog -vlog01compat -work work +incdir+C:/HW2 {C:/HW2/mod_cu.v}
+

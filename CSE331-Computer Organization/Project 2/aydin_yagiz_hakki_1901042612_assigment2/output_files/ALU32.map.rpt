@@ -1,0 +1,554 @@
+Analysis & Synthesis report for ALU32
+Sun Dec 10 18:52:18 2023
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Port Connectivity Checks: "mod:a8|mod_dp:mod_dp"
+ 10. Port Connectivity Checks: "SLT32:a7|ONE_TO_THIRTYTWO_EXTENDER_WITH_LSB:_extender|ONE_TO_32_EXTENDER:extender"
+ 11. Port Connectivity Checks: "SLT32:a7|SUBTRACTOR:_subtractor"
+ 12. Port Connectivity Checks: "SUBTRACTOR:a2"
+ 13. Port Connectivity Checks: "ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder7"
+ 14. Port Connectivity Checks: "ADDER:a1"
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Sun Dec 10 18:52:18 2023       ;
+; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                   ; ALU32                                       ;
+; Top-level Entity Name           ; ALU32                                       ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 34                                          ;
+; Total pins                      ; 101                                         ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
+; Top-level entity name                                                           ; ALU32              ; ALU32              ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 16          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-16        ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                               ;
++----------------------------------+-----------------+------------------------+------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------+---------+
+; ALU32.v                          ; yes             ; User Verilog HDL File  ; C:/HW2/ALU32.v               ;         ;
+; ADDER.v                          ; yes             ; User Verilog HDL File  ; C:/HW2/ADDER.v               ;         ;
+; SUBTRACTOR.v                     ; yes             ; User Verilog HDL File  ; C:/HW2/SUBTRACTOR.v          ;         ;
+; AND32.v                          ; yes             ; User Verilog HDL File  ; C:/HW2/AND32.v               ;         ;
+; OR32.v                           ; yes             ; User Verilog HDL File  ; C:/HW2/OR32.v                ;         ;
+; NOR32.v                          ; yes             ; User Verilog HDL File  ; C:/HW2/NOR32.v               ;         ;
+; XOR32.v                          ; yes             ; User Verilog HDL File  ; C:/HW2/XOR32.v               ;         ;
+; SLT32.v                          ; yes             ; User Verilog HDL File  ; C:/HW2/SLT32.v               ;         ;
+; MUX32.v                          ; yes             ; User Verilog HDL File  ; C:/HW2/MUX32.v               ;         ;
+; ONE_TO_32_EXTENDER.v             ; yes             ; User Verilog HDL File  ; C:/HW2/ONE_TO_32_EXTENDER.v  ;         ;
+; mod.v                            ; yes             ; User Verilog HDL File  ; C:/HW2/mod.v                 ;         ;
+; mod_dp.v                         ; yes             ; User Verilog HDL File  ; C:/HW2/mod_dp.v              ;         ;
++----------------------------------+-----------------+------------------------+------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimate of Logic utilization (ALMs needed) ; 153            ;
+;                                             ;                ;
+; Combinational ALUT usage for logic          ; 228            ;
+;     -- 7 input functions                    ; 2              ;
+;     -- 6 input functions                    ; 75             ;
+;     -- 5 input functions                    ; 38             ;
+;     -- 4 input functions                    ; 25             ;
+;     -- <=3 input functions                  ; 88             ;
+;                                             ;                ;
+; Dedicated logic registers                   ; 34             ;
+;                                             ;                ;
+; I/O pins                                    ; 101            ;
+;                                             ;                ;
+; Total DSP Blocks                            ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; ALUop[0]~input ;
+; Maximum fan-out                             ; 61             ;
+; Total fan-out                               ; 1310           ;
+; Average fan-out                             ; 2.82           ;
++---------------------------------------------+----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                               ;
++------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+--------------+
+; Compilation Hierarchy Node                     ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                           ; Entity Name              ; Library Name ;
++------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+--------------+
+; |ALU32                                         ; 228 (0)             ; 34 (0)                    ; 0                 ; 0          ; 101  ; 0            ; |ALU32                                                                                                                                                        ; ALU32                    ; work         ;
+;    |ADDER:a1|                                  ; 34 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|ADDER:a1                                                                                                                                               ; ADDER                    ; work         ;
+;       |THIRTYTWO_BIT_ADDER:adder|              ; 34 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder                                                                                                                     ; THIRTYTWO_BIT_ADDER      ; work         ;
+;          |FOUR_BIT_ADDER:adder0|               ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder0                                                                                               ; FOUR_BIT_ADDER           ; work         ;
+;             |ONE_BIT_ADDER:adder1|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder0|ONE_BIT_ADDER:adder1                                                                          ; ONE_BIT_ADDER            ; work         ;
+;             |ONE_BIT_ADDER:adder2|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder0|ONE_BIT_ADDER:adder2                                                                          ; ONE_BIT_ADDER            ; work         ;
+;             |ONE_BIT_ADDER:adder3|             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder0|ONE_BIT_ADDER:adder3                                                                          ; ONE_BIT_ADDER            ; work         ;
+;          |FOUR_BIT_ADDER:adder1|               ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder1                                                                                               ; FOUR_BIT_ADDER           ; work         ;
+;             |ONE_BIT_ADDER:adder1|             ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder1|ONE_BIT_ADDER:adder1                                                                          ; ONE_BIT_ADDER            ; work         ;
+;             |ONE_BIT_ADDER:adder3|             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder1|ONE_BIT_ADDER:adder3                                                                          ; ONE_BIT_ADDER            ; work         ;
+;          |FOUR_BIT_ADDER:adder2|               ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder2                                                                                               ; FOUR_BIT_ADDER           ; work         ;
+;             |ONE_BIT_ADDER:adder0|             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder2|ONE_BIT_ADDER:adder0                                                                          ; ONE_BIT_ADDER            ; work         ;
+;             |ONE_BIT_ADDER:adder2|             ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder2|ONE_BIT_ADDER:adder2                                                                          ; ONE_BIT_ADDER            ; work         ;
+;          |FOUR_BIT_ADDER:adder3|               ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder3                                                                                               ; FOUR_BIT_ADDER           ; work         ;
+;             |ONE_BIT_ADDER:adder0|             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder3|ONE_BIT_ADDER:adder0                                                                          ; ONE_BIT_ADDER            ; work         ;
+;             |ONE_BIT_ADDER:adder1|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder3|ONE_BIT_ADDER:adder1                                                                          ; ONE_BIT_ADDER            ; work         ;
+;             |ONE_BIT_ADDER:adder3|             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder3|ONE_BIT_ADDER:adder3                                                                          ; ONE_BIT_ADDER            ; work         ;
+;          |FOUR_BIT_ADDER:adder4|               ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder4                                                                                               ; FOUR_BIT_ADDER           ; work         ;
+;             |ONE_BIT_ADDER:adder0|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder4|ONE_BIT_ADDER:adder0                                                                          ; ONE_BIT_ADDER            ; work         ;
+;             |ONE_BIT_ADDER:adder1|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder4|ONE_BIT_ADDER:adder1                                                                          ; ONE_BIT_ADDER            ; work         ;
+;             |ONE_BIT_ADDER:adder2|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder4|ONE_BIT_ADDER:adder2                                                                          ; ONE_BIT_ADDER            ; work         ;
+;          |FOUR_BIT_ADDER:adder5|               ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder5                                                                                               ; FOUR_BIT_ADDER           ; work         ;
+;             |ONE_BIT_ADDER:adder0|             ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder5|ONE_BIT_ADDER:adder0                                                                          ; ONE_BIT_ADDER            ; work         ;
+;             |ONE_BIT_ADDER:adder2|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder5|ONE_BIT_ADDER:adder2                                                                          ; ONE_BIT_ADDER            ; work         ;
+;          |FOUR_BIT_ADDER:adder6|               ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder6                                                                                               ; FOUR_BIT_ADDER           ; work         ;
+;             |ONE_BIT_ADDER:adder0|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder6|ONE_BIT_ADDER:adder0                                                                          ; ONE_BIT_ADDER            ; work         ;
+;             |ONE_BIT_ADDER:adder1|             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder6|ONE_BIT_ADDER:adder1                                                                          ; ONE_BIT_ADDER            ; work         ;
+;             |ONE_BIT_ADDER:adder3|             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder6|ONE_BIT_ADDER:adder3                                                                          ; ONE_BIT_ADDER            ; work         ;
+;          |FOUR_BIT_ADDER:adder7|               ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder7                                                                                               ; FOUR_BIT_ADDER           ; work         ;
+;             |ONE_BIT_ADDER:adder1|             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder7|ONE_BIT_ADDER:adder1                                                                          ; ONE_BIT_ADDER            ; work         ;
+;             |ONE_BIT_ADDER:adder3|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder7|ONE_BIT_ADDER:adder3                                                                          ; ONE_BIT_ADDER            ; work         ;
+;    |MUX32:mux|                                 ; 89 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|MUX32:mux                                                                                                                                              ; MUX32                    ; work         ;
+;       |EIGHT_BIT_MUX:m0|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|MUX32:mux|EIGHT_BIT_MUX:m0                                                                                                                             ; EIGHT_BIT_MUX            ; work         ;
+;       |EIGHT_BIT_MUX:m10|                      ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|MUX32:mux|EIGHT_BIT_MUX:m10                                                                                                                            ; EIGHT_BIT_MUX            ; work         ;
+;       |EIGHT_BIT_MUX:m11|                      ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|MUX32:mux|EIGHT_BIT_MUX:m11                                                                                                                            ; EIGHT_BIT_MUX            ; work         ;
+;       |EIGHT_BIT_MUX:m12|                      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|MUX32:mux|EIGHT_BIT_MUX:m12                                                                                                                            ; EIGHT_BIT_MUX            ; work         ;
+;       |EIGHT_BIT_MUX:m13|                      ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|MUX32:mux|EIGHT_BIT_MUX:m13                                                                                                                            ; EIGHT_BIT_MUX            ; work         ;
+;       |EIGHT_BIT_MUX:m14|                      ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|MUX32:mux|EIGHT_BIT_MUX:m14                                                                                                                            ; EIGHT_BIT_MUX            ; work         ;
+;       |EIGHT_BIT_MUX:m15|                      ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|MUX32:mux|EIGHT_BIT_MUX:m15                                                                                                                            ; EIGHT_BIT_MUX            ; work         ;
+;       |EIGHT_BIT_MUX:m16|                      ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|MUX32:mux|EIGHT_BIT_MUX:m16                                                                                                                            ; EIGHT_BIT_MUX            ; work         ;
+;       |EIGHT_BIT_MUX:m17|                      ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|MUX32:mux|EIGHT_BIT_MUX:m17                                                                                                                            ; EIGHT_BIT_MUX            ; work         ;
+;       |EIGHT_BIT_MUX:m18|                      ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|MUX32:mux|EIGHT_BIT_MUX:m18                                                                                                                            ; EIGHT_BIT_MUX            ; work         ;
+;       |EIGHT_BIT_MUX:m19|                      ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|MUX32:mux|EIGHT_BIT_MUX:m19                                                                                                                            ; EIGHT_BIT_MUX            ; work         ;
+;       |EIGHT_BIT_MUX:m1|                       ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|MUX32:mux|EIGHT_BIT_MUX:m1                                                                                                                             ; EIGHT_BIT_MUX            ; work         ;
+;       |EIGHT_BIT_MUX:m20|                      ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|MUX32:mux|EIGHT_BIT_MUX:m20                                                                                                                            ; EIGHT_BIT_MUX            ; work         ;
+;       |EIGHT_BIT_MUX:m21|                      ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|MUX32:mux|EIGHT_BIT_MUX:m21                                                                                                                            ; EIGHT_BIT_MUX            ; work         ;
+;       |EIGHT_BIT_MUX:m22|                      ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|MUX32:mux|EIGHT_BIT_MUX:m22                                                                                                                            ; EIGHT_BIT_MUX            ; work         ;
+;       |EIGHT_BIT_MUX:m23|                      ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|MUX32:mux|EIGHT_BIT_MUX:m23                                                                                                                            ; EIGHT_BIT_MUX            ; work         ;
+;       |EIGHT_BIT_MUX:m24|                      ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|MUX32:mux|EIGHT_BIT_MUX:m24                                                                                                                            ; EIGHT_BIT_MUX            ; work         ;
+;       |EIGHT_BIT_MUX:m25|                      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|MUX32:mux|EIGHT_BIT_MUX:m25                                                                                                                            ; EIGHT_BIT_MUX            ; work         ;
+;       |EIGHT_BIT_MUX:m26|                      ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|MUX32:mux|EIGHT_BIT_MUX:m26                                                                                                                            ; EIGHT_BIT_MUX            ; work         ;
+;       |EIGHT_BIT_MUX:m27|                      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|MUX32:mux|EIGHT_BIT_MUX:m27                                                                                                                            ; EIGHT_BIT_MUX            ; work         ;
+;       |EIGHT_BIT_MUX:m28|                      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|MUX32:mux|EIGHT_BIT_MUX:m28                                                                                                                            ; EIGHT_BIT_MUX            ; work         ;
+;       |EIGHT_BIT_MUX:m29|                      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|MUX32:mux|EIGHT_BIT_MUX:m29                                                                                                                            ; EIGHT_BIT_MUX            ; work         ;
+;       |EIGHT_BIT_MUX:m2|                       ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|MUX32:mux|EIGHT_BIT_MUX:m2                                                                                                                             ; EIGHT_BIT_MUX            ; work         ;
+;       |EIGHT_BIT_MUX:m30|                      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|MUX32:mux|EIGHT_BIT_MUX:m30                                                                                                                            ; EIGHT_BIT_MUX            ; work         ;
+;       |EIGHT_BIT_MUX:m31|                      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|MUX32:mux|EIGHT_BIT_MUX:m31                                                                                                                            ; EIGHT_BIT_MUX            ; work         ;
+;       |EIGHT_BIT_MUX:m3|                       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|MUX32:mux|EIGHT_BIT_MUX:m3                                                                                                                             ; EIGHT_BIT_MUX            ; work         ;
+;       |EIGHT_BIT_MUX:m4|                       ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|MUX32:mux|EIGHT_BIT_MUX:m4                                                                                                                             ; EIGHT_BIT_MUX            ; work         ;
+;       |EIGHT_BIT_MUX:m5|                       ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|MUX32:mux|EIGHT_BIT_MUX:m5                                                                                                                             ; EIGHT_BIT_MUX            ; work         ;
+;       |EIGHT_BIT_MUX:m6|                       ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|MUX32:mux|EIGHT_BIT_MUX:m6                                                                                                                             ; EIGHT_BIT_MUX            ; work         ;
+;       |EIGHT_BIT_MUX:m7|                       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|MUX32:mux|EIGHT_BIT_MUX:m7                                                                                                                             ; EIGHT_BIT_MUX            ; work         ;
+;       |EIGHT_BIT_MUX:m8|                       ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|MUX32:mux|EIGHT_BIT_MUX:m8                                                                                                                             ; EIGHT_BIT_MUX            ; work         ;
+;       |EIGHT_BIT_MUX:m9|                       ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|MUX32:mux|EIGHT_BIT_MUX:m9                                                                                                                             ; EIGHT_BIT_MUX            ; work         ;
+;    |SLT32:a7|                                  ; 44 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SLT32:a7                                                                                                                                               ; SLT32                    ; work         ;
+;       |SUBTRACTOR:_subtractor|                 ; 44 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SLT32:a7|SUBTRACTOR:_subtractor                                                                                                                        ; SUBTRACTOR               ; work         ;
+;          |THIRTYTWO_BIT_SUBTRACTOR:subtractor| ; 44 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor                                                                                    ; THIRTYTWO_BIT_SUBTRACTOR ; work         ;
+;             |ADDER:t_adder|                    ; 44 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder                                                                      ; ADDER                    ; work         ;
+;                |THIRTYTWO_BIT_ADDER:adder|     ; 44 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder                                            ; THIRTYTWO_BIT_ADDER      ; work         ;
+;                   |FOUR_BIT_ADDER:adder0|      ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder0                      ; FOUR_BIT_ADDER           ; work         ;
+;                      |ONE_BIT_ADDER:adder0|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder0|ONE_BIT_ADDER:adder0 ; ONE_BIT_ADDER            ; work         ;
+;                      |ONE_BIT_ADDER:adder1|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder0|ONE_BIT_ADDER:adder1 ; ONE_BIT_ADDER            ; work         ;
+;                      |ONE_BIT_ADDER:adder2|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder0|ONE_BIT_ADDER:adder2 ; ONE_BIT_ADDER            ; work         ;
+;                      |ONE_BIT_ADDER:adder3|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder0|ONE_BIT_ADDER:adder3 ; ONE_BIT_ADDER            ; work         ;
+;                   |FOUR_BIT_ADDER:adder1|      ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder1                      ; FOUR_BIT_ADDER           ; work         ;
+;                      |ONE_BIT_ADDER:adder0|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder1|ONE_BIT_ADDER:adder0 ; ONE_BIT_ADDER            ; work         ;
+;                      |ONE_BIT_ADDER:adder1|    ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder1|ONE_BIT_ADDER:adder1 ; ONE_BIT_ADDER            ; work         ;
+;                      |ONE_BIT_ADDER:adder2|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder1|ONE_BIT_ADDER:adder2 ; ONE_BIT_ADDER            ; work         ;
+;                      |ONE_BIT_ADDER:adder3|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder1|ONE_BIT_ADDER:adder3 ; ONE_BIT_ADDER            ; work         ;
+;                   |FOUR_BIT_ADDER:adder2|      ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder2                      ; FOUR_BIT_ADDER           ; work         ;
+;                      |ONE_BIT_ADDER:adder0|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder2|ONE_BIT_ADDER:adder0 ; ONE_BIT_ADDER            ; work         ;
+;                      |ONE_BIT_ADDER:adder1|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder2|ONE_BIT_ADDER:adder1 ; ONE_BIT_ADDER            ; work         ;
+;                      |ONE_BIT_ADDER:adder2|    ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder2|ONE_BIT_ADDER:adder2 ; ONE_BIT_ADDER            ; work         ;
+;                      |ONE_BIT_ADDER:adder3|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder2|ONE_BIT_ADDER:adder3 ; ONE_BIT_ADDER            ; work         ;
+;                   |FOUR_BIT_ADDER:adder3|      ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder3                      ; FOUR_BIT_ADDER           ; work         ;
+;                      |ONE_BIT_ADDER:adder0|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder3|ONE_BIT_ADDER:adder0 ; ONE_BIT_ADDER            ; work         ;
+;                      |ONE_BIT_ADDER:adder1|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder3|ONE_BIT_ADDER:adder1 ; ONE_BIT_ADDER            ; work         ;
+;                      |ONE_BIT_ADDER:adder2|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder3|ONE_BIT_ADDER:adder2 ; ONE_BIT_ADDER            ; work         ;
+;                      |ONE_BIT_ADDER:adder3|    ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder3|ONE_BIT_ADDER:adder3 ; ONE_BIT_ADDER            ; work         ;
+;                   |FOUR_BIT_ADDER:adder4|      ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder4                      ; FOUR_BIT_ADDER           ; work         ;
+;                      |ONE_BIT_ADDER:adder0|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder4|ONE_BIT_ADDER:adder0 ; ONE_BIT_ADDER            ; work         ;
+;                      |ONE_BIT_ADDER:adder1|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder4|ONE_BIT_ADDER:adder1 ; ONE_BIT_ADDER            ; work         ;
+;                      |ONE_BIT_ADDER:adder2|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder4|ONE_BIT_ADDER:adder2 ; ONE_BIT_ADDER            ; work         ;
+;                      |ONE_BIT_ADDER:adder3|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder4|ONE_BIT_ADDER:adder3 ; ONE_BIT_ADDER            ; work         ;
+;                   |FOUR_BIT_ADDER:adder5|      ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder5                      ; FOUR_BIT_ADDER           ; work         ;
+;                      |ONE_BIT_ADDER:adder0|    ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder5|ONE_BIT_ADDER:adder0 ; ONE_BIT_ADDER            ; work         ;
+;                      |ONE_BIT_ADDER:adder1|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder5|ONE_BIT_ADDER:adder1 ; ONE_BIT_ADDER            ; work         ;
+;                      |ONE_BIT_ADDER:adder2|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder5|ONE_BIT_ADDER:adder2 ; ONE_BIT_ADDER            ; work         ;
+;                   |FOUR_BIT_ADDER:adder6|      ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder6                      ; FOUR_BIT_ADDER           ; work         ;
+;                      |ONE_BIT_ADDER:adder0|    ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder6|ONE_BIT_ADDER:adder0 ; ONE_BIT_ADDER            ; work         ;
+;                      |ONE_BIT_ADDER:adder1|    ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder6|ONE_BIT_ADDER:adder1 ; ONE_BIT_ADDER            ; work         ;
+;                      |ONE_BIT_ADDER:adder2|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder6|ONE_BIT_ADDER:adder2 ; ONE_BIT_ADDER            ; work         ;
+;                      |ONE_BIT_ADDER:adder3|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder6|ONE_BIT_ADDER:adder3 ; ONE_BIT_ADDER            ; work         ;
+;                   |FOUR_BIT_ADDER:adder7|      ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder7                      ; FOUR_BIT_ADDER           ; work         ;
+;                      |ONE_BIT_ADDER:adder0|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder7|ONE_BIT_ADDER:adder0 ; ONE_BIT_ADDER            ; work         ;
+;                      |ONE_BIT_ADDER:adder1|    ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder7|ONE_BIT_ADDER:adder1 ; ONE_BIT_ADDER            ; work         ;
+;                      |ONE_BIT_ADDER:adder2|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder7|ONE_BIT_ADDER:adder2 ; ONE_BIT_ADDER            ; work         ;
+;                      |ONE_BIT_ADDER:adder3|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder7|ONE_BIT_ADDER:adder3 ; ONE_BIT_ADDER            ; work         ;
+;    |SUBTRACTOR:a2|                             ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SUBTRACTOR:a2                                                                                                                                          ; SUBTRACTOR               ; work         ;
+;       |THIRTYTWO_BIT_SUBTRACTOR:subtractor|    ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor                                                                                                      ; THIRTYTWO_BIT_SUBTRACTOR ; work         ;
+;          |ADDER:t_adder|                       ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder                                                                                        ; ADDER                    ; work         ;
+;             |THIRTYTWO_BIT_ADDER:adder|        ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder                                                              ; THIRTYTWO_BIT_ADDER      ; work         ;
+;                |FOUR_BIT_ADDER:adder2|         ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder2                                        ; FOUR_BIT_ADDER           ; work         ;
+;                   |ONE_BIT_ADDER:adder2|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder2|ONE_BIT_ADDER:adder2                   ; ONE_BIT_ADDER            ; work         ;
+;                |FOUR_BIT_ADDER:adder3|         ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder3                                        ; FOUR_BIT_ADDER           ; work         ;
+;                   |ONE_BIT_ADDER:adder3|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder3|ONE_BIT_ADDER:adder3                   ; ONE_BIT_ADDER            ; work         ;
+;                |FOUR_BIT_ADDER:adder5|         ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder5                                        ; FOUR_BIT_ADDER           ; work         ;
+;                   |ONE_BIT_ADDER:adder0|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder5|ONE_BIT_ADDER:adder0                   ; ONE_BIT_ADDER            ; work         ;
+;                |FOUR_BIT_ADDER:adder7|         ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder7                                        ; FOUR_BIT_ADDER           ; work         ;
+;                   |ONE_BIT_ADDER:adder1|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder7|ONE_BIT_ADDER:adder1                   ; ONE_BIT_ADDER            ; work         ;
+;    |mod:a8|                                    ; 57 (1)              ; 34 (1)                    ; 0                 ; 0          ; 0    ; 0            ; |ALU32|mod:a8                                                                                                                                                 ; mod                      ; work         ;
+;       |mod_dp:mod_dp|                          ; 56 (56)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |ALU32|mod:a8|mod_dp:mod_dp                                                                                                                                   ; mod_dp                   ; work         ;
++------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 34    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 32    ;
+; Number of registers using Asynchronous Clear ; 34    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 33    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mod:a8|mod_dp:mod_dp"                                                               ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; done ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "SLT32:a7|ONE_TO_THIRTYTWO_EXTENDER_WITH_LSB:_extender|ONE_TO_32_EXTENDER:extender"                                         ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                    ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
+; inp  ; Input  ; Info     ; Stuck at GND                                                                                                               ;
+; out  ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (31 bits) it drives; bit(s) "out[31..31]" have no fanouts ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "SLT32:a7|SUBTRACTOR:_subtractor"                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; cin           ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; result[30..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------+
+; Port Connectivity Checks: "SUBTRACTOR:a2" ;
++------+-------+----------+-----------------+
+; Port ; Type  ; Severity ; Details         ;
++------+-------+----------+-----------------+
+; cin  ; Input ; Info     ; Stuck at VCC    ;
++------+-------+----------+-----------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder7"                           ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------+
+; Port Connectivity Checks: "ADDER:a1"   ;
++------+-------+----------+--------------+
+; Port ; Type  ; Severity ; Details      ;
++------+-------+----------+--------------+
+; cin  ; Input ; Info     ; Stuck at GND ;
++------+-------+----------+--------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 34                          ;
+;     CLR               ; 1                           ;
+;     ENA CLR           ; 1                           ;
+;     ENA CLR SLD       ; 32                          ;
+; arriav_lcell_comb     ; 228                         ;
+;     extend            ; 2                           ;
+;         7 data inputs ; 2                           ;
+;     normal            ; 194                         ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 37                          ;
+;         3 data inputs ; 18                          ;
+;         4 data inputs ; 25                          ;
+;         5 data inputs ; 38                          ;
+;         6 data inputs ; 75                          ;
+;     shared            ; 32                          ;
+;         2 data inputs ; 32                          ;
+; boundary_port         ; 101                         ;
+;                       ;                             ;
+; Max LUT depth         ; 14.00                       ;
+; Average LUT depth     ; 7.09                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Sun Dec 10 18:52:10 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU32 -c ALU32
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 2 design units, including 2 entities, in source file alu32.v
+    Info (12023): Found entity 1: ALU32 File: C:/HW2/ALU32.v Line: 3
+    Info (12023): Found entity 2: tb File: C:/HW2/ALU32.v Line: 64
+Info (12021): Found 4 design units, including 4 entities, in source file adder.v
+    Info (12023): Found entity 1: ADDER File: C:/HW2/ADDER.v Line: 1
+    Info (12023): Found entity 2: ONE_BIT_ADDER File: C:/HW2/ADDER.v Line: 9
+    Info (12023): Found entity 3: FOUR_BIT_ADDER File: C:/HW2/ADDER.v Line: 21
+    Info (12023): Found entity 4: THIRTYTWO_BIT_ADDER File: C:/HW2/ADDER.v Line: 37
+Info (12021): Found 2 design units, including 2 entities, in source file subtractor.v
+    Info (12023): Found entity 1: SUBTRACTOR File: C:/HW2/SUBTRACTOR.v Line: 1
+    Info (12023): Found entity 2: THIRTYTWO_BIT_SUBTRACTOR File: C:/HW2/SUBTRACTOR.v Line: 8
+Info (12021): Found 3 design units, including 3 entities, in source file and32.v
+    Info (12023): Found entity 1: AND32 File: C:/HW2/AND32.v Line: 1
+    Info (12023): Found entity 2: FOUR_BIT_AND File: C:/HW2/AND32.v Line: 9
+    Info (12023): Found entity 3: THIRTYTWO_BIT_AND File: C:/HW2/AND32.v Line: 22
+Info (12021): Found 3 design units, including 3 entities, in source file or32.v
+    Info (12023): Found entity 1: OR32 File: C:/HW2/OR32.v Line: 1
+    Info (12023): Found entity 2: FOUR_BIT_OR File: C:/HW2/OR32.v Line: 11
+    Info (12023): Found entity 3: THIRTYTWO_BIT_OR File: C:/HW2/OR32.v Line: 24
+Info (12021): Found 3 design units, including 3 entities, in source file nor32.v
+    Info (12023): Found entity 1: NOR32 File: C:/HW2/NOR32.v Line: 1
+    Info (12023): Found entity 2: FOUR_BIT_NOR File: C:/HW2/NOR32.v Line: 7
+    Info (12023): Found entity 3: THIRTYTWO_BIT_NOR File: C:/HW2/NOR32.v Line: 18
+Info (12021): Found 3 design units, including 3 entities, in source file xor32.v
+    Info (12023): Found entity 1: XOR32 File: C:/HW2/XOR32.v Line: 1
+    Info (12023): Found entity 2: FOUR_BIT_XOR File: C:/HW2/XOR32.v Line: 11
+    Info (12023): Found entity 3: THIRTYTWO_BIT_XOR File: C:/HW2/XOR32.v Line: 24
+Info (12021): Found 2 design units, including 2 entities, in source file slt32.v
+    Info (12023): Found entity 1: SLT32 File: C:/HW2/SLT32.v Line: 1
+    Info (12023): Found entity 2: ONE_TO_THIRTYTWO_EXTENDER_WITH_LSB File: C:/HW2/SLT32.v Line: 18
+Info (12021): Found 2 design units, including 2 entities, in source file mux32.v
+    Info (12023): Found entity 1: MUX32 File: C:/HW2/MUX32.v Line: 1
+    Info (12023): Found entity 2: EIGHT_BIT_MUX File: C:/HW2/MUX32.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file one_to_32_extender.v
+    Info (12023): Found entity 1: ONE_TO_32_EXTENDER File: C:/HW2/ONE_TO_32_EXTENDER.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mod.v
+    Info (12023): Found entity 1: mod File: C:/HW2/mod.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mod_dp.v
+    Info (12023): Found entity 1: mod_dp File: C:/HW2/mod_dp.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mod_cu.v
+    Info (12023): Found entity 1: mod_cu File: C:/HW2/mod_cu.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at mod.v(30): created implicit net for "done" File: C:/HW2/mod.v Line: 30
+Info (12127): Elaborating entity "ALU32" for the top level hierarchy
+Info (12128): Elaborating entity "ADDER" for hierarchy "ADDER:a1" File: C:/HW2/ALU32.v Line: 21
+Info (12128): Elaborating entity "THIRTYTWO_BIT_ADDER" for hierarchy "ADDER:a1|THIRTYTWO_BIT_ADDER:adder" File: C:/HW2/ADDER.v Line: 2
+Info (12128): Elaborating entity "FOUR_BIT_ADDER" for hierarchy "ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder0" File: C:/HW2/ADDER.v Line: 48
+Info (12128): Elaborating entity "ONE_BIT_ADDER" for hierarchy "ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder0|ONE_BIT_ADDER:adder0" File: C:/HW2/ADDER.v Line: 28
+Info (12128): Elaborating entity "SUBTRACTOR" for hierarchy "SUBTRACTOR:a2" File: C:/HW2/ALU32.v Line: 22
+Info (12128): Elaborating entity "THIRTYTWO_BIT_SUBTRACTOR" for hierarchy "SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor" File: C:/HW2/SUBTRACTOR.v Line: 2
+Info (12128): Elaborating entity "ONE_TO_32_EXTENDER" for hierarchy "SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ONE_TO_32_EXTENDER:extender" File: C:/HW2/SUBTRACTOR.v Line: 14
+Info (12128): Elaborating entity "XOR32" for hierarchy "SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|XOR32:t_xor" File: C:/HW2/SUBTRACTOR.v Line: 17
+Info (12128): Elaborating entity "THIRTYTWO_BIT_XOR" for hierarchy "SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|XOR32:t_xor|THIRTYTWO_BIT_XOR:t_xor" File: C:/HW2/XOR32.v Line: 2
+Info (12128): Elaborating entity "FOUR_BIT_XOR" for hierarchy "SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|XOR32:t_xor|THIRTYTWO_BIT_XOR:t_xor|FOUR_BIT_XOR:xor0" File: C:/HW2/XOR32.v Line: 27
+Info (12128): Elaborating entity "AND32" for hierarchy "AND32:a3" File: C:/HW2/ALU32.v Line: 23
+Info (12128): Elaborating entity "THIRTYTWO_BIT_AND" for hierarchy "AND32:a3|THIRTYTWO_BIT_AND:t_and" File: C:/HW2/AND32.v Line: 2
+Info (12128): Elaborating entity "FOUR_BIT_AND" for hierarchy "AND32:a3|THIRTYTWO_BIT_AND:t_and|FOUR_BIT_AND:and0" File: C:/HW2/AND32.v Line: 25
+Info (12128): Elaborating entity "OR32" for hierarchy "OR32:a4" File: C:/HW2/ALU32.v Line: 24
+Info (12128): Elaborating entity "THIRTYTWO_BIT_OR" for hierarchy "OR32:a4|THIRTYTWO_BIT_OR:t_or" File: C:/HW2/OR32.v Line: 2
+Info (12128): Elaborating entity "FOUR_BIT_OR" for hierarchy "OR32:a4|THIRTYTWO_BIT_OR:t_or|FOUR_BIT_OR:or0" File: C:/HW2/OR32.v Line: 27
+Info (12128): Elaborating entity "NOR32" for hierarchy "NOR32:a5" File: C:/HW2/ALU32.v Line: 25
+Info (12128): Elaborating entity "THIRTYTWO_BIT_NOR" for hierarchy "NOR32:a5|THIRTYTWO_BIT_NOR:t_nor" File: C:/HW2/NOR32.v Line: 2
+Info (12128): Elaborating entity "FOUR_BIT_NOR" for hierarchy "NOR32:a5|THIRTYTWO_BIT_NOR:t_nor|FOUR_BIT_NOR:nor0" File: C:/HW2/NOR32.v Line: 21
+Info (12128): Elaborating entity "SLT32" for hierarchy "SLT32:a7" File: C:/HW2/ALU32.v Line: 27
+Info (12128): Elaborating entity "ONE_TO_THIRTYTWO_EXTENDER_WITH_LSB" for hierarchy "SLT32:a7|ONE_TO_THIRTYTWO_EXTENDER_WITH_LSB:_extender" File: C:/HW2/SLT32.v Line: 8
+Info (12128): Elaborating entity "mod" for hierarchy "mod:a8" File: C:/HW2/ALU32.v Line: 28
+Info (12128): Elaborating entity "mod_dp" for hierarchy "mod:a8|mod_dp:mod_dp" File: C:/HW2/mod.v Line: 31
+Info (12128): Elaborating entity "MUX32" for hierarchy "MUX32:mux" File: C:/HW2/ALU32.v Line: 41
+Info (12128): Elaborating entity "EIGHT_BIT_MUX" for hierarchy "MUX32:mux|EIGHT_BIT_MUX:m0" File: C:/HW2/MUX32.v Line: 3
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 329 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 69 input pins
+    Info (21059): Implemented 32 output pins
+    Info (21061): Implemented 228 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4858 megabytes
+    Info: Processing ended: Sun Dec 10 18:52:18 2023
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:12
+
+

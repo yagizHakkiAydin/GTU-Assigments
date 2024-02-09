@@ -1,0 +1,36 @@
+module register_block_tb();
+
+  reg [31:0] read_data1;
+  reg [31:0] read_data2;
+  reg byteOperations;
+  reg [31:0] write_data;
+  reg [4:0] read_reg1;
+  reg [4:0] read_reg2;
+  reg [4:0] write_reg;
+  reg regWrite;
+
+  register_block _reg_block (
+    .read_data1(read_data1),
+    .read_data2(read_data2),
+    .byteOperations(byteOperations),
+    .write_data(write_data),
+    .read_reg1(read_reg1),
+    .read_reg2(read_reg2),
+    .write_reg(write_reg),
+    .regWrite(regWrite)
+  );
+
+  initial begin
+    $readmemb("registers.mem", _reg_block.registers);
+    // Assuming you have a module-level array 'registers' in register_block
+    // and you want to initialize it with the content of "registers.mem"
+    // Update 'read_data1' with the correct read_data output you want to test
+
+    // Example: Reading data from register 0
+    read_reg1 = 5'b00000;  // Set read_reg1 to the register index you want to read
+    regWrite = 1'b0;       // Set regWrite to 0 for reading
+    #10;                   // Wait for a few simulation cycles
+    // At this point, read_data1 should contain the data from the specified register
+  end
+
+endmodule

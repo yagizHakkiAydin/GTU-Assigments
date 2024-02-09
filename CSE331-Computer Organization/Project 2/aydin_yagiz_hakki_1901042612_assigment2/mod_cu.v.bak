@@ -1,0 +1,29 @@
+module mod_cu(
+  input clk,        // Clock
+  input rst,        // Reset
+  input [2:0] state, // FSM state
+  output reg [2:0] next_state // Next state output
+);
+
+// Define FSM states
+parameter S_IDLE = 3'b000;
+parameter S_SUB = 3'b001;
+parameter S_COMPARE = 3'b010;
+parameter S_RESULT = 3'b011;
+
+// State transition logic
+always @(posedge clk or posedge rst) begin
+  if (rst) begin
+    next_state <= S_IDLE;
+  end else begin
+    case (state)
+      S_IDLE: next_state <= S_SUB;
+      S_SUB: next_state <= S_COMPARE;
+      S_COMPARE: next_state <= S_RESULT;
+      S_RESULT: next_state <= S_IDLE;
+      default: next_state <= S_IDLE;
+    endcase
+  end
+end
+
+endmodule

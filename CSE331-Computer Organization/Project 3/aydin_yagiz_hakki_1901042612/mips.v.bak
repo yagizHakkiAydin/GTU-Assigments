@@ -1,0 +1,380 @@
+module mips (
+ // input  reg  clk,        // Input clock
+  input  wire  reset,      // Input reset
+  input  wire  in_data,    // Input data
+  output wire   out_data    // Output data
+);
+
+
+
+
+  // Declare signals to connect to register_block
+wire [31:0] write_data_reg_bloc;
+wire [4:0] write_reg; //connected to mux
+wire [31:0] read_data1;
+wire [31:0] read_data2;
+
+wire [31:0] instruction;
+reg [31:0] pc_output;
+wire [31:0] pc_input;
+
+
+  
+
+  reg [31:0] alu_src1;
+  wire [31:0] alu_src2;
+  wire [2:0] alu_ctr;
+  wire [31:0] alu_result;
+  wire zero_bit;
+
+
+// Declare signals to connect to memory_block
+wire [31:0] read_data;
+
+
+
+
+
+    // Declare signals to connect to control_unit
+  wire regDst;
+  wire branch;
+  wire memRead;
+  wire memWrite;
+  wire byteOperations;
+  wire jump;
+  wire move;
+  wire [2:0] ALUop;
+  wire ALUsrc;
+  wire regWrite;
+  wire [5:0] opcode;
+
+
+
+    // Declare signals to connect to sign_extend
+  wire [15:0] imm;
+  wire [31:0] sign_ext_imm;
+  
+  wire [31:0] shifted_address;
+  
+  
+ 
+ wire [31:0] pc_next_address;
+ wire [31:0] pc_current_address;
+
+ 
+ 
+ wire [31:0] jump_adder_result;
+ 
+ wire pc_mux_select;
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+instruction_block _instruction_block (
+   .instruction(instruction),
+	.pc(pc_output)
+);
+ 
+
+ins_to_reg_mux _ins_to_reg_mux(
+	.out(write_reg),
+	.inp0(instruction[20:16]),
+	.inp1(instruction[15:11]),
+	.select(regDst)
+);
+//___________________________________________________________________________________________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+register_block _register_block (
+   .read_data1(read_data1),
+   .read_data2(read_data2),
+	.byteOpearations(byteOperations),
+   .write_data(write_data_reg_bloc),
+   .read_reg1(instruction[25:21]), //connected
+   .read_reg2(instruction[20:16]), //connected
+   .write_reg(write_reg), //connected
+   .regWrite(regWrite)  //connected
+);
+  
+  
+  
+reg_to_alu_mux _reg_to_alu_mux (
+	.out(alu_src2),
+	.inp0(read_data2),
+	.inp1(sign_ext_imm),
+	.select(ALUsrc)
+);
+
+  
+  
+  
+ 
+
+
+  // Instantiate alu module
+  alu _alu (
+    .alu_result(alu_result),
+    .zero_bit(zero_bit),
+    .alu_src1(read_data1),
+    .alu_src2(alu_src2),
+    .alu_ctr(alu_ctr)
+  );
+  
+  
+  
+  
+  
+  
+  
+
+
+  // Instantiate memory_block module
+memory_block _memory_block (
+    .read_data(read_data),
+	 .byteOperations(byteOperations),
+    .address(alu_result[17:0]),
+    .write_data(read_data2),
+    .memRead(memRead),
+    .memWrite(memWrite)
+);  
+  
+  
+  
+  
+mem_mux _mem_mux (
+	.out(write_data_reg_bloc),
+	.inp0(alu_result),
+	.inp1(read_data),
+	.select(memRead)
+);
+  
+  
+  
+  
+  
+
+
+
+  // Instantiate control_unit module
+  control_unit _control_unit (
+    .regDst(regDst),
+    .branch(branch),
+    .memRead(memRead),
+    .memWrite(memWrite),
+    .ALUop(ALUop),
+    .ALUsrc(ALUsrc),
+    .regWrite(regWrite),
+	 .jump(jump),
+	 .byteOperations(byteOperations),
+    .move(move),
+    .opcode(instruction[31:26])
+  );
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+ 
+
+  // Instantiate alu_control module
+  alu_control _alu_control (
+    .alu_ctr(alu_ctr),
+    .function_code(instruction[5:0]),
+    .ALUop(ALUop)
+  );
+  
+
+    
+  
+
+
+  // Instantiate sign_extend module
+  sign_extend _sign_extend (
+    .sign_ext_imm(sign_ext_imm),
+    .imm(instruction[15:0])
+  );
+  
+  
+    
+  
+
+  // Instantiate shift_left_2 module
+  shift_left_2 _shift_left_2 (
+    .shifted_address(shifted_address),
+    .address(sign_ext_imm)
+  );
+  
+  
+  
+
+  // Instantiate the program_counter_adder module
+  program_counter_adder _program_counter_adder (
+    .next_address(pc_next_address),
+    .address(pc_current_address)
+  );
+
+  
+  
+  
+  
+  
+ //_________________________________Connecting modules each other
+  
+  
+  
+  
+  
+wire empty_wire;
+ADDER _jump_adder
+(
+	.a(pc_next_address),
+	.b(shifted_address),
+	.cin(1'b0),
+	.sum(jump_adder_result),
+	.cout(empty_wire)
+);
+  
+  
+  
+  
+
+pc_mux _pc_mux (
+	.out(pc_input),
+	.inp0(pc_next_address),
+	.inp1(jump_adder_result),
+	.select(pc_mux_select)
+);
+
+  
+  
+and and_gate( pc_mux_select , branch , zero_bit );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//control_unit_tb t();
+
+
+
+
+
+endmodule
+
+
+
+module control_unit_tb;
+
+  reg [5:0] opcode_reg;
+  wire [5:0] opcode;
+  wire regDst, branch, memRead, memWrite, ALUsrc, regWrite, jump, byteOperations, move;
+  wire [2:0] ALUop;
+
+  // Instantiate control_unit module
+  control_unit _control_unit (
+    .regDst(regDst),
+    .branch(branch),
+    .memRead(memRead),
+    .memWrite(memWrite),
+    .ALUop(ALUop),
+    .ALUsrc(ALUsrc),
+    .regWrite(regWrite),
+    .jump(jump),
+    .byteOperations(byteOperations),
+    .move(move),
+    .opcode(opcode)
+  );
+
+  // Initial block to apply stimulus
+  initial begin
+    // Apply stimulus for each opcode
+    // Print the ALUop output for each opcode
+    $display("Test with Opcode: %b", opcode_reg);
+    $monitor("ALUop: %b", ALUop);
+
+    // Apply opcode values for testing
+    opcode_reg = 6'b001010; // For example, set opcode to "001010" (addi)
+    #10;
+
+    opcode_reg = 6'b000100; // For example, set opcode to "000100" (andi)
+    #10;
+
+    opcode_reg = 6'b100111; // For example, set opcode to "100111" (bne)
+    #10;
+
+    // Add more opcode values as needed
+    opcode_reg = 6'b010001; // For example, set opcode to "010001" (sb)
+    #10;
+
+    opcode_reg = 6'b000111; // For example, set opcode to "000111" (slti)
+    #10;
+
+    opcode_reg = 6'b001000; // For example, set opcode to "001000" (lw)
+    #10;
+
+    // Terminate simulation
+    $stop;
+  end
+
+  // Connect reg to wire
+  assign opcode = opcode_reg;
+
+endmodule
+
+
+
+
+
+
+

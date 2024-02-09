@@ -1,0 +1,31 @@
+module mod(
+  input clk,        // Clock
+  input rst,        // Reset
+  input [31:0] A,   // Input A
+  input [31:0] B,   // Input B
+  output reg [31:0] result, // Output result
+  output reg done // Done signal
+);
+
+// Instantiate control unit and datapath
+mod_cu cu(.clk(clk), .rst(rst), .state(state), .next_state(next_state));
+mod_dp dp(.A(A), .B(B), .state(state), .result(result), .done(done));
+
+// Connect FSM outputs
+assign cu.next_state = next_state;
+
+// Define FSM states
+parameter S_IDLE = 3'b000;
+
+// Initialize FSM signals
+reg [2:0] state, next_state;
+always @(posedge clk or posedge rst) begin
+  if (rst) begin
+    state <= S_IDLE;
+    next_state <= S_IDLE;
+  end else begin
+    state <= next_state;
+  end
+end
+
+endmodule

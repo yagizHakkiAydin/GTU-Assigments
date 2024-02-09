@@ -1,0 +1,1018 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/yagz/Desktop/project/simulation/modelsim
+vADDER
+Z1 !s110 1705674139
+!i10b 1
+!s100 JKPd0I9=RfTDSoW?D2]o_0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I^e0L?jzVWRX1joV=YYB313
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1705189220
+Z5 8/home/yagz/Desktop/project/ADDER.v
+Z6 F/home/yagz/Desktop/project/ADDER.v
+!i122 13
+Z7 L0 1 3
+Z8 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z9 !s108 1705674139.000000
+Z10 !s107 /home/yagz/Desktop/project/ADDER.v|
+Z11 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/yagz/Desktop/project|/home/yagz/Desktop/project/ADDER.v|
+!i113 1
+Z12 o-vlog01compat -work work
+Z13 !s92 -vlog01compat -work work +incdir+/home/yagz/Desktop/project
+Z14 tCvgOpt 0
+n@a@d@d@e@r
+valu
+R1
+!i10b 1
+!s100 @6]0@F8:V9g1JdH96LRJl1
+R2
+I]AX<<aKze8k:_hnX5[NNN2
+R3
+R0
+w1705273211
+8/home/yagz/Desktop/project/alu.v
+F/home/yagz/Desktop/project/alu.v
+!i122 2
+L0 2 102
+R8
+r1
+!s85 0
+31
+R9
+!s107 /home/yagz/Desktop/project/alu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/yagz/Desktop/project|/home/yagz/Desktop/project/alu.v|
+!i113 1
+R12
+R13
+R14
+valu_control
+R1
+!i10b 1
+!s100 SYX<LFAhI[n[@[m7_Z[_S2
+R2
+Ia1f5GYkz3R_mT6]<`PRPX1
+R3
+R0
+w1705506557
+8/home/yagz/Desktop/project/alu_control.v
+F/home/yagz/Desktop/project/alu_control.v
+!i122 3
+L0 1 156
+R8
+r1
+!s85 0
+31
+R9
+!s107 /home/yagz/Desktop/project/alu_control.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/yagz/Desktop/project|/home/yagz/Desktop/project/alu_control.v|
+!i113 1
+R12
+R13
+R14
+vAND32
+R1
+!i10b 1
+!s100 k=[G>QQg<NODJBl=EkZf13
+R2
+IOmA7DhB3Ad=I7jL;P>dGW2
+R3
+R0
+Z15 w1705189418
+Z16 8/home/yagz/Desktop/project/AND32.v
+Z17 F/home/yagz/Desktop/project/AND32.v
+!i122 17
+R7
+R8
+r1
+!s85 0
+31
+R9
+Z18 !s107 /home/yagz/Desktop/project/AND32.v|
+Z19 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/yagz/Desktop/project|/home/yagz/Desktop/project/AND32.v|
+!i113 1
+R12
+R13
+R14
+n@a@n@d32
+vcontrol_unit
+R1
+!i10b 1
+!s100 0DCf4Z9kj[3f4nN3<zUii1
+R2
+IiJi4YmlE?NeX1MNkS_a=12
+R3
+R0
+Z20 w1705659284
+Z21 8/home/yagz/Desktop/project/control_unit.v
+Z22 F/home/yagz/Desktop/project/control_unit.v
+!i122 1
+L0 1 452
+R8
+r1
+!s85 0
+31
+R9
+Z23 !s107 /home/yagz/Desktop/project/control_unit.v|
+Z24 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/yagz/Desktop/project|/home/yagz/Desktop/project/control_unit.v|
+!i113 1
+R12
+R13
+R14
+vEIGHT_BIT_MUX
+Z25 !s110 1705674140
+!i10b 1
+!s100 T61=37em0zNQOhO4V6[:M3
+R2
+I3L@f:mbRKom^[W4TM]I6O3
+R3
+R0
+Z26 w1702134659
+Z27 8/home/yagz/Desktop/project/MUX32.v
+Z28 F/home/yagz/Desktop/project/MUX32.v
+!i122 21
+L0 42 121
+R8
+r1
+!s85 0
+31
+Z29 !s108 1705674140.000000
+Z30 !s107 /home/yagz/Desktop/project/MUX32.v|
+Z31 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/yagz/Desktop/project|/home/yagz/Desktop/project/MUX32.v|
+!i113 1
+R12
+R13
+R14
+n@e@i@g@h@t_@b@i@t_@m@u@x
+vFOUR_BIT_ADDER
+R1
+!i10b 1
+!s100 dSzz?k:<[PI0h<]^Ueek:2
+R2
+IKA6c5Jef7[?be4e^jDL3n3
+R3
+R0
+R4
+R5
+R6
+!i122 13
+L0 21 13
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+R14
+n@f@o@u@r_@b@i@t_@a@d@d@e@r
+vFOUR_BIT_AND
+R1
+!i10b 1
+!s100 FzSk^0UFNdAz3NRBBdJT;2
+R2
+IC<k1_>_9WZUNZ?A<0JBUJ0
+R3
+R0
+R15
+R16
+R17
+!i122 17
+Z32 L0 9 10
+R8
+r1
+!s85 0
+31
+R9
+R18
+R19
+!i113 1
+R12
+R13
+R14
+n@f@o@u@r_@b@i@t_@a@n@d
+vFOUR_BIT_NOR
+R25
+!i10b 1
+!s100 <cbBZi>[>`EC[XIJNCFPQ2
+R2
+IOCCE;`K><P>9OiIVaco<`0
+R3
+R0
+Z33 w1702133557
+Z34 8/home/yagz/Desktop/project/NOR32.v
+Z35 F/home/yagz/Desktop/project/NOR32.v
+!i122 19
+L0 7 8
+R8
+r1
+!s85 0
+31
+R29
+Z36 !s107 /home/yagz/Desktop/project/NOR32.v|
+Z37 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/yagz/Desktop/project|/home/yagz/Desktop/project/NOR32.v|
+!i113 1
+R12
+R13
+R14
+n@f@o@u@r_@b@i@t_@n@o@r
+vFOUR_BIT_OR
+R25
+!i10b 1
+!s100 G^DROWEkRO6X05m^_a4=W0
+R2
+IbZX_DQe3B>z:Dl`C00`OB3
+R3
+R0
+Z38 w1705189456
+Z39 8/home/yagz/Desktop/project/OR32.v
+Z40 F/home/yagz/Desktop/project/OR32.v
+!i122 18
+Z41 L0 11 10
+R8
+r1
+!s85 0
+31
+R9
+Z42 !s107 /home/yagz/Desktop/project/OR32.v|
+Z43 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/yagz/Desktop/project|/home/yagz/Desktop/project/OR32.v|
+!i113 1
+R12
+R13
+R14
+n@f@o@u@r_@b@i@t_@o@r
+vFOUR_BIT_XOR
+R1
+!i10b 1
+!s100 [6mn>?UXLJch^g9TKL>4b1
+R2
+IdzKHcYigQFV@ccJaOLfkP2
+R3
+R0
+Z44 w1702133897
+Z45 8/home/yagz/Desktop/project/XOR32.v
+Z46 F/home/yagz/Desktop/project/XOR32.v
+!i122 16
+R41
+R8
+r1
+!s85 0
+31
+R9
+Z47 !s107 /home/yagz/Desktop/project/XOR32.v|
+Z48 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/yagz/Desktop/project|/home/yagz/Desktop/project/XOR32.v|
+!i113 1
+R12
+R13
+R14
+n@f@o@u@r_@b@i@t_@x@o@r
+vins_to_reg_mux
+R1
+!i10b 1
+!s100 KVjL2I]izdS5cjF[NC?5N1
+R2
+IcRk5XCVGb6@Zf_4NdKKR:3
+R3
+R0
+w1705354338
+8/home/yagz/Desktop/project/ins_to_reg_mux.v
+F/home/yagz/Desktop/project/ins_to_reg_mux.v
+!i122 8
+L0 1 51
+R8
+r1
+!s85 0
+31
+R9
+!s107 /home/yagz/Desktop/project/ins_to_reg_mux.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/yagz/Desktop/project|/home/yagz/Desktop/project/ins_to_reg_mux.v|
+!i113 1
+R12
+R13
+R14
+vinstruction_block
+R25
+!i10b 1
+!s100 T<O_Q>2zFHNKOHWRoIRBX2
+R2
+IKkWh6:QfeBonb_kKOEK870
+R3
+R0
+w1705659402
+8/home/yagz/Desktop/project/instruction_block.v
+F/home/yagz/Desktop/project/instruction_block.v
+!i122 23
+Z49 L0 1 22
+R8
+r1
+!s85 0
+31
+R29
+!s107 /home/yagz/Desktop/project/instruction_block.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/yagz/Desktop/project|/home/yagz/Desktop/project/instruction_block.v|
+!i113 1
+R12
+R13
+R14
+vmem_mux
+R1
+!i10b 1
+!s100 :50HcX[Ud7aH]GzC>_^<E1
+R2
+I=H_STL;?6BkJlPPJ]2P722
+R3
+R0
+w1705270355
+8/home/yagz/Desktop/project/mem_mux.v
+F/home/yagz/Desktop/project/mem_mux.v
+!i122 10
+Z50 L0 1 239
+R8
+r1
+!s85 0
+31
+R9
+!s107 /home/yagz/Desktop/project/mem_mux.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/yagz/Desktop/project|/home/yagz/Desktop/project/mem_mux.v|
+!i113 1
+R12
+R13
+R14
+vmemory_block
+R25
+!i10b 1
+!s100 TTE`iGQUL4lkYdlYMF];n1
+R2
+IfRbRj^^6ikACnkMKBUbKo2
+R3
+R0
+w1705671496
+8/home/yagz/Desktop/project/memory_block.v
+F/home/yagz/Desktop/project/memory_block.v
+!i122 24
+L0 1 39
+R8
+r1
+!s85 0
+31
+R29
+!s107 /home/yagz/Desktop/project/memory_block.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/yagz/Desktop/project|/home/yagz/Desktop/project/memory_block.v|
+!i113 1
+R12
+R13
+R14
+vmips
+R1
+!i10b 1
+!s100 JN6eJJJ]z?IVk5^2ZDR]g3
+R2
+IIH[`YI^<f[0f2@73h9F]U1
+R3
+R0
+Z51 w1705674121
+Z52 8/home/yagz/Desktop/project/mips.v
+Z53 F/home/yagz/Desktop/project/mips.v
+!i122 0
+L0 1 304
+R8
+r1
+!s85 0
+31
+R9
+Z54 !s107 /home/yagz/Desktop/project/mips.v|
+Z55 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/yagz/Desktop/project|/home/yagz/Desktop/project/mips.v|
+!i113 1
+R12
+R13
+R14
+vmips_tb
+R1
+!i10b 1
+!s100 dhh;ZjXX?LBBEJRAf_z<<0
+R2
+IScJdo2WPYmdODj2?<S8if2
+R3
+R0
+R51
+R52
+R53
+!i122 0
+L0 307 94
+R8
+r1
+!s85 0
+31
+R9
+R54
+R55
+!i113 1
+R12
+R13
+R14
+vmove_mux
+R1
+!i10b 1
+!s100 Go7Nn]4EM88Z?02dL7XAS2
+R2
+IE6j^WzBh47o<zjSnljlBb3
+R3
+R0
+w1705644569
+8/home/yagz/Desktop/project/move_mux.v
+F/home/yagz/Desktop/project/move_mux.v
+!i122 12
+R50
+R8
+r1
+!s85 0
+31
+R9
+!s107 /home/yagz/Desktop/project/move_mux.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/yagz/Desktop/project|/home/yagz/Desktop/project/move_mux.v|
+!i113 1
+R12
+R13
+R14
+vmux2x1
+R1
+!i10b 1
+!s100 CSGVX<_@?0P?C=7G0>J;>0
+R2
+IRWC5Z0E6Mej_HPa6gz@T?3
+R3
+R0
+w1705257999
+8/home/yagz/Desktop/project/mux2x1.v
+F/home/yagz/Desktop/project/mux2x1.v
+!i122 7
+R49
+R8
+r1
+!s85 0
+31
+R9
+!s107 /home/yagz/Desktop/project/mux2x1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/yagz/Desktop/project|/home/yagz/Desktop/project/mux2x1.v|
+!i113 1
+R12
+R13
+R14
+vMUX32
+R25
+!i10b 1
+!s100 OZCnFHbRz<WIW@>=F[mm[0
+R2
+Inji0VR937kFK>jCB^C8[Y1
+R3
+R0
+R26
+R27
+R28
+!i122 21
+L0 1 35
+R8
+r1
+!s85 0
+31
+R29
+R30
+R31
+!i113 1
+R12
+R13
+R14
+n@m@u@x32
+vNOR32
+R25
+!i10b 1
+!s100 :[nFD>TDZY67WOWc:aHD]0
+R2
+I@=gKPRb:^YUnc83UajQaT2
+R3
+R0
+R33
+R34
+R35
+!i122 19
+R7
+R8
+r1
+!s85 0
+31
+R29
+R36
+R37
+!i113 1
+R12
+R13
+R14
+n@n@o@r32
+vONE_BIT_ADDER
+R1
+!i10b 1
+!s100 gDEP5k7lB9406?aSGPNY^3
+R2
+Il7de_1FHC[9DG?O`GdZYX1
+R3
+R0
+R4
+R5
+R6
+!i122 13
+R32
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+R14
+n@o@n@e_@b@i@t_@a@d@d@e@r
+vONE_TO_32_EXTENDER
+R1
+!i10b 1
+!s100 jGZzRNiEdmP;]OOZFM9CN1
+R2
+Idd]^hPNJS?M_>IQ7EcdD>3
+R3
+R0
+w1702134801
+8/home/yagz/Desktop/project/ONE_TO_32_EXTENDER.v
+F/home/yagz/Desktop/project/ONE_TO_32_EXTENDER.v
+!i122 15
+Z56 L0 1 44
+R8
+r1
+!s85 0
+31
+R9
+!s107 /home/yagz/Desktop/project/ONE_TO_32_EXTENDER.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/yagz/Desktop/project|/home/yagz/Desktop/project/ONE_TO_32_EXTENDER.v|
+!i113 1
+R12
+R13
+R14
+n@o@n@e_@t@o_32_@e@x@t@e@n@d@e@r
+vONE_TO_THIRTYTWO_EXTENDER_WITH_LSB
+R25
+!i10b 1
+!s100 zVZaaPoZIY;1TXgMR[eKa1
+R2
+I?GHGX`W]U[L86H_0HY^aO0
+R3
+R0
+Z57 w1702134836
+Z58 8/home/yagz/Desktop/project/SLT32.v
+Z59 F/home/yagz/Desktop/project/SLT32.v
+!i122 20
+L0 18 7
+R8
+r1
+!s85 0
+31
+R29
+Z60 !s107 /home/yagz/Desktop/project/SLT32.v|
+Z61 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/yagz/Desktop/project|/home/yagz/Desktop/project/SLT32.v|
+!i113 1
+R12
+R13
+R14
+n@o@n@e_@t@o_@t@h@i@r@t@y@t@w@o_@e@x@t@e@n@d@e@r_@w@i@t@h_@l@s@b
+vOR32
+R25
+!i10b 1
+!s100 >IRA7^>ZdaLg:D0BeST=V2
+R2
+Ig;^_HmE@N3ObAUO8JZ[d[0
+R3
+R0
+R38
+R39
+R40
+!i122 18
+R7
+R8
+r1
+!s85 0
+31
+R9
+R42
+R43
+!i113 1
+R12
+R13
+R14
+n@o@r32
+vpc_mux
+R1
+!i10b 1
+!s100 H_PTX;GRRUCjXT9<i0B4D0
+R2
+IN:P@6ho@Th]hD9jiSH>We3
+R3
+R0
+w1705514960
+8/home/yagz/Desktop/project/pc_mux.v
+F/home/yagz/Desktop/project/pc_mux.v
+!i122 11
+R50
+R8
+r1
+!s85 0
+31
+R9
+!s107 /home/yagz/Desktop/project/pc_mux.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/yagz/Desktop/project|/home/yagz/Desktop/project/pc_mux.v|
+!i113 1
+R12
+R13
+R14
+vprogram_counter_adder
+R1
+!i10b 1
+!s100 7ciaV`HhEGX3VJ:<4;:ek0
+R2
+IPmdSJ`SEk?IGF]XY@;@K>0
+R3
+R0
+w1705519318
+8/home/yagz/Desktop/project/program_counter_adder.v
+F/home/yagz/Desktop/project/program_counter_adder.v
+!i122 6
+L0 1 58
+R8
+r1
+!s85 0
+31
+R9
+!s107 /home/yagz/Desktop/project/program_counter_adder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/yagz/Desktop/project|/home/yagz/Desktop/project/program_counter_adder.v|
+!i113 1
+R12
+R13
+R14
+vreg_to_alu_mux
+R1
+!i10b 1
+!s100 V:H@QV`MiXjUZQDZjkD_h1
+R2
+Iz=^KI9<:PWI[9JAOmZnnk3
+R3
+R0
+w1705267381
+8/home/yagz/Desktop/project/reg_to_alu_mux.v
+F/home/yagz/Desktop/project/reg_to_alu_mux.v
+!i122 9
+R50
+R8
+r1
+!s85 0
+31
+R9
+!s107 /home/yagz/Desktop/project/reg_to_alu_mux.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/yagz/Desktop/project|/home/yagz/Desktop/project/reg_to_alu_mux.v|
+!i113 1
+R12
+R13
+R14
+vregister_block
+R25
+!i10b 1
+!s100 K8B_hIjQbg27=VhWGjU_A3
+R2
+IJE0OBdicK=T<XDlal633@3
+R3
+R0
+w1705673108
+8/home/yagz/Desktop/project/register_block.v
+F/home/yagz/Desktop/project/register_block.v
+!i122 22
+Z62 L0 1 41
+R8
+r1
+!s85 0
+31
+R29
+!s107 /home/yagz/Desktop/project/register_block.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/yagz/Desktop/project|/home/yagz/Desktop/project/register_block.v|
+!i113 1
+R12
+R13
+R14
+vshift_left_2
+R1
+!i10b 1
+!s100 EjnW25ML6W5GTBk06I]3^0
+R2
+Io^V]8Qi6ABM`KZL<8[ZSS0
+R3
+R0
+w1705168870
+8/home/yagz/Desktop/project/shift_left_2.v
+F/home/yagz/Desktop/project/shift_left_2.v
+!i122 5
+R62
+R8
+r1
+!s85 0
+31
+R9
+!s107 /home/yagz/Desktop/project/shift_left_2.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/yagz/Desktop/project|/home/yagz/Desktop/project/shift_left_2.v|
+!i113 1
+R12
+R13
+R14
+vsign_extend
+R1
+!i10b 1
+!s100 zW_FPamijdC;2JeY1DIl72
+R2
+IWg8a3Z@TPJi06fl>IVN313
+R3
+R0
+w1705177727
+8/home/yagz/Desktop/project/sign_extend.v
+F/home/yagz/Desktop/project/sign_extend.v
+!i122 4
+R56
+R8
+r1
+!s85 0
+31
+R9
+!s107 /home/yagz/Desktop/project/sign_extend.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/yagz/Desktop/project|/home/yagz/Desktop/project/sign_extend.v|
+!i113 1
+R12
+R13
+R14
+vsix_input_and
+R1
+!i10b 1
+!s100 TVoL43M1oIagdh>VjcXGP1
+R2
+I0]mV3WPWjCYeJSVc;JA:f3
+R3
+R0
+R20
+R21
+R22
+!i122 1
+L0 457 29
+R8
+r1
+!s85 0
+31
+R9
+R23
+R24
+!i113 1
+R12
+R13
+R14
+vSLT32
+R25
+!i10b 1
+!s100 9hdI8cXPzeCDkTFFX6EdA3
+R2
+IXEBb98XnJB5BkOB[8ll0A2
+R3
+R0
+R57
+R58
+R59
+!i122 20
+L0 1 15
+R8
+r1
+!s85 0
+31
+R29
+R60
+R61
+!i113 1
+R12
+R13
+R14
+n@s@l@t32
+vSUBTRACTOR
+R1
+!i10b 1
+!s100 ?SQgW?G>ARH`aI`Ai2YV30
+R2
+I2lHX40_E[Y<5YdZiYFGP^3
+R3
+R0
+Z63 w1705189373
+Z64 8/home/yagz/Desktop/project/SUBTRACTOR.v
+Z65 F/home/yagz/Desktop/project/SUBTRACTOR.v
+!i122 14
+R7
+R8
+r1
+!s85 0
+31
+R9
+Z66 !s107 /home/yagz/Desktop/project/SUBTRACTOR.v|
+Z67 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/yagz/Desktop/project|/home/yagz/Desktop/project/SUBTRACTOR.v|
+!i113 1
+R12
+R13
+R14
+n@s@u@b@t@r@a@c@t@o@r
+vTHIRTYTWO_BIT_ADDER
+R1
+!i10b 1
+!s100 g6@_1>h7<oz@8Q7J_;d``2
+R2
+I4?S_Ce0F:gOCWZeo2C2RI1
+R3
+R0
+R4
+R5
+R6
+!i122 13
+L0 37 23
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+R14
+n@t@h@i@r@t@y@t@w@o_@b@i@t_@a@d@d@e@r
+vTHIRTYTWO_BIT_AND
+R1
+!i10b 1
+!s100 UMb_cCPQN]OjYLdnmCYH[0
+R2
+I3;l8@0AaozlJZoSETZ=li3
+R3
+R0
+R15
+R16
+R17
+!i122 17
+L0 22 15
+R8
+r1
+!s85 0
+31
+R9
+R18
+R19
+!i113 1
+R12
+R13
+R14
+n@t@h@i@r@t@y@t@w@o_@b@i@t_@a@n@d
+vTHIRTYTWO_BIT_NOR
+R25
+!i10b 1
+!s100 M@A>@1;0TGf0j6:g2HIXD2
+R2
+I`EOo@]W7FKHY2n]Lcm_3h0
+R3
+R0
+R33
+R34
+R35
+!i122 19
+L0 18 15
+R8
+r1
+!s85 0
+31
+R29
+R36
+R37
+!i113 1
+R12
+R13
+R14
+n@t@h@i@r@t@y@t@w@o_@b@i@t_@n@o@r
+vTHIRTYTWO_BIT_OR
+R25
+!i10b 1
+!s100 NkSHjfLP_YkXHJbbHBJbo0
+R2
+IkHDA7LXBVOAf33`]DizOU3
+R3
+R0
+R38
+R39
+R40
+!i122 18
+Z68 L0 24 15
+R8
+r1
+!s85 0
+31
+R9
+R42
+R43
+!i113 1
+R12
+R13
+R14
+n@t@h@i@r@t@y@t@w@o_@b@i@t_@o@r
+vTHIRTYTWO_BIT_SUBTRACTOR
+R1
+!i10b 1
+!s100 T90e4kNL9fKF[h4U`IYm32
+R2
+IKEe1Ec?>Y3>^[cKogLzm_0
+R3
+R0
+R63
+R64
+R65
+!i122 14
+L0 8 14
+R8
+r1
+!s85 0
+31
+R9
+R66
+R67
+!i113 1
+R12
+R13
+R14
+n@t@h@i@r@t@y@t@w@o_@b@i@t_@s@u@b@t@r@a@c@t@o@r
+vTHIRTYTWO_BIT_XOR
+R1
+!i10b 1
+!s100 0a@DoZWTShK<;3FX=LdDh2
+R2
+IoTonRloJ9@g^GT^jiggk43
+R3
+R0
+R44
+R45
+R46
+!i122 16
+R68
+R8
+r1
+!s85 0
+31
+R9
+R47
+R48
+!i113 1
+R12
+R13
+R14
+n@t@h@i@r@t@y@t@w@o_@b@i@t_@x@o@r
+vXOR32
+R1
+!i10b 1
+!s100 NSIPGTok??c1ZC?cB`g2=2
+R2
+IiU7?f5VJoH2_4e7;IX^^:1
+R3
+R0
+R44
+R45
+R46
+!i122 16
+R7
+R8
+r1
+!s85 0
+31
+R9
+R47
+R48
+!i113 1
+R12
+R13
+R14
+n@x@o@r32

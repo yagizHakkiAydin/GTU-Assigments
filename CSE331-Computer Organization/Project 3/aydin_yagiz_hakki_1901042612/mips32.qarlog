@@ -1,0 +1,52 @@
+Quartus Prime Archive log --	/home/yagz/Desktop/project/mips32.qarlog
+
+Archive:	/home/yagz/Desktop/project/mips32.qar
+Date:		Fri Jan 19 17:27:03 2024
+Quartus Prime		20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+/home/yagz/Desktop/project/ADDER.v
+/home/yagz/Desktop/project/AND32.v
+/home/yagz/Desktop/project/MUX32.v
+/home/yagz/Desktop/project/NOR32.v
+/home/yagz/Desktop/project/ONE_TO_32_EXTENDER.v
+/home/yagz/Desktop/project/OR32.v
+/home/yagz/Desktop/project/SLT32.v
+/home/yagz/Desktop/project/SUBTRACTOR.v
+/home/yagz/Desktop/project/XOR32.v
+/home/yagz/Desktop/project/alu.v
+/home/yagz/Desktop/project/alu_control.v
+/home/yagz/Desktop/project/alu_control_tb.v
+/home/yagz/Desktop/project/control_unit.v
+/home/yagz/Desktop/project/control_unit_tb.v
+/home/yagz/Desktop/project/ins_to_reg_mux.v
+/home/yagz/Desktop/project/instruction_block.v
+/home/yagz/Desktop/project/instructions.mem
+/home/yagz/Desktop/project/mem_mux.v
+/home/yagz/Desktop/project/memory.mem
+/home/yagz/Desktop/project/memory_block.v
+/home/yagz/Desktop/project/memory_block_tb.v
+/home/yagz/Desktop/project/mips.qsf
+/home/yagz/Desktop/project/mips.v
+/home/yagz/Desktop/project/mips32.qpf
+/home/yagz/Desktop/project/move_mux.v
+/home/yagz/Desktop/project/mux2x1.v
+/home/yagz/Desktop/project/pc_mux.v
+/home/yagz/Desktop/project/program_counter.v
+/home/yagz/Desktop/project/program_counter_adder.v
+/home/yagz/Desktop/project/program_counter_adder_tb.v
+/home/yagz/Desktop/project/reg_to_alu_mux.v
+/home/yagz/Desktop/project/register_block.v
+/home/yagz/Desktop/project/register_block_tb.v
+/home/yagz/Desktop/project/registers.mem
+/home/yagz/Desktop/project/shift_left_2.v
+/home/yagz/Desktop/project/sign_extend.v
+/home/yagz/Desktop/project/simulation/modelsim/instructions.mem
+/home/yagz/Desktop/project/simulation/modelsim/memory.mem
+/home/yagz/Desktop/project/simulation/modelsim/mips_tb.v
+/home/yagz/Desktop/project/simulation/modelsim/registers.mem
+/home/yagz/intelFPGA_lite/20.1/quartus/linux64/assignment_defaults.qdf
+	======= Total: 41 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

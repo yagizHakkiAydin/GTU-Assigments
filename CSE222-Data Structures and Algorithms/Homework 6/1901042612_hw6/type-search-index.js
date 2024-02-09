@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"com.YagizHakki","l":"Main"},{"p":"com.YagizHakki","l":"MergeSort"},{"p":"com.YagizHakki","l":"NewSort"},{"p":"com.YagizHakki","l":"QuickSort"},{"p":"com.YagizHakki","l":"Sort"}];updateSearchResults();

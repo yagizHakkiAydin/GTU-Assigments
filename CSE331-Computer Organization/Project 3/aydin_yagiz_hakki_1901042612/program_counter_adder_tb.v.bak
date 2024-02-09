@@ -1,0 +1,25 @@
+module program_counter_adder_tb();
+
+
+
+reg inp;
+reg result;
+
+
+program_counter_adder pc_adder(
+
+
+
+);
+
+initial begin
+	
+	inp = 32'd27;
+	
+
+
+
+end
+
+
+endmodule

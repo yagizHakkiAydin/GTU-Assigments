@@ -1,0 +1,189 @@
+# Reading pref.tcl
+# do ALU32_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/HW2 {C:/HW2/ALU32.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:48:54 on Dec 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/HW2" C:/HW2/ALU32.v 
+# -- Compiling module ALU32
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	tb
+# End time: 18:48:54 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/HW2 {C:/HW2/ADDER.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:48:54 on Dec 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/HW2" C:/HW2/ADDER.v 
+# -- Compiling module ADDER
+# -- Compiling module ONE_BIT_ADDER
+# -- Compiling module FOUR_BIT_ADDER
+# -- Compiling module THIRTYTWO_BIT_ADDER
+# 
+# Top level modules:
+# 	ADDER
+# End time: 18:48:54 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/HW2 {C:/HW2/SUBTRACTOR.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:48:54 on Dec 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/HW2" C:/HW2/SUBTRACTOR.v 
+# -- Compiling module SUBTRACTOR
+# -- Compiling module THIRTYTWO_BIT_SUBTRACTOR
+# 
+# Top level modules:
+# 	SUBTRACTOR
+# End time: 18:48:54 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/HW2 {C:/HW2/AND32.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:48:54 on Dec 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/HW2" C:/HW2/AND32.v 
+# -- Compiling module AND32
+# -- Compiling module FOUR_BIT_AND
+# -- Compiling module THIRTYTWO_BIT_AND
+# 
+# Top level modules:
+# 	AND32
+# End time: 18:48:54 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/HW2 {C:/HW2/OR32.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:48:54 on Dec 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/HW2" C:/HW2/OR32.v 
+# -- Compiling module OR32
+# -- Compiling module FOUR_BIT_OR
+# -- Compiling module THIRTYTWO_BIT_OR
+# 
+# Top level modules:
+# 	OR32
+# End time: 18:48:54 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/HW2 {C:/HW2/NOR32.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:48:55 on Dec 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/HW2" C:/HW2/NOR32.v 
+# -- Compiling module NOR32
+# -- Compiling module FOUR_BIT_NOR
+# -- Compiling module THIRTYTWO_BIT_NOR
+# 
+# Top level modules:
+# 	NOR32
+# End time: 18:48:55 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/HW2 {C:/HW2/XOR32.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:48:55 on Dec 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/HW2" C:/HW2/XOR32.v 
+# -- Compiling module XOR32
+# -- Compiling module FOUR_BIT_XOR
+# -- Compiling module THIRTYTWO_BIT_XOR
+# 
+# Top level modules:
+# 	XOR32
+# End time: 18:48:55 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/HW2 {C:/HW2/SLT32.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:48:55 on Dec 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/HW2" C:/HW2/SLT32.v 
+# -- Compiling module SLT32
+# -- Compiling module ONE_TO_THIRTYTWO_EXTENDER_WITH_LSB
+# 
+# Top level modules:
+# 	SLT32
+# End time: 18:48:55 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/HW2 {C:/HW2/MUX32.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:48:55 on Dec 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/HW2" C:/HW2/MUX32.v 
+# -- Compiling module MUX32
+# -- Compiling module EIGHT_BIT_MUX
+# 
+# Top level modules:
+# 	MUX32
+# End time: 18:48:55 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/HW2 {C:/HW2/ONE_TO_32_EXTENDER.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:48:55 on Dec 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/HW2" C:/HW2/ONE_TO_32_EXTENDER.v 
+# -- Compiling module ONE_TO_32_EXTENDER
+# 
+# Top level modules:
+# 	ONE_TO_32_EXTENDER
+# End time: 18:48:55 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/HW2 {C:/HW2/mod.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:48:55 on Dec 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/HW2" C:/HW2/mod.v 
+# -- Compiling module mod
+# 
+# Top level modules:
+# 	mod
+# End time: 18:48:55 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/HW2 {C:/HW2/mod_dp.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:48:55 on Dec 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/HW2" C:/HW2/mod_dp.v 
+# -- Compiling module mod_dp
+# 
+# Top level modules:
+# 	mod_dp
+# End time: 18:48:55 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.tb
+# vsim work.tb 
+# Start time: 18:49:07 on Dec 10,2023
+# Loading work.tb
+# Loading work.ALU32
+# Loading work.ADDER
+# Loading work.THIRTYTWO_BIT_ADDER
+# Loading work.FOUR_BIT_ADDER
+# Loading work.ONE_BIT_ADDER
+# Loading work.SUBTRACTOR
+# Loading work.THIRTYTWO_BIT_SUBTRACTOR
+# Loading work.ONE_TO_32_EXTENDER
+# Loading work.XOR32
+# Loading work.THIRTYTWO_BIT_XOR
+# Loading work.FOUR_BIT_XOR
+# Loading work.AND32
+# Loading work.THIRTYTWO_BIT_AND
+# Loading work.FOUR_BIT_AND
+# Loading work.OR32
+# Loading work.THIRTYTWO_BIT_OR
+# Loading work.FOUR_BIT_OR
+# Loading work.NOR32
+# Loading work.THIRTYTWO_BIT_NOR
+# Loading work.FOUR_BIT_NOR
+# Loading work.SLT32
+# Loading work.ONE_TO_THIRTYTWO_EXTENDER_WITH_LSB
+# Loading work.mod
+# Loading work.mod_dp
+# Loading work.MUX32
+# Loading work.EIGHT_BIT_MUX
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (31) for port 'out'. The port definition is at: C:/HW2/ONE_TO_32_EXTENDER.v(1).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/alu/a7/_extender/extender File: C:/HW2/SLT32.v Line: 20
+run -all
+# a:         50
+# b:          9
+# a mod b:          0
+# ** Note: $stop    : C:/HW2/ALU32.v(105)
+#    Time: 160 ns  Iteration: 0  Instance: /tb
+# Break in Module tb at C:/HW2/ALU32.v line 105
+# End time: 18:50:36 on Dec 10,2023, Elapsed time: 0:01:29
+# Errors: 0, Warnings: 1

@@ -1,0 +1,15 @@
+module mips_tb();
+
+
+
+mips m (
+ // input  reg  clk,        // Input clock
+  input  wire  reset,      // Input reset
+  input  wire  in_data,    // Input data
+  output wire   out_data    // Output data
+);
+
+
+
+
+endmodule

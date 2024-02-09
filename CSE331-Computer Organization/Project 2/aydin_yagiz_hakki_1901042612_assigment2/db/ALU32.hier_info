@@ -1,0 +1,6590 @@
+|ALU32
+a[0] => a[0].IN8
+a[1] => a[1].IN8
+a[2] => a[2].IN8
+a[3] => a[3].IN8
+a[4] => a[4].IN8
+a[5] => a[5].IN8
+a[6] => a[6].IN8
+a[7] => a[7].IN8
+a[8] => a[8].IN8
+a[9] => a[9].IN8
+a[10] => a[10].IN8
+a[11] => a[11].IN8
+a[12] => a[12].IN8
+a[13] => a[13].IN8
+a[14] => a[14].IN8
+a[15] => a[15].IN8
+a[16] => a[16].IN8
+a[17] => a[17].IN8
+a[18] => a[18].IN8
+a[19] => a[19].IN8
+a[20] => a[20].IN8
+a[21] => a[21].IN8
+a[22] => a[22].IN8
+a[23] => a[23].IN8
+a[24] => a[24].IN8
+a[25] => a[25].IN8
+a[26] => a[26].IN8
+a[27] => a[27].IN8
+a[28] => a[28].IN8
+a[29] => a[29].IN8
+a[30] => a[30].IN8
+a[31] => a[31].IN8
+b[0] => b[0].IN8
+b[1] => b[1].IN8
+b[2] => b[2].IN8
+b[3] => b[3].IN8
+b[4] => b[4].IN8
+b[5] => b[5].IN8
+b[6] => b[6].IN8
+b[7] => b[7].IN8
+b[8] => b[8].IN8
+b[9] => b[9].IN8
+b[10] => b[10].IN8
+b[11] => b[11].IN8
+b[12] => b[12].IN8
+b[13] => b[13].IN8
+b[14] => b[14].IN8
+b[15] => b[15].IN8
+b[16] => b[16].IN8
+b[17] => b[17].IN8
+b[18] => b[18].IN8
+b[19] => b[19].IN8
+b[20] => b[20].IN8
+b[21] => b[21].IN8
+b[22] => b[22].IN8
+b[23] => b[23].IN8
+b[24] => b[24].IN8
+b[25] => b[25].IN8
+b[26] => b[26].IN8
+b[27] => b[27].IN8
+b[28] => b[28].IN8
+b[29] => b[29].IN8
+b[30] => b[30].IN8
+b[31] => b[31].IN8
+ALUop[0] => ALUop[0].IN1
+ALUop[1] => ALUop[1].IN1
+ALUop[2] => ALUop[2].IN1
+result[0] << MUX32:mux.result
+result[1] << MUX32:mux.result
+result[2] << MUX32:mux.result
+result[3] << MUX32:mux.result
+result[4] << MUX32:mux.result
+result[5] << MUX32:mux.result
+result[6] << MUX32:mux.result
+result[7] << MUX32:mux.result
+result[8] << MUX32:mux.result
+result[9] << MUX32:mux.result
+result[10] << MUX32:mux.result
+result[11] << MUX32:mux.result
+result[12] << MUX32:mux.result
+result[13] << MUX32:mux.result
+result[14] << MUX32:mux.result
+result[15] << MUX32:mux.result
+result[16] << MUX32:mux.result
+result[17] << MUX32:mux.result
+result[18] << MUX32:mux.result
+result[19] << MUX32:mux.result
+result[20] << MUX32:mux.result
+result[21] << MUX32:mux.result
+result[22] << MUX32:mux.result
+result[23] << MUX32:mux.result
+result[24] << MUX32:mux.result
+result[25] << MUX32:mux.result
+result[26] << MUX32:mux.result
+result[27] << MUX32:mux.result
+result[28] << MUX32:mux.result
+result[29] << MUX32:mux.result
+result[30] << MUX32:mux.result
+result[31] << MUX32:mux.result
+clk => clk.IN1
+reset => reset.IN1
+
+
+|ALU32|ADDER:a1
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+a[4] => a[4].IN1
+a[5] => a[5].IN1
+a[6] => a[6].IN1
+a[7] => a[7].IN1
+a[8] => a[8].IN1
+a[9] => a[9].IN1
+a[10] => a[10].IN1
+a[11] => a[11].IN1
+a[12] => a[12].IN1
+a[13] => a[13].IN1
+a[14] => a[14].IN1
+a[15] => a[15].IN1
+a[16] => a[16].IN1
+a[17] => a[17].IN1
+a[18] => a[18].IN1
+a[19] => a[19].IN1
+a[20] => a[20].IN1
+a[21] => a[21].IN1
+a[22] => a[22].IN1
+a[23] => a[23].IN1
+a[24] => a[24].IN1
+a[25] => a[25].IN1
+a[26] => a[26].IN1
+a[27] => a[27].IN1
+a[28] => a[28].IN1
+a[29] => a[29].IN1
+a[30] => a[30].IN1
+a[31] => a[31].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+b[4] => b[4].IN1
+b[5] => b[5].IN1
+b[6] => b[6].IN1
+b[7] => b[7].IN1
+b[8] => b[8].IN1
+b[9] => b[9].IN1
+b[10] => b[10].IN1
+b[11] => b[11].IN1
+b[12] => b[12].IN1
+b[13] => b[13].IN1
+b[14] => b[14].IN1
+b[15] => b[15].IN1
+b[16] => b[16].IN1
+b[17] => b[17].IN1
+b[18] => b[18].IN1
+b[19] => b[19].IN1
+b[20] => b[20].IN1
+b[21] => b[21].IN1
+b[22] => b[22].IN1
+b[23] => b[23].IN1
+b[24] => b[24].IN1
+b[25] => b[25].IN1
+b[26] => b[26].IN1
+b[27] => b[27].IN1
+b[28] => b[28].IN1
+b[29] => b[29].IN1
+b[30] => b[30].IN1
+b[31] => b[31].IN1
+cin => cin.IN1
+sum[0] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[1] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[2] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[3] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[4] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[5] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[6] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[7] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[8] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[9] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[10] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[11] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[12] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[13] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[14] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[15] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[16] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[17] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[18] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[19] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[20] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[21] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[22] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[23] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[24] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[25] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[26] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[27] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[28] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[29] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[30] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[31] <= THIRTYTWO_BIT_ADDER:adder.port3
+
+
+|ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+a[4] => a[4].IN1
+a[5] => a[5].IN1
+a[6] => a[6].IN1
+a[7] => a[7].IN1
+a[8] => a[8].IN1
+a[9] => a[9].IN1
+a[10] => a[10].IN1
+a[11] => a[11].IN1
+a[12] => a[12].IN1
+a[13] => a[13].IN1
+a[14] => a[14].IN1
+a[15] => a[15].IN1
+a[16] => a[16].IN1
+a[17] => a[17].IN1
+a[18] => a[18].IN1
+a[19] => a[19].IN1
+a[20] => a[20].IN1
+a[21] => a[21].IN1
+a[22] => a[22].IN1
+a[23] => a[23].IN1
+a[24] => a[24].IN1
+a[25] => a[25].IN1
+a[26] => a[26].IN1
+a[27] => a[27].IN1
+a[28] => a[28].IN1
+a[29] => a[29].IN1
+a[30] => a[30].IN1
+a[31] => a[31].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+b[4] => b[4].IN1
+b[5] => b[5].IN1
+b[6] => b[6].IN1
+b[7] => b[7].IN1
+b[8] => b[8].IN1
+b[9] => b[9].IN1
+b[10] => b[10].IN1
+b[11] => b[11].IN1
+b[12] => b[12].IN1
+b[13] => b[13].IN1
+b[14] => b[14].IN1
+b[15] => b[15].IN1
+b[16] => b[16].IN1
+b[17] => b[17].IN1
+b[18] => b[18].IN1
+b[19] => b[19].IN1
+b[20] => b[20].IN1
+b[21] => b[21].IN1
+b[22] => b[22].IN1
+b[23] => b[23].IN1
+b[24] => b[24].IN1
+b[25] => b[25].IN1
+b[26] => b[26].IN1
+b[27] => b[27].IN1
+b[28] => b[28].IN1
+b[29] => b[29].IN1
+b[30] => b[30].IN1
+b[31] => b[31].IN1
+cin => cin.IN1
+sum[0] <= FOUR_BIT_ADDER:adder0.port3
+sum[1] <= FOUR_BIT_ADDER:adder0.port3
+sum[2] <= FOUR_BIT_ADDER:adder0.port3
+sum[3] <= FOUR_BIT_ADDER:adder0.port3
+sum[4] <= FOUR_BIT_ADDER:adder1.port3
+sum[5] <= FOUR_BIT_ADDER:adder1.port3
+sum[6] <= FOUR_BIT_ADDER:adder1.port3
+sum[7] <= FOUR_BIT_ADDER:adder1.port3
+sum[8] <= FOUR_BIT_ADDER:adder2.port3
+sum[9] <= FOUR_BIT_ADDER:adder2.port3
+sum[10] <= FOUR_BIT_ADDER:adder2.port3
+sum[11] <= FOUR_BIT_ADDER:adder2.port3
+sum[12] <= FOUR_BIT_ADDER:adder3.port3
+sum[13] <= FOUR_BIT_ADDER:adder3.port3
+sum[14] <= FOUR_BIT_ADDER:adder3.port3
+sum[15] <= FOUR_BIT_ADDER:adder3.port3
+sum[16] <= FOUR_BIT_ADDER:adder4.port3
+sum[17] <= FOUR_BIT_ADDER:adder4.port3
+sum[18] <= FOUR_BIT_ADDER:adder4.port3
+sum[19] <= FOUR_BIT_ADDER:adder4.port3
+sum[20] <= FOUR_BIT_ADDER:adder5.port3
+sum[21] <= FOUR_BIT_ADDER:adder5.port3
+sum[22] <= FOUR_BIT_ADDER:adder5.port3
+sum[23] <= FOUR_BIT_ADDER:adder5.port3
+sum[24] <= FOUR_BIT_ADDER:adder6.port3
+sum[25] <= FOUR_BIT_ADDER:adder6.port3
+sum[26] <= FOUR_BIT_ADDER:adder6.port3
+sum[27] <= FOUR_BIT_ADDER:adder6.port3
+sum[28] <= FOUR_BIT_ADDER:adder7.port3
+sum[29] <= FOUR_BIT_ADDER:adder7.port3
+sum[30] <= FOUR_BIT_ADDER:adder7.port3
+sum[31] <= FOUR_BIT_ADDER:adder7.port3
+
+
+|ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder0
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+cin => cin.IN1
+sum[0] <= ONE_BIT_ADDER:adder0.port3
+sum[1] <= ONE_BIT_ADDER:adder1.port3
+sum[2] <= ONE_BIT_ADDER:adder2.port3
+sum[3] <= ONE_BIT_ADDER:adder3.port3
+cout <= ONE_BIT_ADDER:adder3.port4
+
+
+|ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder0|ONE_BIT_ADDER:adder0
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder0|ONE_BIT_ADDER:adder1
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder0|ONE_BIT_ADDER:adder2
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder0|ONE_BIT_ADDER:adder3
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder1
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+cin => cin.IN1
+sum[0] <= ONE_BIT_ADDER:adder0.port3
+sum[1] <= ONE_BIT_ADDER:adder1.port3
+sum[2] <= ONE_BIT_ADDER:adder2.port3
+sum[3] <= ONE_BIT_ADDER:adder3.port3
+cout <= ONE_BIT_ADDER:adder3.port4
+
+
+|ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder1|ONE_BIT_ADDER:adder0
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder1|ONE_BIT_ADDER:adder1
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder1|ONE_BIT_ADDER:adder2
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder1|ONE_BIT_ADDER:adder3
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder2
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+cin => cin.IN1
+sum[0] <= ONE_BIT_ADDER:adder0.port3
+sum[1] <= ONE_BIT_ADDER:adder1.port3
+sum[2] <= ONE_BIT_ADDER:adder2.port3
+sum[3] <= ONE_BIT_ADDER:adder3.port3
+cout <= ONE_BIT_ADDER:adder3.port4
+
+
+|ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder2|ONE_BIT_ADDER:adder0
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder2|ONE_BIT_ADDER:adder1
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder2|ONE_BIT_ADDER:adder2
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder2|ONE_BIT_ADDER:adder3
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder3
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+cin => cin.IN1
+sum[0] <= ONE_BIT_ADDER:adder0.port3
+sum[1] <= ONE_BIT_ADDER:adder1.port3
+sum[2] <= ONE_BIT_ADDER:adder2.port3
+sum[3] <= ONE_BIT_ADDER:adder3.port3
+cout <= ONE_BIT_ADDER:adder3.port4
+
+
+|ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder3|ONE_BIT_ADDER:adder0
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder3|ONE_BIT_ADDER:adder1
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder3|ONE_BIT_ADDER:adder2
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder3|ONE_BIT_ADDER:adder3
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder4
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+cin => cin.IN1
+sum[0] <= ONE_BIT_ADDER:adder0.port3
+sum[1] <= ONE_BIT_ADDER:adder1.port3
+sum[2] <= ONE_BIT_ADDER:adder2.port3
+sum[3] <= ONE_BIT_ADDER:adder3.port3
+cout <= ONE_BIT_ADDER:adder3.port4
+
+
+|ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder4|ONE_BIT_ADDER:adder0
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder4|ONE_BIT_ADDER:adder1
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder4|ONE_BIT_ADDER:adder2
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder4|ONE_BIT_ADDER:adder3
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder5
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+cin => cin.IN1
+sum[0] <= ONE_BIT_ADDER:adder0.port3
+sum[1] <= ONE_BIT_ADDER:adder1.port3
+sum[2] <= ONE_BIT_ADDER:adder2.port3
+sum[3] <= ONE_BIT_ADDER:adder3.port3
+cout <= ONE_BIT_ADDER:adder3.port4
+
+
+|ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder5|ONE_BIT_ADDER:adder0
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder5|ONE_BIT_ADDER:adder1
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder5|ONE_BIT_ADDER:adder2
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder5|ONE_BIT_ADDER:adder3
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder6
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+cin => cin.IN1
+sum[0] <= ONE_BIT_ADDER:adder0.port3
+sum[1] <= ONE_BIT_ADDER:adder1.port3
+sum[2] <= ONE_BIT_ADDER:adder2.port3
+sum[3] <= ONE_BIT_ADDER:adder3.port3
+cout <= ONE_BIT_ADDER:adder3.port4
+
+
+|ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder6|ONE_BIT_ADDER:adder0
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder6|ONE_BIT_ADDER:adder1
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder6|ONE_BIT_ADDER:adder2
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder6|ONE_BIT_ADDER:adder3
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder7
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+cin => cin.IN1
+sum[0] <= ONE_BIT_ADDER:adder0.port3
+sum[1] <= ONE_BIT_ADDER:adder1.port3
+sum[2] <= ONE_BIT_ADDER:adder2.port3
+sum[3] <= ONE_BIT_ADDER:adder3.port3
+cout <= ONE_BIT_ADDER:adder3.port4
+
+
+|ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder7|ONE_BIT_ADDER:adder0
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder7|ONE_BIT_ADDER:adder1
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder7|ONE_BIT_ADDER:adder2
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|ADDER:a1|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder7|ONE_BIT_ADDER:adder3
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SUBTRACTOR:a2
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+a[4] => a[4].IN1
+a[5] => a[5].IN1
+a[6] => a[6].IN1
+a[7] => a[7].IN1
+a[8] => a[8].IN1
+a[9] => a[9].IN1
+a[10] => a[10].IN1
+a[11] => a[11].IN1
+a[12] => a[12].IN1
+a[13] => a[13].IN1
+a[14] => a[14].IN1
+a[15] => a[15].IN1
+a[16] => a[16].IN1
+a[17] => a[17].IN1
+a[18] => a[18].IN1
+a[19] => a[19].IN1
+a[20] => a[20].IN1
+a[21] => a[21].IN1
+a[22] => a[22].IN1
+a[23] => a[23].IN1
+a[24] => a[24].IN1
+a[25] => a[25].IN1
+a[26] => a[26].IN1
+a[27] => a[27].IN1
+a[28] => a[28].IN1
+a[29] => a[29].IN1
+a[30] => a[30].IN1
+a[31] => a[31].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+b[4] => b[4].IN1
+b[5] => b[5].IN1
+b[6] => b[6].IN1
+b[7] => b[7].IN1
+b[8] => b[8].IN1
+b[9] => b[9].IN1
+b[10] => b[10].IN1
+b[11] => b[11].IN1
+b[12] => b[12].IN1
+b[13] => b[13].IN1
+b[14] => b[14].IN1
+b[15] => b[15].IN1
+b[16] => b[16].IN1
+b[17] => b[17].IN1
+b[18] => b[18].IN1
+b[19] => b[19].IN1
+b[20] => b[20].IN1
+b[21] => b[21].IN1
+b[22] => b[22].IN1
+b[23] => b[23].IN1
+b[24] => b[24].IN1
+b[25] => b[25].IN1
+b[26] => b[26].IN1
+b[27] => b[27].IN1
+b[28] => b[28].IN1
+b[29] => b[29].IN1
+b[30] => b[30].IN1
+b[31] => b[31].IN1
+cin => cin.IN1
+result[0] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[1] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[2] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[3] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[4] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[5] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[6] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[7] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[8] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[9] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[10] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[11] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[12] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[13] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[14] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[15] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[16] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[17] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[18] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[19] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[20] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[21] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[22] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[23] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[24] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[25] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[26] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[27] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[28] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[29] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[30] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[31] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+a[4] => a[4].IN1
+a[5] => a[5].IN1
+a[6] => a[6].IN1
+a[7] => a[7].IN1
+a[8] => a[8].IN1
+a[9] => a[9].IN1
+a[10] => a[10].IN1
+a[11] => a[11].IN1
+a[12] => a[12].IN1
+a[13] => a[13].IN1
+a[14] => a[14].IN1
+a[15] => a[15].IN1
+a[16] => a[16].IN1
+a[17] => a[17].IN1
+a[18] => a[18].IN1
+a[19] => a[19].IN1
+a[20] => a[20].IN1
+a[21] => a[21].IN1
+a[22] => a[22].IN1
+a[23] => a[23].IN1
+a[24] => a[24].IN1
+a[25] => a[25].IN1
+a[26] => a[26].IN1
+a[27] => a[27].IN1
+a[28] => a[28].IN1
+a[29] => a[29].IN1
+a[30] => a[30].IN1
+a[31] => a[31].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+b[4] => b[4].IN1
+b[5] => b[5].IN1
+b[6] => b[6].IN1
+b[7] => b[7].IN1
+b[8] => b[8].IN1
+b[9] => b[9].IN1
+b[10] => b[10].IN1
+b[11] => b[11].IN1
+b[12] => b[12].IN1
+b[13] => b[13].IN1
+b[14] => b[14].IN1
+b[15] => b[15].IN1
+b[16] => b[16].IN1
+b[17] => b[17].IN1
+b[18] => b[18].IN1
+b[19] => b[19].IN1
+b[20] => b[20].IN1
+b[21] => b[21].IN1
+b[22] => b[22].IN1
+b[23] => b[23].IN1
+b[24] => b[24].IN1
+b[25] => b[25].IN1
+b[26] => b[26].IN1
+b[27] => b[27].IN1
+b[28] => b[28].IN1
+b[29] => b[29].IN1
+b[30] => b[30].IN1
+b[31] => b[31].IN1
+cin => cin.IN2
+result[0] <= ADDER:t_adder.port3
+result[1] <= ADDER:t_adder.port3
+result[2] <= ADDER:t_adder.port3
+result[3] <= ADDER:t_adder.port3
+result[4] <= ADDER:t_adder.port3
+result[5] <= ADDER:t_adder.port3
+result[6] <= ADDER:t_adder.port3
+result[7] <= ADDER:t_adder.port3
+result[8] <= ADDER:t_adder.port3
+result[9] <= ADDER:t_adder.port3
+result[10] <= ADDER:t_adder.port3
+result[11] <= ADDER:t_adder.port3
+result[12] <= ADDER:t_adder.port3
+result[13] <= ADDER:t_adder.port3
+result[14] <= ADDER:t_adder.port3
+result[15] <= ADDER:t_adder.port3
+result[16] <= ADDER:t_adder.port3
+result[17] <= ADDER:t_adder.port3
+result[18] <= ADDER:t_adder.port3
+result[19] <= ADDER:t_adder.port3
+result[20] <= ADDER:t_adder.port3
+result[21] <= ADDER:t_adder.port3
+result[22] <= ADDER:t_adder.port3
+result[23] <= ADDER:t_adder.port3
+result[24] <= ADDER:t_adder.port3
+result[25] <= ADDER:t_adder.port3
+result[26] <= ADDER:t_adder.port3
+result[27] <= ADDER:t_adder.port3
+result[28] <= ADDER:t_adder.port3
+result[29] <= ADDER:t_adder.port3
+result[30] <= ADDER:t_adder.port3
+result[31] <= ADDER:t_adder.port3
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ONE_TO_32_EXTENDER:extender
+inp => out[0].DATAIN
+inp => out[1].DATAIN
+inp => out[2].DATAIN
+inp => out[3].DATAIN
+inp => out[4].DATAIN
+inp => out[5].DATAIN
+inp => out[6].DATAIN
+inp => out[7].DATAIN
+inp => out[8].DATAIN
+inp => out[9].DATAIN
+inp => out[10].DATAIN
+inp => out[11].DATAIN
+inp => out[12].DATAIN
+inp => out[13].DATAIN
+inp => out[14].DATAIN
+inp => out[15].DATAIN
+inp => out[16].DATAIN
+inp => out[17].DATAIN
+inp => out[18].DATAIN
+inp => out[19].DATAIN
+inp => out[20].DATAIN
+inp => out[21].DATAIN
+inp => out[22].DATAIN
+inp => out[23].DATAIN
+inp => out[24].DATAIN
+inp => out[25].DATAIN
+inp => out[26].DATAIN
+inp => out[27].DATAIN
+inp => out[28].DATAIN
+inp => out[29].DATAIN
+inp => out[30].DATAIN
+inp => out[31].DATAIN
+out[0] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[16] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[17] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[18] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[19] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[20] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[21] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[22] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[23] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[24] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[25] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[26] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[27] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[28] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[29] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[30] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[31] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|XOR32:t_xor
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+A[4] => A[4].IN1
+A[5] => A[5].IN1
+A[6] => A[6].IN1
+A[7] => A[7].IN1
+A[8] => A[8].IN1
+A[9] => A[9].IN1
+A[10] => A[10].IN1
+A[11] => A[11].IN1
+A[12] => A[12].IN1
+A[13] => A[13].IN1
+A[14] => A[14].IN1
+A[15] => A[15].IN1
+A[16] => A[16].IN1
+A[17] => A[17].IN1
+A[18] => A[18].IN1
+A[19] => A[19].IN1
+A[20] => A[20].IN1
+A[21] => A[21].IN1
+A[22] => A[22].IN1
+A[23] => A[23].IN1
+A[24] => A[24].IN1
+A[25] => A[25].IN1
+A[26] => A[26].IN1
+A[27] => A[27].IN1
+A[28] => A[28].IN1
+A[29] => A[29].IN1
+A[30] => A[30].IN1
+A[31] => A[31].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+B[4] => B[4].IN1
+B[5] => B[5].IN1
+B[6] => B[6].IN1
+B[7] => B[7].IN1
+B[8] => B[8].IN1
+B[9] => B[9].IN1
+B[10] => B[10].IN1
+B[11] => B[11].IN1
+B[12] => B[12].IN1
+B[13] => B[13].IN1
+B[14] => B[14].IN1
+B[15] => B[15].IN1
+B[16] => B[16].IN1
+B[17] => B[17].IN1
+B[18] => B[18].IN1
+B[19] => B[19].IN1
+B[20] => B[20].IN1
+B[21] => B[21].IN1
+B[22] => B[22].IN1
+B[23] => B[23].IN1
+B[24] => B[24].IN1
+B[25] => B[25].IN1
+B[26] => B[26].IN1
+B[27] => B[27].IN1
+B[28] => B[28].IN1
+B[29] => B[29].IN1
+B[30] => B[30].IN1
+B[31] => B[31].IN1
+Y[0] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[1] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[2] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[3] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[4] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[5] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[6] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[7] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[8] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[9] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[10] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[11] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[12] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[13] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[14] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[15] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[16] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[17] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[18] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[19] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[20] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[21] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[22] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[23] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[24] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[25] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[26] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[27] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[28] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[29] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[30] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[31] <= THIRTYTWO_BIT_XOR:t_xor.port2
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|XOR32:t_xor|THIRTYTWO_BIT_XOR:t_xor
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+A[4] => A[4].IN1
+A[5] => A[5].IN1
+A[6] => A[6].IN1
+A[7] => A[7].IN1
+A[8] => A[8].IN1
+A[9] => A[9].IN1
+A[10] => A[10].IN1
+A[11] => A[11].IN1
+A[12] => A[12].IN1
+A[13] => A[13].IN1
+A[14] => A[14].IN1
+A[15] => A[15].IN1
+A[16] => A[16].IN1
+A[17] => A[17].IN1
+A[18] => A[18].IN1
+A[19] => A[19].IN1
+A[20] => A[20].IN1
+A[21] => A[21].IN1
+A[22] => A[22].IN1
+A[23] => A[23].IN1
+A[24] => A[24].IN1
+A[25] => A[25].IN1
+A[26] => A[26].IN1
+A[27] => A[27].IN1
+A[28] => A[28].IN1
+A[29] => A[29].IN1
+A[30] => A[30].IN1
+A[31] => A[31].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+B[4] => B[4].IN1
+B[5] => B[5].IN1
+B[6] => B[6].IN1
+B[7] => B[7].IN1
+B[8] => B[8].IN1
+B[9] => B[9].IN1
+B[10] => B[10].IN1
+B[11] => B[11].IN1
+B[12] => B[12].IN1
+B[13] => B[13].IN1
+B[14] => B[14].IN1
+B[15] => B[15].IN1
+B[16] => B[16].IN1
+B[17] => B[17].IN1
+B[18] => B[18].IN1
+B[19] => B[19].IN1
+B[20] => B[20].IN1
+B[21] => B[21].IN1
+B[22] => B[22].IN1
+B[23] => B[23].IN1
+B[24] => B[24].IN1
+B[25] => B[25].IN1
+B[26] => B[26].IN1
+B[27] => B[27].IN1
+B[28] => B[28].IN1
+B[29] => B[29].IN1
+B[30] => B[30].IN1
+B[31] => B[31].IN1
+Y[0] <= FOUR_BIT_XOR:xor0.port2
+Y[1] <= FOUR_BIT_XOR:xor0.port2
+Y[2] <= FOUR_BIT_XOR:xor0.port2
+Y[3] <= FOUR_BIT_XOR:xor0.port2
+Y[4] <= FOUR_BIT_XOR:xor1.port2
+Y[5] <= FOUR_BIT_XOR:xor1.port2
+Y[6] <= FOUR_BIT_XOR:xor1.port2
+Y[7] <= FOUR_BIT_XOR:xor1.port2
+Y[8] <= FOUR_BIT_XOR:xor2.port2
+Y[9] <= FOUR_BIT_XOR:xor2.port2
+Y[10] <= FOUR_BIT_XOR:xor2.port2
+Y[11] <= FOUR_BIT_XOR:xor2.port2
+Y[12] <= FOUR_BIT_XOR:xor3.port2
+Y[13] <= FOUR_BIT_XOR:xor3.port2
+Y[14] <= FOUR_BIT_XOR:xor3.port2
+Y[15] <= FOUR_BIT_XOR:xor3.port2
+Y[16] <= FOUR_BIT_XOR:xor4.port2
+Y[17] <= FOUR_BIT_XOR:xor4.port2
+Y[18] <= FOUR_BIT_XOR:xor4.port2
+Y[19] <= FOUR_BIT_XOR:xor4.port2
+Y[20] <= FOUR_BIT_XOR:xor5.port2
+Y[21] <= FOUR_BIT_XOR:xor5.port2
+Y[22] <= FOUR_BIT_XOR:xor5.port2
+Y[23] <= FOUR_BIT_XOR:xor5.port2
+Y[24] <= FOUR_BIT_XOR:xor6.port2
+Y[25] <= FOUR_BIT_XOR:xor6.port2
+Y[26] <= FOUR_BIT_XOR:xor6.port2
+Y[27] <= FOUR_BIT_XOR:xor6.port2
+Y[28] <= FOUR_BIT_XOR:xor7.port2
+Y[29] <= FOUR_BIT_XOR:xor7.port2
+Y[30] <= FOUR_BIT_XOR:xor7.port2
+Y[31] <= FOUR_BIT_XOR:xor7.port2
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|XOR32:t_xor|THIRTYTWO_BIT_XOR:t_xor|FOUR_BIT_XOR:xor0
+A[0] => xor0.IN0
+A[1] => xor1.IN0
+A[2] => xor2.IN0
+A[3] => xor3.IN0
+B[0] => xor0.IN1
+B[1] => xor1.IN1
+B[2] => xor2.IN1
+B[3] => xor3.IN1
+Y[0] <= xor0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= xor3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|XOR32:t_xor|THIRTYTWO_BIT_XOR:t_xor|FOUR_BIT_XOR:xor1
+A[0] => xor0.IN0
+A[1] => xor1.IN0
+A[2] => xor2.IN0
+A[3] => xor3.IN0
+B[0] => xor0.IN1
+B[1] => xor1.IN1
+B[2] => xor2.IN1
+B[3] => xor3.IN1
+Y[0] <= xor0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= xor3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|XOR32:t_xor|THIRTYTWO_BIT_XOR:t_xor|FOUR_BIT_XOR:xor2
+A[0] => xor0.IN0
+A[1] => xor1.IN0
+A[2] => xor2.IN0
+A[3] => xor3.IN0
+B[0] => xor0.IN1
+B[1] => xor1.IN1
+B[2] => xor2.IN1
+B[3] => xor3.IN1
+Y[0] <= xor0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= xor3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|XOR32:t_xor|THIRTYTWO_BIT_XOR:t_xor|FOUR_BIT_XOR:xor3
+A[0] => xor0.IN0
+A[1] => xor1.IN0
+A[2] => xor2.IN0
+A[3] => xor3.IN0
+B[0] => xor0.IN1
+B[1] => xor1.IN1
+B[2] => xor2.IN1
+B[3] => xor3.IN1
+Y[0] <= xor0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= xor3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|XOR32:t_xor|THIRTYTWO_BIT_XOR:t_xor|FOUR_BIT_XOR:xor4
+A[0] => xor0.IN0
+A[1] => xor1.IN0
+A[2] => xor2.IN0
+A[3] => xor3.IN0
+B[0] => xor0.IN1
+B[1] => xor1.IN1
+B[2] => xor2.IN1
+B[3] => xor3.IN1
+Y[0] <= xor0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= xor3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|XOR32:t_xor|THIRTYTWO_BIT_XOR:t_xor|FOUR_BIT_XOR:xor5
+A[0] => xor0.IN0
+A[1] => xor1.IN0
+A[2] => xor2.IN0
+A[3] => xor3.IN0
+B[0] => xor0.IN1
+B[1] => xor1.IN1
+B[2] => xor2.IN1
+B[3] => xor3.IN1
+Y[0] <= xor0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= xor3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|XOR32:t_xor|THIRTYTWO_BIT_XOR:t_xor|FOUR_BIT_XOR:xor6
+A[0] => xor0.IN0
+A[1] => xor1.IN0
+A[2] => xor2.IN0
+A[3] => xor3.IN0
+B[0] => xor0.IN1
+B[1] => xor1.IN1
+B[2] => xor2.IN1
+B[3] => xor3.IN1
+Y[0] <= xor0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= xor3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|XOR32:t_xor|THIRTYTWO_BIT_XOR:t_xor|FOUR_BIT_XOR:xor7
+A[0] => xor0.IN0
+A[1] => xor1.IN0
+A[2] => xor2.IN0
+A[3] => xor3.IN0
+B[0] => xor0.IN1
+B[1] => xor1.IN1
+B[2] => xor2.IN1
+B[3] => xor3.IN1
+Y[0] <= xor0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= xor3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+a[4] => a[4].IN1
+a[5] => a[5].IN1
+a[6] => a[6].IN1
+a[7] => a[7].IN1
+a[8] => a[8].IN1
+a[9] => a[9].IN1
+a[10] => a[10].IN1
+a[11] => a[11].IN1
+a[12] => a[12].IN1
+a[13] => a[13].IN1
+a[14] => a[14].IN1
+a[15] => a[15].IN1
+a[16] => a[16].IN1
+a[17] => a[17].IN1
+a[18] => a[18].IN1
+a[19] => a[19].IN1
+a[20] => a[20].IN1
+a[21] => a[21].IN1
+a[22] => a[22].IN1
+a[23] => a[23].IN1
+a[24] => a[24].IN1
+a[25] => a[25].IN1
+a[26] => a[26].IN1
+a[27] => a[27].IN1
+a[28] => a[28].IN1
+a[29] => a[29].IN1
+a[30] => a[30].IN1
+a[31] => a[31].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+b[4] => b[4].IN1
+b[5] => b[5].IN1
+b[6] => b[6].IN1
+b[7] => b[7].IN1
+b[8] => b[8].IN1
+b[9] => b[9].IN1
+b[10] => b[10].IN1
+b[11] => b[11].IN1
+b[12] => b[12].IN1
+b[13] => b[13].IN1
+b[14] => b[14].IN1
+b[15] => b[15].IN1
+b[16] => b[16].IN1
+b[17] => b[17].IN1
+b[18] => b[18].IN1
+b[19] => b[19].IN1
+b[20] => b[20].IN1
+b[21] => b[21].IN1
+b[22] => b[22].IN1
+b[23] => b[23].IN1
+b[24] => b[24].IN1
+b[25] => b[25].IN1
+b[26] => b[26].IN1
+b[27] => b[27].IN1
+b[28] => b[28].IN1
+b[29] => b[29].IN1
+b[30] => b[30].IN1
+b[31] => b[31].IN1
+cin => cin.IN1
+sum[0] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[1] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[2] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[3] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[4] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[5] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[6] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[7] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[8] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[9] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[10] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[11] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[12] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[13] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[14] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[15] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[16] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[17] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[18] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[19] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[20] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[21] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[22] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[23] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[24] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[25] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[26] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[27] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[28] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[29] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[30] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[31] <= THIRTYTWO_BIT_ADDER:adder.port3
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+a[4] => a[4].IN1
+a[5] => a[5].IN1
+a[6] => a[6].IN1
+a[7] => a[7].IN1
+a[8] => a[8].IN1
+a[9] => a[9].IN1
+a[10] => a[10].IN1
+a[11] => a[11].IN1
+a[12] => a[12].IN1
+a[13] => a[13].IN1
+a[14] => a[14].IN1
+a[15] => a[15].IN1
+a[16] => a[16].IN1
+a[17] => a[17].IN1
+a[18] => a[18].IN1
+a[19] => a[19].IN1
+a[20] => a[20].IN1
+a[21] => a[21].IN1
+a[22] => a[22].IN1
+a[23] => a[23].IN1
+a[24] => a[24].IN1
+a[25] => a[25].IN1
+a[26] => a[26].IN1
+a[27] => a[27].IN1
+a[28] => a[28].IN1
+a[29] => a[29].IN1
+a[30] => a[30].IN1
+a[31] => a[31].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+b[4] => b[4].IN1
+b[5] => b[5].IN1
+b[6] => b[6].IN1
+b[7] => b[7].IN1
+b[8] => b[8].IN1
+b[9] => b[9].IN1
+b[10] => b[10].IN1
+b[11] => b[11].IN1
+b[12] => b[12].IN1
+b[13] => b[13].IN1
+b[14] => b[14].IN1
+b[15] => b[15].IN1
+b[16] => b[16].IN1
+b[17] => b[17].IN1
+b[18] => b[18].IN1
+b[19] => b[19].IN1
+b[20] => b[20].IN1
+b[21] => b[21].IN1
+b[22] => b[22].IN1
+b[23] => b[23].IN1
+b[24] => b[24].IN1
+b[25] => b[25].IN1
+b[26] => b[26].IN1
+b[27] => b[27].IN1
+b[28] => b[28].IN1
+b[29] => b[29].IN1
+b[30] => b[30].IN1
+b[31] => b[31].IN1
+cin => cin.IN1
+sum[0] <= FOUR_BIT_ADDER:adder0.port3
+sum[1] <= FOUR_BIT_ADDER:adder0.port3
+sum[2] <= FOUR_BIT_ADDER:adder0.port3
+sum[3] <= FOUR_BIT_ADDER:adder0.port3
+sum[4] <= FOUR_BIT_ADDER:adder1.port3
+sum[5] <= FOUR_BIT_ADDER:adder1.port3
+sum[6] <= FOUR_BIT_ADDER:adder1.port3
+sum[7] <= FOUR_BIT_ADDER:adder1.port3
+sum[8] <= FOUR_BIT_ADDER:adder2.port3
+sum[9] <= FOUR_BIT_ADDER:adder2.port3
+sum[10] <= FOUR_BIT_ADDER:adder2.port3
+sum[11] <= FOUR_BIT_ADDER:adder2.port3
+sum[12] <= FOUR_BIT_ADDER:adder3.port3
+sum[13] <= FOUR_BIT_ADDER:adder3.port3
+sum[14] <= FOUR_BIT_ADDER:adder3.port3
+sum[15] <= FOUR_BIT_ADDER:adder3.port3
+sum[16] <= FOUR_BIT_ADDER:adder4.port3
+sum[17] <= FOUR_BIT_ADDER:adder4.port3
+sum[18] <= FOUR_BIT_ADDER:adder4.port3
+sum[19] <= FOUR_BIT_ADDER:adder4.port3
+sum[20] <= FOUR_BIT_ADDER:adder5.port3
+sum[21] <= FOUR_BIT_ADDER:adder5.port3
+sum[22] <= FOUR_BIT_ADDER:adder5.port3
+sum[23] <= FOUR_BIT_ADDER:adder5.port3
+sum[24] <= FOUR_BIT_ADDER:adder6.port3
+sum[25] <= FOUR_BIT_ADDER:adder6.port3
+sum[26] <= FOUR_BIT_ADDER:adder6.port3
+sum[27] <= FOUR_BIT_ADDER:adder6.port3
+sum[28] <= FOUR_BIT_ADDER:adder7.port3
+sum[29] <= FOUR_BIT_ADDER:adder7.port3
+sum[30] <= FOUR_BIT_ADDER:adder7.port3
+sum[31] <= FOUR_BIT_ADDER:adder7.port3
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder0
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+cin => cin.IN1
+sum[0] <= ONE_BIT_ADDER:adder0.port3
+sum[1] <= ONE_BIT_ADDER:adder1.port3
+sum[2] <= ONE_BIT_ADDER:adder2.port3
+sum[3] <= ONE_BIT_ADDER:adder3.port3
+cout <= ONE_BIT_ADDER:adder3.port4
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder0|ONE_BIT_ADDER:adder0
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder0|ONE_BIT_ADDER:adder1
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder0|ONE_BIT_ADDER:adder2
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder0|ONE_BIT_ADDER:adder3
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder1
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+cin => cin.IN1
+sum[0] <= ONE_BIT_ADDER:adder0.port3
+sum[1] <= ONE_BIT_ADDER:adder1.port3
+sum[2] <= ONE_BIT_ADDER:adder2.port3
+sum[3] <= ONE_BIT_ADDER:adder3.port3
+cout <= ONE_BIT_ADDER:adder3.port4
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder1|ONE_BIT_ADDER:adder0
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder1|ONE_BIT_ADDER:adder1
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder1|ONE_BIT_ADDER:adder2
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder1|ONE_BIT_ADDER:adder3
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder2
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+cin => cin.IN1
+sum[0] <= ONE_BIT_ADDER:adder0.port3
+sum[1] <= ONE_BIT_ADDER:adder1.port3
+sum[2] <= ONE_BIT_ADDER:adder2.port3
+sum[3] <= ONE_BIT_ADDER:adder3.port3
+cout <= ONE_BIT_ADDER:adder3.port4
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder2|ONE_BIT_ADDER:adder0
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder2|ONE_BIT_ADDER:adder1
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder2|ONE_BIT_ADDER:adder2
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder2|ONE_BIT_ADDER:adder3
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder3
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+cin => cin.IN1
+sum[0] <= ONE_BIT_ADDER:adder0.port3
+sum[1] <= ONE_BIT_ADDER:adder1.port3
+sum[2] <= ONE_BIT_ADDER:adder2.port3
+sum[3] <= ONE_BIT_ADDER:adder3.port3
+cout <= ONE_BIT_ADDER:adder3.port4
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder3|ONE_BIT_ADDER:adder0
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder3|ONE_BIT_ADDER:adder1
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder3|ONE_BIT_ADDER:adder2
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder3|ONE_BIT_ADDER:adder3
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder4
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+cin => cin.IN1
+sum[0] <= ONE_BIT_ADDER:adder0.port3
+sum[1] <= ONE_BIT_ADDER:adder1.port3
+sum[2] <= ONE_BIT_ADDER:adder2.port3
+sum[3] <= ONE_BIT_ADDER:adder3.port3
+cout <= ONE_BIT_ADDER:adder3.port4
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder4|ONE_BIT_ADDER:adder0
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder4|ONE_BIT_ADDER:adder1
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder4|ONE_BIT_ADDER:adder2
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder4|ONE_BIT_ADDER:adder3
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder5
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+cin => cin.IN1
+sum[0] <= ONE_BIT_ADDER:adder0.port3
+sum[1] <= ONE_BIT_ADDER:adder1.port3
+sum[2] <= ONE_BIT_ADDER:adder2.port3
+sum[3] <= ONE_BIT_ADDER:adder3.port3
+cout <= ONE_BIT_ADDER:adder3.port4
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder5|ONE_BIT_ADDER:adder0
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder5|ONE_BIT_ADDER:adder1
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder5|ONE_BIT_ADDER:adder2
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder5|ONE_BIT_ADDER:adder3
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder6
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+cin => cin.IN1
+sum[0] <= ONE_BIT_ADDER:adder0.port3
+sum[1] <= ONE_BIT_ADDER:adder1.port3
+sum[2] <= ONE_BIT_ADDER:adder2.port3
+sum[3] <= ONE_BIT_ADDER:adder3.port3
+cout <= ONE_BIT_ADDER:adder3.port4
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder6|ONE_BIT_ADDER:adder0
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder6|ONE_BIT_ADDER:adder1
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder6|ONE_BIT_ADDER:adder2
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder6|ONE_BIT_ADDER:adder3
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder7
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+cin => cin.IN1
+sum[0] <= ONE_BIT_ADDER:adder0.port3
+sum[1] <= ONE_BIT_ADDER:adder1.port3
+sum[2] <= ONE_BIT_ADDER:adder2.port3
+sum[3] <= ONE_BIT_ADDER:adder3.port3
+cout <= ONE_BIT_ADDER:adder3.port4
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder7|ONE_BIT_ADDER:adder0
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder7|ONE_BIT_ADDER:adder1
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder7|ONE_BIT_ADDER:adder2
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SUBTRACTOR:a2|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder7|ONE_BIT_ADDER:adder3
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|AND32:a3
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+A[4] => A[4].IN1
+A[5] => A[5].IN1
+A[6] => A[6].IN1
+A[7] => A[7].IN1
+A[8] => A[8].IN1
+A[9] => A[9].IN1
+A[10] => A[10].IN1
+A[11] => A[11].IN1
+A[12] => A[12].IN1
+A[13] => A[13].IN1
+A[14] => A[14].IN1
+A[15] => A[15].IN1
+A[16] => A[16].IN1
+A[17] => A[17].IN1
+A[18] => A[18].IN1
+A[19] => A[19].IN1
+A[20] => A[20].IN1
+A[21] => A[21].IN1
+A[22] => A[22].IN1
+A[23] => A[23].IN1
+A[24] => A[24].IN1
+A[25] => A[25].IN1
+A[26] => A[26].IN1
+A[27] => A[27].IN1
+A[28] => A[28].IN1
+A[29] => A[29].IN1
+A[30] => A[30].IN1
+A[31] => A[31].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+B[4] => B[4].IN1
+B[5] => B[5].IN1
+B[6] => B[6].IN1
+B[7] => B[7].IN1
+B[8] => B[8].IN1
+B[9] => B[9].IN1
+B[10] => B[10].IN1
+B[11] => B[11].IN1
+B[12] => B[12].IN1
+B[13] => B[13].IN1
+B[14] => B[14].IN1
+B[15] => B[15].IN1
+B[16] => B[16].IN1
+B[17] => B[17].IN1
+B[18] => B[18].IN1
+B[19] => B[19].IN1
+B[20] => B[20].IN1
+B[21] => B[21].IN1
+B[22] => B[22].IN1
+B[23] => B[23].IN1
+B[24] => B[24].IN1
+B[25] => B[25].IN1
+B[26] => B[26].IN1
+B[27] => B[27].IN1
+B[28] => B[28].IN1
+B[29] => B[29].IN1
+B[30] => B[30].IN1
+B[31] => B[31].IN1
+Y[0] <= THIRTYTWO_BIT_AND:t_and.port2
+Y[1] <= THIRTYTWO_BIT_AND:t_and.port2
+Y[2] <= THIRTYTWO_BIT_AND:t_and.port2
+Y[3] <= THIRTYTWO_BIT_AND:t_and.port2
+Y[4] <= THIRTYTWO_BIT_AND:t_and.port2
+Y[5] <= THIRTYTWO_BIT_AND:t_and.port2
+Y[6] <= THIRTYTWO_BIT_AND:t_and.port2
+Y[7] <= THIRTYTWO_BIT_AND:t_and.port2
+Y[8] <= THIRTYTWO_BIT_AND:t_and.port2
+Y[9] <= THIRTYTWO_BIT_AND:t_and.port2
+Y[10] <= THIRTYTWO_BIT_AND:t_and.port2
+Y[11] <= THIRTYTWO_BIT_AND:t_and.port2
+Y[12] <= THIRTYTWO_BIT_AND:t_and.port2
+Y[13] <= THIRTYTWO_BIT_AND:t_and.port2
+Y[14] <= THIRTYTWO_BIT_AND:t_and.port2
+Y[15] <= THIRTYTWO_BIT_AND:t_and.port2
+Y[16] <= THIRTYTWO_BIT_AND:t_and.port2
+Y[17] <= THIRTYTWO_BIT_AND:t_and.port2
+Y[18] <= THIRTYTWO_BIT_AND:t_and.port2
+Y[19] <= THIRTYTWO_BIT_AND:t_and.port2
+Y[20] <= THIRTYTWO_BIT_AND:t_and.port2
+Y[21] <= THIRTYTWO_BIT_AND:t_and.port2
+Y[22] <= THIRTYTWO_BIT_AND:t_and.port2
+Y[23] <= THIRTYTWO_BIT_AND:t_and.port2
+Y[24] <= THIRTYTWO_BIT_AND:t_and.port2
+Y[25] <= THIRTYTWO_BIT_AND:t_and.port2
+Y[26] <= THIRTYTWO_BIT_AND:t_and.port2
+Y[27] <= THIRTYTWO_BIT_AND:t_and.port2
+Y[28] <= THIRTYTWO_BIT_AND:t_and.port2
+Y[29] <= THIRTYTWO_BIT_AND:t_and.port2
+Y[30] <= THIRTYTWO_BIT_AND:t_and.port2
+Y[31] <= THIRTYTWO_BIT_AND:t_and.port2
+
+
+|ALU32|AND32:a3|THIRTYTWO_BIT_AND:t_and
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+A[4] => A[4].IN1
+A[5] => A[5].IN1
+A[6] => A[6].IN1
+A[7] => A[7].IN1
+A[8] => A[8].IN1
+A[9] => A[9].IN1
+A[10] => A[10].IN1
+A[11] => A[11].IN1
+A[12] => A[12].IN1
+A[13] => A[13].IN1
+A[14] => A[14].IN1
+A[15] => A[15].IN1
+A[16] => A[16].IN1
+A[17] => A[17].IN1
+A[18] => A[18].IN1
+A[19] => A[19].IN1
+A[20] => A[20].IN1
+A[21] => A[21].IN1
+A[22] => A[22].IN1
+A[23] => A[23].IN1
+A[24] => A[24].IN1
+A[25] => A[25].IN1
+A[26] => A[26].IN1
+A[27] => A[27].IN1
+A[28] => A[28].IN1
+A[29] => A[29].IN1
+A[30] => A[30].IN1
+A[31] => A[31].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+B[4] => B[4].IN1
+B[5] => B[5].IN1
+B[6] => B[6].IN1
+B[7] => B[7].IN1
+B[8] => B[8].IN1
+B[9] => B[9].IN1
+B[10] => B[10].IN1
+B[11] => B[11].IN1
+B[12] => B[12].IN1
+B[13] => B[13].IN1
+B[14] => B[14].IN1
+B[15] => B[15].IN1
+B[16] => B[16].IN1
+B[17] => B[17].IN1
+B[18] => B[18].IN1
+B[19] => B[19].IN1
+B[20] => B[20].IN1
+B[21] => B[21].IN1
+B[22] => B[22].IN1
+B[23] => B[23].IN1
+B[24] => B[24].IN1
+B[25] => B[25].IN1
+B[26] => B[26].IN1
+B[27] => B[27].IN1
+B[28] => B[28].IN1
+B[29] => B[29].IN1
+B[30] => B[30].IN1
+B[31] => B[31].IN1
+Y[0] <= FOUR_BIT_AND:and0.port2
+Y[1] <= FOUR_BIT_AND:and0.port2
+Y[2] <= FOUR_BIT_AND:and0.port2
+Y[3] <= FOUR_BIT_AND:and0.port2
+Y[4] <= FOUR_BIT_AND:and1.port2
+Y[5] <= FOUR_BIT_AND:and1.port2
+Y[6] <= FOUR_BIT_AND:and1.port2
+Y[7] <= FOUR_BIT_AND:and1.port2
+Y[8] <= FOUR_BIT_AND:and2.port2
+Y[9] <= FOUR_BIT_AND:and2.port2
+Y[10] <= FOUR_BIT_AND:and2.port2
+Y[11] <= FOUR_BIT_AND:and2.port2
+Y[12] <= FOUR_BIT_AND:and3.port2
+Y[13] <= FOUR_BIT_AND:and3.port2
+Y[14] <= FOUR_BIT_AND:and3.port2
+Y[15] <= FOUR_BIT_AND:and3.port2
+Y[16] <= FOUR_BIT_AND:and4.port2
+Y[17] <= FOUR_BIT_AND:and4.port2
+Y[18] <= FOUR_BIT_AND:and4.port2
+Y[19] <= FOUR_BIT_AND:and4.port2
+Y[20] <= FOUR_BIT_AND:and5.port2
+Y[21] <= FOUR_BIT_AND:and5.port2
+Y[22] <= FOUR_BIT_AND:and5.port2
+Y[23] <= FOUR_BIT_AND:and5.port2
+Y[24] <= FOUR_BIT_AND:and6.port2
+Y[25] <= FOUR_BIT_AND:and6.port2
+Y[26] <= FOUR_BIT_AND:and6.port2
+Y[27] <= FOUR_BIT_AND:and6.port2
+Y[28] <= FOUR_BIT_AND:and7.port2
+Y[29] <= FOUR_BIT_AND:and7.port2
+Y[30] <= FOUR_BIT_AND:and7.port2
+Y[31] <= FOUR_BIT_AND:and7.port2
+
+
+|ALU32|AND32:a3|THIRTYTWO_BIT_AND:t_and|FOUR_BIT_AND:and0
+A[0] => and0.IN0
+A[1] => and1.IN0
+A[2] => and2.IN0
+A[3] => and3.IN0
+B[0] => and0.IN1
+B[1] => and1.IN1
+B[2] => and2.IN1
+B[3] => and3.IN1
+Y[0] <= and0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= and1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= and2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= and3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|AND32:a3|THIRTYTWO_BIT_AND:t_and|FOUR_BIT_AND:and1
+A[0] => and0.IN0
+A[1] => and1.IN0
+A[2] => and2.IN0
+A[3] => and3.IN0
+B[0] => and0.IN1
+B[1] => and1.IN1
+B[2] => and2.IN1
+B[3] => and3.IN1
+Y[0] <= and0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= and1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= and2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= and3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|AND32:a3|THIRTYTWO_BIT_AND:t_and|FOUR_BIT_AND:and2
+A[0] => and0.IN0
+A[1] => and1.IN0
+A[2] => and2.IN0
+A[3] => and3.IN0
+B[0] => and0.IN1
+B[1] => and1.IN1
+B[2] => and2.IN1
+B[3] => and3.IN1
+Y[0] <= and0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= and1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= and2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= and3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|AND32:a3|THIRTYTWO_BIT_AND:t_and|FOUR_BIT_AND:and3
+A[0] => and0.IN0
+A[1] => and1.IN0
+A[2] => and2.IN0
+A[3] => and3.IN0
+B[0] => and0.IN1
+B[1] => and1.IN1
+B[2] => and2.IN1
+B[3] => and3.IN1
+Y[0] <= and0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= and1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= and2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= and3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|AND32:a3|THIRTYTWO_BIT_AND:t_and|FOUR_BIT_AND:and4
+A[0] => and0.IN0
+A[1] => and1.IN0
+A[2] => and2.IN0
+A[3] => and3.IN0
+B[0] => and0.IN1
+B[1] => and1.IN1
+B[2] => and2.IN1
+B[3] => and3.IN1
+Y[0] <= and0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= and1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= and2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= and3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|AND32:a3|THIRTYTWO_BIT_AND:t_and|FOUR_BIT_AND:and5
+A[0] => and0.IN0
+A[1] => and1.IN0
+A[2] => and2.IN0
+A[3] => and3.IN0
+B[0] => and0.IN1
+B[1] => and1.IN1
+B[2] => and2.IN1
+B[3] => and3.IN1
+Y[0] <= and0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= and1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= and2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= and3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|AND32:a3|THIRTYTWO_BIT_AND:t_and|FOUR_BIT_AND:and6
+A[0] => and0.IN0
+A[1] => and1.IN0
+A[2] => and2.IN0
+A[3] => and3.IN0
+B[0] => and0.IN1
+B[1] => and1.IN1
+B[2] => and2.IN1
+B[3] => and3.IN1
+Y[0] <= and0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= and1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= and2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= and3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|AND32:a3|THIRTYTWO_BIT_AND:t_and|FOUR_BIT_AND:and7
+A[0] => and0.IN0
+A[1] => and1.IN0
+A[2] => and2.IN0
+A[3] => and3.IN0
+B[0] => and0.IN1
+B[1] => and1.IN1
+B[2] => and2.IN1
+B[3] => and3.IN1
+Y[0] <= and0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= and1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= and2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= and3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|OR32:a4
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+A[4] => A[4].IN1
+A[5] => A[5].IN1
+A[6] => A[6].IN1
+A[7] => A[7].IN1
+A[8] => A[8].IN1
+A[9] => A[9].IN1
+A[10] => A[10].IN1
+A[11] => A[11].IN1
+A[12] => A[12].IN1
+A[13] => A[13].IN1
+A[14] => A[14].IN1
+A[15] => A[15].IN1
+A[16] => A[16].IN1
+A[17] => A[17].IN1
+A[18] => A[18].IN1
+A[19] => A[19].IN1
+A[20] => A[20].IN1
+A[21] => A[21].IN1
+A[22] => A[22].IN1
+A[23] => A[23].IN1
+A[24] => A[24].IN1
+A[25] => A[25].IN1
+A[26] => A[26].IN1
+A[27] => A[27].IN1
+A[28] => A[28].IN1
+A[29] => A[29].IN1
+A[30] => A[30].IN1
+A[31] => A[31].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+B[4] => B[4].IN1
+B[5] => B[5].IN1
+B[6] => B[6].IN1
+B[7] => B[7].IN1
+B[8] => B[8].IN1
+B[9] => B[9].IN1
+B[10] => B[10].IN1
+B[11] => B[11].IN1
+B[12] => B[12].IN1
+B[13] => B[13].IN1
+B[14] => B[14].IN1
+B[15] => B[15].IN1
+B[16] => B[16].IN1
+B[17] => B[17].IN1
+B[18] => B[18].IN1
+B[19] => B[19].IN1
+B[20] => B[20].IN1
+B[21] => B[21].IN1
+B[22] => B[22].IN1
+B[23] => B[23].IN1
+B[24] => B[24].IN1
+B[25] => B[25].IN1
+B[26] => B[26].IN1
+B[27] => B[27].IN1
+B[28] => B[28].IN1
+B[29] => B[29].IN1
+B[30] => B[30].IN1
+B[31] => B[31].IN1
+Y[0] <= THIRTYTWO_BIT_OR:t_or.port2
+Y[1] <= THIRTYTWO_BIT_OR:t_or.port2
+Y[2] <= THIRTYTWO_BIT_OR:t_or.port2
+Y[3] <= THIRTYTWO_BIT_OR:t_or.port2
+Y[4] <= THIRTYTWO_BIT_OR:t_or.port2
+Y[5] <= THIRTYTWO_BIT_OR:t_or.port2
+Y[6] <= THIRTYTWO_BIT_OR:t_or.port2
+Y[7] <= THIRTYTWO_BIT_OR:t_or.port2
+Y[8] <= THIRTYTWO_BIT_OR:t_or.port2
+Y[9] <= THIRTYTWO_BIT_OR:t_or.port2
+Y[10] <= THIRTYTWO_BIT_OR:t_or.port2
+Y[11] <= THIRTYTWO_BIT_OR:t_or.port2
+Y[12] <= THIRTYTWO_BIT_OR:t_or.port2
+Y[13] <= THIRTYTWO_BIT_OR:t_or.port2
+Y[14] <= THIRTYTWO_BIT_OR:t_or.port2
+Y[15] <= THIRTYTWO_BIT_OR:t_or.port2
+Y[16] <= THIRTYTWO_BIT_OR:t_or.port2
+Y[17] <= THIRTYTWO_BIT_OR:t_or.port2
+Y[18] <= THIRTYTWO_BIT_OR:t_or.port2
+Y[19] <= THIRTYTWO_BIT_OR:t_or.port2
+Y[20] <= THIRTYTWO_BIT_OR:t_or.port2
+Y[21] <= THIRTYTWO_BIT_OR:t_or.port2
+Y[22] <= THIRTYTWO_BIT_OR:t_or.port2
+Y[23] <= THIRTYTWO_BIT_OR:t_or.port2
+Y[24] <= THIRTYTWO_BIT_OR:t_or.port2
+Y[25] <= THIRTYTWO_BIT_OR:t_or.port2
+Y[26] <= THIRTYTWO_BIT_OR:t_or.port2
+Y[27] <= THIRTYTWO_BIT_OR:t_or.port2
+Y[28] <= THIRTYTWO_BIT_OR:t_or.port2
+Y[29] <= THIRTYTWO_BIT_OR:t_or.port2
+Y[30] <= THIRTYTWO_BIT_OR:t_or.port2
+Y[31] <= THIRTYTWO_BIT_OR:t_or.port2
+
+
+|ALU32|OR32:a4|THIRTYTWO_BIT_OR:t_or
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+A[4] => A[4].IN1
+A[5] => A[5].IN1
+A[6] => A[6].IN1
+A[7] => A[7].IN1
+A[8] => A[8].IN1
+A[9] => A[9].IN1
+A[10] => A[10].IN1
+A[11] => A[11].IN1
+A[12] => A[12].IN1
+A[13] => A[13].IN1
+A[14] => A[14].IN1
+A[15] => A[15].IN1
+A[16] => A[16].IN1
+A[17] => A[17].IN1
+A[18] => A[18].IN1
+A[19] => A[19].IN1
+A[20] => A[20].IN1
+A[21] => A[21].IN1
+A[22] => A[22].IN1
+A[23] => A[23].IN1
+A[24] => A[24].IN1
+A[25] => A[25].IN1
+A[26] => A[26].IN1
+A[27] => A[27].IN1
+A[28] => A[28].IN1
+A[29] => A[29].IN1
+A[30] => A[30].IN1
+A[31] => A[31].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+B[4] => B[4].IN1
+B[5] => B[5].IN1
+B[6] => B[6].IN1
+B[7] => B[7].IN1
+B[8] => B[8].IN1
+B[9] => B[9].IN1
+B[10] => B[10].IN1
+B[11] => B[11].IN1
+B[12] => B[12].IN1
+B[13] => B[13].IN1
+B[14] => B[14].IN1
+B[15] => B[15].IN1
+B[16] => B[16].IN1
+B[17] => B[17].IN1
+B[18] => B[18].IN1
+B[19] => B[19].IN1
+B[20] => B[20].IN1
+B[21] => B[21].IN1
+B[22] => B[22].IN1
+B[23] => B[23].IN1
+B[24] => B[24].IN1
+B[25] => B[25].IN1
+B[26] => B[26].IN1
+B[27] => B[27].IN1
+B[28] => B[28].IN1
+B[29] => B[29].IN1
+B[30] => B[30].IN1
+B[31] => B[31].IN1
+Y[0] <= FOUR_BIT_OR:or0.port2
+Y[1] <= FOUR_BIT_OR:or0.port2
+Y[2] <= FOUR_BIT_OR:or0.port2
+Y[3] <= FOUR_BIT_OR:or0.port2
+Y[4] <= FOUR_BIT_OR:or1.port2
+Y[5] <= FOUR_BIT_OR:or1.port2
+Y[6] <= FOUR_BIT_OR:or1.port2
+Y[7] <= FOUR_BIT_OR:or1.port2
+Y[8] <= FOUR_BIT_OR:or2.port2
+Y[9] <= FOUR_BIT_OR:or2.port2
+Y[10] <= FOUR_BIT_OR:or2.port2
+Y[11] <= FOUR_BIT_OR:or2.port2
+Y[12] <= FOUR_BIT_OR:or3.port2
+Y[13] <= FOUR_BIT_OR:or3.port2
+Y[14] <= FOUR_BIT_OR:or3.port2
+Y[15] <= FOUR_BIT_OR:or3.port2
+Y[16] <= FOUR_BIT_OR:or4.port2
+Y[17] <= FOUR_BIT_OR:or4.port2
+Y[18] <= FOUR_BIT_OR:or4.port2
+Y[19] <= FOUR_BIT_OR:or4.port2
+Y[20] <= FOUR_BIT_OR:or5.port2
+Y[21] <= FOUR_BIT_OR:or5.port2
+Y[22] <= FOUR_BIT_OR:or5.port2
+Y[23] <= FOUR_BIT_OR:or5.port2
+Y[24] <= FOUR_BIT_OR:or6.port2
+Y[25] <= FOUR_BIT_OR:or6.port2
+Y[26] <= FOUR_BIT_OR:or6.port2
+Y[27] <= FOUR_BIT_OR:or6.port2
+Y[28] <= FOUR_BIT_OR:or7.port2
+Y[29] <= FOUR_BIT_OR:or7.port2
+Y[30] <= FOUR_BIT_OR:or7.port2
+Y[31] <= FOUR_BIT_OR:or7.port2
+
+
+|ALU32|OR32:a4|THIRTYTWO_BIT_OR:t_or|FOUR_BIT_OR:or0
+A[0] => or0.IN0
+A[1] => or1.IN0
+A[2] => or2.IN0
+A[3] => or3.IN0
+B[0] => or0.IN1
+B[1] => or1.IN1
+B[2] => or2.IN1
+B[3] => or3.IN1
+Y[0] <= or0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= or1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= or2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= or3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|OR32:a4|THIRTYTWO_BIT_OR:t_or|FOUR_BIT_OR:or1
+A[0] => or0.IN0
+A[1] => or1.IN0
+A[2] => or2.IN0
+A[3] => or3.IN0
+B[0] => or0.IN1
+B[1] => or1.IN1
+B[2] => or2.IN1
+B[3] => or3.IN1
+Y[0] <= or0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= or1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= or2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= or3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|OR32:a4|THIRTYTWO_BIT_OR:t_or|FOUR_BIT_OR:or2
+A[0] => or0.IN0
+A[1] => or1.IN0
+A[2] => or2.IN0
+A[3] => or3.IN0
+B[0] => or0.IN1
+B[1] => or1.IN1
+B[2] => or2.IN1
+B[3] => or3.IN1
+Y[0] <= or0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= or1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= or2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= or3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|OR32:a4|THIRTYTWO_BIT_OR:t_or|FOUR_BIT_OR:or3
+A[0] => or0.IN0
+A[1] => or1.IN0
+A[2] => or2.IN0
+A[3] => or3.IN0
+B[0] => or0.IN1
+B[1] => or1.IN1
+B[2] => or2.IN1
+B[3] => or3.IN1
+Y[0] <= or0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= or1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= or2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= or3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|OR32:a4|THIRTYTWO_BIT_OR:t_or|FOUR_BIT_OR:or4
+A[0] => or0.IN0
+A[1] => or1.IN0
+A[2] => or2.IN0
+A[3] => or3.IN0
+B[0] => or0.IN1
+B[1] => or1.IN1
+B[2] => or2.IN1
+B[3] => or3.IN1
+Y[0] <= or0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= or1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= or2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= or3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|OR32:a4|THIRTYTWO_BIT_OR:t_or|FOUR_BIT_OR:or5
+A[0] => or0.IN0
+A[1] => or1.IN0
+A[2] => or2.IN0
+A[3] => or3.IN0
+B[0] => or0.IN1
+B[1] => or1.IN1
+B[2] => or2.IN1
+B[3] => or3.IN1
+Y[0] <= or0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= or1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= or2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= or3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|OR32:a4|THIRTYTWO_BIT_OR:t_or|FOUR_BIT_OR:or6
+A[0] => or0.IN0
+A[1] => or1.IN0
+A[2] => or2.IN0
+A[3] => or3.IN0
+B[0] => or0.IN1
+B[1] => or1.IN1
+B[2] => or2.IN1
+B[3] => or3.IN1
+Y[0] <= or0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= or1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= or2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= or3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|OR32:a4|THIRTYTWO_BIT_OR:t_or|FOUR_BIT_OR:or7
+A[0] => or0.IN0
+A[1] => or1.IN0
+A[2] => or2.IN0
+A[3] => or3.IN0
+B[0] => or0.IN1
+B[1] => or1.IN1
+B[2] => or2.IN1
+B[3] => or3.IN1
+Y[0] <= or0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= or1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= or2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= or3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|NOR32:a5
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+A[4] => A[4].IN1
+A[5] => A[5].IN1
+A[6] => A[6].IN1
+A[7] => A[7].IN1
+A[8] => A[8].IN1
+A[9] => A[9].IN1
+A[10] => A[10].IN1
+A[11] => A[11].IN1
+A[12] => A[12].IN1
+A[13] => A[13].IN1
+A[14] => A[14].IN1
+A[15] => A[15].IN1
+A[16] => A[16].IN1
+A[17] => A[17].IN1
+A[18] => A[18].IN1
+A[19] => A[19].IN1
+A[20] => A[20].IN1
+A[21] => A[21].IN1
+A[22] => A[22].IN1
+A[23] => A[23].IN1
+A[24] => A[24].IN1
+A[25] => A[25].IN1
+A[26] => A[26].IN1
+A[27] => A[27].IN1
+A[28] => A[28].IN1
+A[29] => A[29].IN1
+A[30] => A[30].IN1
+A[31] => A[31].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+B[4] => B[4].IN1
+B[5] => B[5].IN1
+B[6] => B[6].IN1
+B[7] => B[7].IN1
+B[8] => B[8].IN1
+B[9] => B[9].IN1
+B[10] => B[10].IN1
+B[11] => B[11].IN1
+B[12] => B[12].IN1
+B[13] => B[13].IN1
+B[14] => B[14].IN1
+B[15] => B[15].IN1
+B[16] => B[16].IN1
+B[17] => B[17].IN1
+B[18] => B[18].IN1
+B[19] => B[19].IN1
+B[20] => B[20].IN1
+B[21] => B[21].IN1
+B[22] => B[22].IN1
+B[23] => B[23].IN1
+B[24] => B[24].IN1
+B[25] => B[25].IN1
+B[26] => B[26].IN1
+B[27] => B[27].IN1
+B[28] => B[28].IN1
+B[29] => B[29].IN1
+B[30] => B[30].IN1
+B[31] => B[31].IN1
+Y[0] <= THIRTYTWO_BIT_NOR:t_nor.port2
+Y[1] <= THIRTYTWO_BIT_NOR:t_nor.port2
+Y[2] <= THIRTYTWO_BIT_NOR:t_nor.port2
+Y[3] <= THIRTYTWO_BIT_NOR:t_nor.port2
+Y[4] <= THIRTYTWO_BIT_NOR:t_nor.port2
+Y[5] <= THIRTYTWO_BIT_NOR:t_nor.port2
+Y[6] <= THIRTYTWO_BIT_NOR:t_nor.port2
+Y[7] <= THIRTYTWO_BIT_NOR:t_nor.port2
+Y[8] <= THIRTYTWO_BIT_NOR:t_nor.port2
+Y[9] <= THIRTYTWO_BIT_NOR:t_nor.port2
+Y[10] <= THIRTYTWO_BIT_NOR:t_nor.port2
+Y[11] <= THIRTYTWO_BIT_NOR:t_nor.port2
+Y[12] <= THIRTYTWO_BIT_NOR:t_nor.port2
+Y[13] <= THIRTYTWO_BIT_NOR:t_nor.port2
+Y[14] <= THIRTYTWO_BIT_NOR:t_nor.port2
+Y[15] <= THIRTYTWO_BIT_NOR:t_nor.port2
+Y[16] <= THIRTYTWO_BIT_NOR:t_nor.port2
+Y[17] <= THIRTYTWO_BIT_NOR:t_nor.port2
+Y[18] <= THIRTYTWO_BIT_NOR:t_nor.port2
+Y[19] <= THIRTYTWO_BIT_NOR:t_nor.port2
+Y[20] <= THIRTYTWO_BIT_NOR:t_nor.port2
+Y[21] <= THIRTYTWO_BIT_NOR:t_nor.port2
+Y[22] <= THIRTYTWO_BIT_NOR:t_nor.port2
+Y[23] <= THIRTYTWO_BIT_NOR:t_nor.port2
+Y[24] <= THIRTYTWO_BIT_NOR:t_nor.port2
+Y[25] <= THIRTYTWO_BIT_NOR:t_nor.port2
+Y[26] <= THIRTYTWO_BIT_NOR:t_nor.port2
+Y[27] <= THIRTYTWO_BIT_NOR:t_nor.port2
+Y[28] <= THIRTYTWO_BIT_NOR:t_nor.port2
+Y[29] <= THIRTYTWO_BIT_NOR:t_nor.port2
+Y[30] <= THIRTYTWO_BIT_NOR:t_nor.port2
+Y[31] <= THIRTYTWO_BIT_NOR:t_nor.port2
+
+
+|ALU32|NOR32:a5|THIRTYTWO_BIT_NOR:t_nor
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+A[4] => A[4].IN1
+A[5] => A[5].IN1
+A[6] => A[6].IN1
+A[7] => A[7].IN1
+A[8] => A[8].IN1
+A[9] => A[9].IN1
+A[10] => A[10].IN1
+A[11] => A[11].IN1
+A[12] => A[12].IN1
+A[13] => A[13].IN1
+A[14] => A[14].IN1
+A[15] => A[15].IN1
+A[16] => A[16].IN1
+A[17] => A[17].IN1
+A[18] => A[18].IN1
+A[19] => A[19].IN1
+A[20] => A[20].IN1
+A[21] => A[21].IN1
+A[22] => A[22].IN1
+A[23] => A[23].IN1
+A[24] => A[24].IN1
+A[25] => A[25].IN1
+A[26] => A[26].IN1
+A[27] => A[27].IN1
+A[28] => A[28].IN1
+A[29] => A[29].IN1
+A[30] => A[30].IN1
+A[31] => A[31].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+B[4] => B[4].IN1
+B[5] => B[5].IN1
+B[6] => B[6].IN1
+B[7] => B[7].IN1
+B[8] => B[8].IN1
+B[9] => B[9].IN1
+B[10] => B[10].IN1
+B[11] => B[11].IN1
+B[12] => B[12].IN1
+B[13] => B[13].IN1
+B[14] => B[14].IN1
+B[15] => B[15].IN1
+B[16] => B[16].IN1
+B[17] => B[17].IN1
+B[18] => B[18].IN1
+B[19] => B[19].IN1
+B[20] => B[20].IN1
+B[21] => B[21].IN1
+B[22] => B[22].IN1
+B[23] => B[23].IN1
+B[24] => B[24].IN1
+B[25] => B[25].IN1
+B[26] => B[26].IN1
+B[27] => B[27].IN1
+B[28] => B[28].IN1
+B[29] => B[29].IN1
+B[30] => B[30].IN1
+B[31] => B[31].IN1
+Y[0] <= FOUR_BIT_NOR:nor0.port2
+Y[1] <= FOUR_BIT_NOR:nor0.port2
+Y[2] <= FOUR_BIT_NOR:nor0.port2
+Y[3] <= FOUR_BIT_NOR:nor0.port2
+Y[4] <= FOUR_BIT_NOR:nor1.port2
+Y[5] <= FOUR_BIT_NOR:nor1.port2
+Y[6] <= FOUR_BIT_NOR:nor1.port2
+Y[7] <= FOUR_BIT_NOR:nor1.port2
+Y[8] <= FOUR_BIT_NOR:nor2.port2
+Y[9] <= FOUR_BIT_NOR:nor2.port2
+Y[10] <= FOUR_BIT_NOR:nor2.port2
+Y[11] <= FOUR_BIT_NOR:nor2.port2
+Y[12] <= FOUR_BIT_NOR:nor3.port2
+Y[13] <= FOUR_BIT_NOR:nor3.port2
+Y[14] <= FOUR_BIT_NOR:nor3.port2
+Y[15] <= FOUR_BIT_NOR:nor3.port2
+Y[16] <= FOUR_BIT_NOR:nor4.port2
+Y[17] <= FOUR_BIT_NOR:nor4.port2
+Y[18] <= FOUR_BIT_NOR:nor4.port2
+Y[19] <= FOUR_BIT_NOR:nor4.port2
+Y[20] <= FOUR_BIT_NOR:nor5.port2
+Y[21] <= FOUR_BIT_NOR:nor5.port2
+Y[22] <= FOUR_BIT_NOR:nor5.port2
+Y[23] <= FOUR_BIT_NOR:nor5.port2
+Y[24] <= FOUR_BIT_NOR:nor6.port2
+Y[25] <= FOUR_BIT_NOR:nor6.port2
+Y[26] <= FOUR_BIT_NOR:nor6.port2
+Y[27] <= FOUR_BIT_NOR:nor6.port2
+Y[28] <= FOUR_BIT_NOR:nor7.port2
+Y[29] <= FOUR_BIT_NOR:nor7.port2
+Y[30] <= FOUR_BIT_NOR:nor7.port2
+Y[31] <= FOUR_BIT_NOR:nor7.port2
+
+
+|ALU32|NOR32:a5|THIRTYTWO_BIT_NOR:t_nor|FOUR_BIT_NOR:nor0
+A[0] => nor0.IN0
+A[1] => nor1.IN0
+A[2] => nor2.IN0
+A[3] => nor3.IN0
+B[0] => nor0.IN1
+B[1] => nor1.IN1
+B[2] => nor2.IN1
+B[3] => nor3.IN1
+Y[0] <= nor0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= nor1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= nor2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= nor3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|NOR32:a5|THIRTYTWO_BIT_NOR:t_nor|FOUR_BIT_NOR:nor1
+A[0] => nor0.IN0
+A[1] => nor1.IN0
+A[2] => nor2.IN0
+A[3] => nor3.IN0
+B[0] => nor0.IN1
+B[1] => nor1.IN1
+B[2] => nor2.IN1
+B[3] => nor3.IN1
+Y[0] <= nor0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= nor1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= nor2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= nor3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|NOR32:a5|THIRTYTWO_BIT_NOR:t_nor|FOUR_BIT_NOR:nor2
+A[0] => nor0.IN0
+A[1] => nor1.IN0
+A[2] => nor2.IN0
+A[3] => nor3.IN0
+B[0] => nor0.IN1
+B[1] => nor1.IN1
+B[2] => nor2.IN1
+B[3] => nor3.IN1
+Y[0] <= nor0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= nor1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= nor2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= nor3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|NOR32:a5|THIRTYTWO_BIT_NOR:t_nor|FOUR_BIT_NOR:nor3
+A[0] => nor0.IN0
+A[1] => nor1.IN0
+A[2] => nor2.IN0
+A[3] => nor3.IN0
+B[0] => nor0.IN1
+B[1] => nor1.IN1
+B[2] => nor2.IN1
+B[3] => nor3.IN1
+Y[0] <= nor0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= nor1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= nor2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= nor3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|NOR32:a5|THIRTYTWO_BIT_NOR:t_nor|FOUR_BIT_NOR:nor4
+A[0] => nor0.IN0
+A[1] => nor1.IN0
+A[2] => nor2.IN0
+A[3] => nor3.IN0
+B[0] => nor0.IN1
+B[1] => nor1.IN1
+B[2] => nor2.IN1
+B[3] => nor3.IN1
+Y[0] <= nor0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= nor1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= nor2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= nor3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|NOR32:a5|THIRTYTWO_BIT_NOR:t_nor|FOUR_BIT_NOR:nor5
+A[0] => nor0.IN0
+A[1] => nor1.IN0
+A[2] => nor2.IN0
+A[3] => nor3.IN0
+B[0] => nor0.IN1
+B[1] => nor1.IN1
+B[2] => nor2.IN1
+B[3] => nor3.IN1
+Y[0] <= nor0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= nor1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= nor2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= nor3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|NOR32:a5|THIRTYTWO_BIT_NOR:t_nor|FOUR_BIT_NOR:nor6
+A[0] => nor0.IN0
+A[1] => nor1.IN0
+A[2] => nor2.IN0
+A[3] => nor3.IN0
+B[0] => nor0.IN1
+B[1] => nor1.IN1
+B[2] => nor2.IN1
+B[3] => nor3.IN1
+Y[0] <= nor0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= nor1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= nor2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= nor3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|NOR32:a5|THIRTYTWO_BIT_NOR:t_nor|FOUR_BIT_NOR:nor7
+A[0] => nor0.IN0
+A[1] => nor1.IN0
+A[2] => nor2.IN0
+A[3] => nor3.IN0
+B[0] => nor0.IN1
+B[1] => nor1.IN1
+B[2] => nor2.IN1
+B[3] => nor3.IN1
+Y[0] <= nor0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= nor1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= nor2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= nor3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|XOR32:a6
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+A[4] => A[4].IN1
+A[5] => A[5].IN1
+A[6] => A[6].IN1
+A[7] => A[7].IN1
+A[8] => A[8].IN1
+A[9] => A[9].IN1
+A[10] => A[10].IN1
+A[11] => A[11].IN1
+A[12] => A[12].IN1
+A[13] => A[13].IN1
+A[14] => A[14].IN1
+A[15] => A[15].IN1
+A[16] => A[16].IN1
+A[17] => A[17].IN1
+A[18] => A[18].IN1
+A[19] => A[19].IN1
+A[20] => A[20].IN1
+A[21] => A[21].IN1
+A[22] => A[22].IN1
+A[23] => A[23].IN1
+A[24] => A[24].IN1
+A[25] => A[25].IN1
+A[26] => A[26].IN1
+A[27] => A[27].IN1
+A[28] => A[28].IN1
+A[29] => A[29].IN1
+A[30] => A[30].IN1
+A[31] => A[31].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+B[4] => B[4].IN1
+B[5] => B[5].IN1
+B[6] => B[6].IN1
+B[7] => B[7].IN1
+B[8] => B[8].IN1
+B[9] => B[9].IN1
+B[10] => B[10].IN1
+B[11] => B[11].IN1
+B[12] => B[12].IN1
+B[13] => B[13].IN1
+B[14] => B[14].IN1
+B[15] => B[15].IN1
+B[16] => B[16].IN1
+B[17] => B[17].IN1
+B[18] => B[18].IN1
+B[19] => B[19].IN1
+B[20] => B[20].IN1
+B[21] => B[21].IN1
+B[22] => B[22].IN1
+B[23] => B[23].IN1
+B[24] => B[24].IN1
+B[25] => B[25].IN1
+B[26] => B[26].IN1
+B[27] => B[27].IN1
+B[28] => B[28].IN1
+B[29] => B[29].IN1
+B[30] => B[30].IN1
+B[31] => B[31].IN1
+Y[0] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[1] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[2] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[3] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[4] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[5] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[6] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[7] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[8] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[9] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[10] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[11] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[12] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[13] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[14] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[15] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[16] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[17] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[18] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[19] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[20] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[21] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[22] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[23] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[24] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[25] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[26] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[27] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[28] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[29] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[30] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[31] <= THIRTYTWO_BIT_XOR:t_xor.port2
+
+
+|ALU32|XOR32:a6|THIRTYTWO_BIT_XOR:t_xor
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+A[4] => A[4].IN1
+A[5] => A[5].IN1
+A[6] => A[6].IN1
+A[7] => A[7].IN1
+A[8] => A[8].IN1
+A[9] => A[9].IN1
+A[10] => A[10].IN1
+A[11] => A[11].IN1
+A[12] => A[12].IN1
+A[13] => A[13].IN1
+A[14] => A[14].IN1
+A[15] => A[15].IN1
+A[16] => A[16].IN1
+A[17] => A[17].IN1
+A[18] => A[18].IN1
+A[19] => A[19].IN1
+A[20] => A[20].IN1
+A[21] => A[21].IN1
+A[22] => A[22].IN1
+A[23] => A[23].IN1
+A[24] => A[24].IN1
+A[25] => A[25].IN1
+A[26] => A[26].IN1
+A[27] => A[27].IN1
+A[28] => A[28].IN1
+A[29] => A[29].IN1
+A[30] => A[30].IN1
+A[31] => A[31].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+B[4] => B[4].IN1
+B[5] => B[5].IN1
+B[6] => B[6].IN1
+B[7] => B[7].IN1
+B[8] => B[8].IN1
+B[9] => B[9].IN1
+B[10] => B[10].IN1
+B[11] => B[11].IN1
+B[12] => B[12].IN1
+B[13] => B[13].IN1
+B[14] => B[14].IN1
+B[15] => B[15].IN1
+B[16] => B[16].IN1
+B[17] => B[17].IN1
+B[18] => B[18].IN1
+B[19] => B[19].IN1
+B[20] => B[20].IN1
+B[21] => B[21].IN1
+B[22] => B[22].IN1
+B[23] => B[23].IN1
+B[24] => B[24].IN1
+B[25] => B[25].IN1
+B[26] => B[26].IN1
+B[27] => B[27].IN1
+B[28] => B[28].IN1
+B[29] => B[29].IN1
+B[30] => B[30].IN1
+B[31] => B[31].IN1
+Y[0] <= FOUR_BIT_XOR:xor0.port2
+Y[1] <= FOUR_BIT_XOR:xor0.port2
+Y[2] <= FOUR_BIT_XOR:xor0.port2
+Y[3] <= FOUR_BIT_XOR:xor0.port2
+Y[4] <= FOUR_BIT_XOR:xor1.port2
+Y[5] <= FOUR_BIT_XOR:xor1.port2
+Y[6] <= FOUR_BIT_XOR:xor1.port2
+Y[7] <= FOUR_BIT_XOR:xor1.port2
+Y[8] <= FOUR_BIT_XOR:xor2.port2
+Y[9] <= FOUR_BIT_XOR:xor2.port2
+Y[10] <= FOUR_BIT_XOR:xor2.port2
+Y[11] <= FOUR_BIT_XOR:xor2.port2
+Y[12] <= FOUR_BIT_XOR:xor3.port2
+Y[13] <= FOUR_BIT_XOR:xor3.port2
+Y[14] <= FOUR_BIT_XOR:xor3.port2
+Y[15] <= FOUR_BIT_XOR:xor3.port2
+Y[16] <= FOUR_BIT_XOR:xor4.port2
+Y[17] <= FOUR_BIT_XOR:xor4.port2
+Y[18] <= FOUR_BIT_XOR:xor4.port2
+Y[19] <= FOUR_BIT_XOR:xor4.port2
+Y[20] <= FOUR_BIT_XOR:xor5.port2
+Y[21] <= FOUR_BIT_XOR:xor5.port2
+Y[22] <= FOUR_BIT_XOR:xor5.port2
+Y[23] <= FOUR_BIT_XOR:xor5.port2
+Y[24] <= FOUR_BIT_XOR:xor6.port2
+Y[25] <= FOUR_BIT_XOR:xor6.port2
+Y[26] <= FOUR_BIT_XOR:xor6.port2
+Y[27] <= FOUR_BIT_XOR:xor6.port2
+Y[28] <= FOUR_BIT_XOR:xor7.port2
+Y[29] <= FOUR_BIT_XOR:xor7.port2
+Y[30] <= FOUR_BIT_XOR:xor7.port2
+Y[31] <= FOUR_BIT_XOR:xor7.port2
+
+
+|ALU32|XOR32:a6|THIRTYTWO_BIT_XOR:t_xor|FOUR_BIT_XOR:xor0
+A[0] => xor0.IN0
+A[1] => xor1.IN0
+A[2] => xor2.IN0
+A[3] => xor3.IN0
+B[0] => xor0.IN1
+B[1] => xor1.IN1
+B[2] => xor2.IN1
+B[3] => xor3.IN1
+Y[0] <= xor0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= xor3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|XOR32:a6|THIRTYTWO_BIT_XOR:t_xor|FOUR_BIT_XOR:xor1
+A[0] => xor0.IN0
+A[1] => xor1.IN0
+A[2] => xor2.IN0
+A[3] => xor3.IN0
+B[0] => xor0.IN1
+B[1] => xor1.IN1
+B[2] => xor2.IN1
+B[3] => xor3.IN1
+Y[0] <= xor0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= xor3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|XOR32:a6|THIRTYTWO_BIT_XOR:t_xor|FOUR_BIT_XOR:xor2
+A[0] => xor0.IN0
+A[1] => xor1.IN0
+A[2] => xor2.IN0
+A[3] => xor3.IN0
+B[0] => xor0.IN1
+B[1] => xor1.IN1
+B[2] => xor2.IN1
+B[3] => xor3.IN1
+Y[0] <= xor0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= xor3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|XOR32:a6|THIRTYTWO_BIT_XOR:t_xor|FOUR_BIT_XOR:xor3
+A[0] => xor0.IN0
+A[1] => xor1.IN0
+A[2] => xor2.IN0
+A[3] => xor3.IN0
+B[0] => xor0.IN1
+B[1] => xor1.IN1
+B[2] => xor2.IN1
+B[3] => xor3.IN1
+Y[0] <= xor0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= xor3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|XOR32:a6|THIRTYTWO_BIT_XOR:t_xor|FOUR_BIT_XOR:xor4
+A[0] => xor0.IN0
+A[1] => xor1.IN0
+A[2] => xor2.IN0
+A[3] => xor3.IN0
+B[0] => xor0.IN1
+B[1] => xor1.IN1
+B[2] => xor2.IN1
+B[3] => xor3.IN1
+Y[0] <= xor0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= xor3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|XOR32:a6|THIRTYTWO_BIT_XOR:t_xor|FOUR_BIT_XOR:xor5
+A[0] => xor0.IN0
+A[1] => xor1.IN0
+A[2] => xor2.IN0
+A[3] => xor3.IN0
+B[0] => xor0.IN1
+B[1] => xor1.IN1
+B[2] => xor2.IN1
+B[3] => xor3.IN1
+Y[0] <= xor0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= xor3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|XOR32:a6|THIRTYTWO_BIT_XOR:t_xor|FOUR_BIT_XOR:xor6
+A[0] => xor0.IN0
+A[1] => xor1.IN0
+A[2] => xor2.IN0
+A[3] => xor3.IN0
+B[0] => xor0.IN1
+B[1] => xor1.IN1
+B[2] => xor2.IN1
+B[3] => xor3.IN1
+Y[0] <= xor0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= xor3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|XOR32:a6|THIRTYTWO_BIT_XOR:t_xor|FOUR_BIT_XOR:xor7
+A[0] => xor0.IN0
+A[1] => xor1.IN0
+A[2] => xor2.IN0
+A[3] => xor3.IN0
+B[0] => xor0.IN1
+B[1] => xor1.IN1
+B[2] => xor2.IN1
+B[3] => xor3.IN1
+Y[0] <= xor0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= xor3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SLT32:a7
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+A[4] => A[4].IN1
+A[5] => A[5].IN1
+A[6] => A[6].IN1
+A[7] => A[7].IN1
+A[8] => A[8].IN1
+A[9] => A[9].IN1
+A[10] => A[10].IN1
+A[11] => A[11].IN1
+A[12] => A[12].IN1
+A[13] => A[13].IN1
+A[14] => A[14].IN1
+A[15] => A[15].IN1
+A[16] => A[16].IN1
+A[17] => A[17].IN1
+A[18] => A[18].IN1
+A[19] => A[19].IN1
+A[20] => A[20].IN1
+A[21] => A[21].IN1
+A[22] => A[22].IN1
+A[23] => A[23].IN1
+A[24] => A[24].IN1
+A[25] => A[25].IN1
+A[26] => A[26].IN1
+A[27] => A[27].IN1
+A[28] => A[28].IN1
+A[29] => A[29].IN1
+A[30] => A[30].IN1
+A[31] => A[31].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+B[4] => B[4].IN1
+B[5] => B[5].IN1
+B[6] => B[6].IN1
+B[7] => B[7].IN1
+B[8] => B[8].IN1
+B[9] => B[9].IN1
+B[10] => B[10].IN1
+B[11] => B[11].IN1
+B[12] => B[12].IN1
+B[13] => B[13].IN1
+B[14] => B[14].IN1
+B[15] => B[15].IN1
+B[16] => B[16].IN1
+B[17] => B[17].IN1
+B[18] => B[18].IN1
+B[19] => B[19].IN1
+B[20] => B[20].IN1
+B[21] => B[21].IN1
+B[22] => B[22].IN1
+B[23] => B[23].IN1
+B[24] => B[24].IN1
+B[25] => B[25].IN1
+B[26] => B[26].IN1
+B[27] => B[27].IN1
+B[28] => B[28].IN1
+B[29] => B[29].IN1
+B[30] => B[30].IN1
+B[31] => B[31].IN1
+Y[0] <= ONE_TO_THIRTYTWO_EXTENDER_WITH_LSB:_extender.port1
+Y[1] <= ONE_TO_THIRTYTWO_EXTENDER_WITH_LSB:_extender.port1
+Y[2] <= ONE_TO_THIRTYTWO_EXTENDER_WITH_LSB:_extender.port1
+Y[3] <= ONE_TO_THIRTYTWO_EXTENDER_WITH_LSB:_extender.port1
+Y[4] <= ONE_TO_THIRTYTWO_EXTENDER_WITH_LSB:_extender.port1
+Y[5] <= ONE_TO_THIRTYTWO_EXTENDER_WITH_LSB:_extender.port1
+Y[6] <= ONE_TO_THIRTYTWO_EXTENDER_WITH_LSB:_extender.port1
+Y[7] <= ONE_TO_THIRTYTWO_EXTENDER_WITH_LSB:_extender.port1
+Y[8] <= ONE_TO_THIRTYTWO_EXTENDER_WITH_LSB:_extender.port1
+Y[9] <= ONE_TO_THIRTYTWO_EXTENDER_WITH_LSB:_extender.port1
+Y[10] <= ONE_TO_THIRTYTWO_EXTENDER_WITH_LSB:_extender.port1
+Y[11] <= ONE_TO_THIRTYTWO_EXTENDER_WITH_LSB:_extender.port1
+Y[12] <= ONE_TO_THIRTYTWO_EXTENDER_WITH_LSB:_extender.port1
+Y[13] <= ONE_TO_THIRTYTWO_EXTENDER_WITH_LSB:_extender.port1
+Y[14] <= ONE_TO_THIRTYTWO_EXTENDER_WITH_LSB:_extender.port1
+Y[15] <= ONE_TO_THIRTYTWO_EXTENDER_WITH_LSB:_extender.port1
+Y[16] <= ONE_TO_THIRTYTWO_EXTENDER_WITH_LSB:_extender.port1
+Y[17] <= ONE_TO_THIRTYTWO_EXTENDER_WITH_LSB:_extender.port1
+Y[18] <= ONE_TO_THIRTYTWO_EXTENDER_WITH_LSB:_extender.port1
+Y[19] <= ONE_TO_THIRTYTWO_EXTENDER_WITH_LSB:_extender.port1
+Y[20] <= ONE_TO_THIRTYTWO_EXTENDER_WITH_LSB:_extender.port1
+Y[21] <= ONE_TO_THIRTYTWO_EXTENDER_WITH_LSB:_extender.port1
+Y[22] <= ONE_TO_THIRTYTWO_EXTENDER_WITH_LSB:_extender.port1
+Y[23] <= ONE_TO_THIRTYTWO_EXTENDER_WITH_LSB:_extender.port1
+Y[24] <= ONE_TO_THIRTYTWO_EXTENDER_WITH_LSB:_extender.port1
+Y[25] <= ONE_TO_THIRTYTWO_EXTENDER_WITH_LSB:_extender.port1
+Y[26] <= ONE_TO_THIRTYTWO_EXTENDER_WITH_LSB:_extender.port1
+Y[27] <= ONE_TO_THIRTYTWO_EXTENDER_WITH_LSB:_extender.port1
+Y[28] <= ONE_TO_THIRTYTWO_EXTENDER_WITH_LSB:_extender.port1
+Y[29] <= ONE_TO_THIRTYTWO_EXTENDER_WITH_LSB:_extender.port1
+Y[30] <= ONE_TO_THIRTYTWO_EXTENDER_WITH_LSB:_extender.port1
+Y[31] <= ONE_TO_THIRTYTWO_EXTENDER_WITH_LSB:_extender.port1
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+a[4] => a[4].IN1
+a[5] => a[5].IN1
+a[6] => a[6].IN1
+a[7] => a[7].IN1
+a[8] => a[8].IN1
+a[9] => a[9].IN1
+a[10] => a[10].IN1
+a[11] => a[11].IN1
+a[12] => a[12].IN1
+a[13] => a[13].IN1
+a[14] => a[14].IN1
+a[15] => a[15].IN1
+a[16] => a[16].IN1
+a[17] => a[17].IN1
+a[18] => a[18].IN1
+a[19] => a[19].IN1
+a[20] => a[20].IN1
+a[21] => a[21].IN1
+a[22] => a[22].IN1
+a[23] => a[23].IN1
+a[24] => a[24].IN1
+a[25] => a[25].IN1
+a[26] => a[26].IN1
+a[27] => a[27].IN1
+a[28] => a[28].IN1
+a[29] => a[29].IN1
+a[30] => a[30].IN1
+a[31] => a[31].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+b[4] => b[4].IN1
+b[5] => b[5].IN1
+b[6] => b[6].IN1
+b[7] => b[7].IN1
+b[8] => b[8].IN1
+b[9] => b[9].IN1
+b[10] => b[10].IN1
+b[11] => b[11].IN1
+b[12] => b[12].IN1
+b[13] => b[13].IN1
+b[14] => b[14].IN1
+b[15] => b[15].IN1
+b[16] => b[16].IN1
+b[17] => b[17].IN1
+b[18] => b[18].IN1
+b[19] => b[19].IN1
+b[20] => b[20].IN1
+b[21] => b[21].IN1
+b[22] => b[22].IN1
+b[23] => b[23].IN1
+b[24] => b[24].IN1
+b[25] => b[25].IN1
+b[26] => b[26].IN1
+b[27] => b[27].IN1
+b[28] => b[28].IN1
+b[29] => b[29].IN1
+b[30] => b[30].IN1
+b[31] => b[31].IN1
+cin => cin.IN1
+result[0] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[1] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[2] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[3] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[4] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[5] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[6] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[7] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[8] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[9] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[10] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[11] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[12] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[13] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[14] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[15] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[16] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[17] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[18] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[19] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[20] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[21] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[22] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[23] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[24] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[25] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[26] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[27] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[28] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[29] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[30] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+result[31] <= THIRTYTWO_BIT_SUBTRACTOR:subtractor.port3
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+a[4] => a[4].IN1
+a[5] => a[5].IN1
+a[6] => a[6].IN1
+a[7] => a[7].IN1
+a[8] => a[8].IN1
+a[9] => a[9].IN1
+a[10] => a[10].IN1
+a[11] => a[11].IN1
+a[12] => a[12].IN1
+a[13] => a[13].IN1
+a[14] => a[14].IN1
+a[15] => a[15].IN1
+a[16] => a[16].IN1
+a[17] => a[17].IN1
+a[18] => a[18].IN1
+a[19] => a[19].IN1
+a[20] => a[20].IN1
+a[21] => a[21].IN1
+a[22] => a[22].IN1
+a[23] => a[23].IN1
+a[24] => a[24].IN1
+a[25] => a[25].IN1
+a[26] => a[26].IN1
+a[27] => a[27].IN1
+a[28] => a[28].IN1
+a[29] => a[29].IN1
+a[30] => a[30].IN1
+a[31] => a[31].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+b[4] => b[4].IN1
+b[5] => b[5].IN1
+b[6] => b[6].IN1
+b[7] => b[7].IN1
+b[8] => b[8].IN1
+b[9] => b[9].IN1
+b[10] => b[10].IN1
+b[11] => b[11].IN1
+b[12] => b[12].IN1
+b[13] => b[13].IN1
+b[14] => b[14].IN1
+b[15] => b[15].IN1
+b[16] => b[16].IN1
+b[17] => b[17].IN1
+b[18] => b[18].IN1
+b[19] => b[19].IN1
+b[20] => b[20].IN1
+b[21] => b[21].IN1
+b[22] => b[22].IN1
+b[23] => b[23].IN1
+b[24] => b[24].IN1
+b[25] => b[25].IN1
+b[26] => b[26].IN1
+b[27] => b[27].IN1
+b[28] => b[28].IN1
+b[29] => b[29].IN1
+b[30] => b[30].IN1
+b[31] => b[31].IN1
+cin => cin.IN2
+result[0] <= ADDER:t_adder.port3
+result[1] <= ADDER:t_adder.port3
+result[2] <= ADDER:t_adder.port3
+result[3] <= ADDER:t_adder.port3
+result[4] <= ADDER:t_adder.port3
+result[5] <= ADDER:t_adder.port3
+result[6] <= ADDER:t_adder.port3
+result[7] <= ADDER:t_adder.port3
+result[8] <= ADDER:t_adder.port3
+result[9] <= ADDER:t_adder.port3
+result[10] <= ADDER:t_adder.port3
+result[11] <= ADDER:t_adder.port3
+result[12] <= ADDER:t_adder.port3
+result[13] <= ADDER:t_adder.port3
+result[14] <= ADDER:t_adder.port3
+result[15] <= ADDER:t_adder.port3
+result[16] <= ADDER:t_adder.port3
+result[17] <= ADDER:t_adder.port3
+result[18] <= ADDER:t_adder.port3
+result[19] <= ADDER:t_adder.port3
+result[20] <= ADDER:t_adder.port3
+result[21] <= ADDER:t_adder.port3
+result[22] <= ADDER:t_adder.port3
+result[23] <= ADDER:t_adder.port3
+result[24] <= ADDER:t_adder.port3
+result[25] <= ADDER:t_adder.port3
+result[26] <= ADDER:t_adder.port3
+result[27] <= ADDER:t_adder.port3
+result[28] <= ADDER:t_adder.port3
+result[29] <= ADDER:t_adder.port3
+result[30] <= ADDER:t_adder.port3
+result[31] <= ADDER:t_adder.port3
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ONE_TO_32_EXTENDER:extender
+inp => out[0].DATAIN
+inp => out[1].DATAIN
+inp => out[2].DATAIN
+inp => out[3].DATAIN
+inp => out[4].DATAIN
+inp => out[5].DATAIN
+inp => out[6].DATAIN
+inp => out[7].DATAIN
+inp => out[8].DATAIN
+inp => out[9].DATAIN
+inp => out[10].DATAIN
+inp => out[11].DATAIN
+inp => out[12].DATAIN
+inp => out[13].DATAIN
+inp => out[14].DATAIN
+inp => out[15].DATAIN
+inp => out[16].DATAIN
+inp => out[17].DATAIN
+inp => out[18].DATAIN
+inp => out[19].DATAIN
+inp => out[20].DATAIN
+inp => out[21].DATAIN
+inp => out[22].DATAIN
+inp => out[23].DATAIN
+inp => out[24].DATAIN
+inp => out[25].DATAIN
+inp => out[26].DATAIN
+inp => out[27].DATAIN
+inp => out[28].DATAIN
+inp => out[29].DATAIN
+inp => out[30].DATAIN
+inp => out[31].DATAIN
+out[0] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[16] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[17] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[18] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[19] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[20] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[21] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[22] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[23] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[24] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[25] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[26] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[27] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[28] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[29] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[30] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[31] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|XOR32:t_xor
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+A[4] => A[4].IN1
+A[5] => A[5].IN1
+A[6] => A[6].IN1
+A[7] => A[7].IN1
+A[8] => A[8].IN1
+A[9] => A[9].IN1
+A[10] => A[10].IN1
+A[11] => A[11].IN1
+A[12] => A[12].IN1
+A[13] => A[13].IN1
+A[14] => A[14].IN1
+A[15] => A[15].IN1
+A[16] => A[16].IN1
+A[17] => A[17].IN1
+A[18] => A[18].IN1
+A[19] => A[19].IN1
+A[20] => A[20].IN1
+A[21] => A[21].IN1
+A[22] => A[22].IN1
+A[23] => A[23].IN1
+A[24] => A[24].IN1
+A[25] => A[25].IN1
+A[26] => A[26].IN1
+A[27] => A[27].IN1
+A[28] => A[28].IN1
+A[29] => A[29].IN1
+A[30] => A[30].IN1
+A[31] => A[31].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+B[4] => B[4].IN1
+B[5] => B[5].IN1
+B[6] => B[6].IN1
+B[7] => B[7].IN1
+B[8] => B[8].IN1
+B[9] => B[9].IN1
+B[10] => B[10].IN1
+B[11] => B[11].IN1
+B[12] => B[12].IN1
+B[13] => B[13].IN1
+B[14] => B[14].IN1
+B[15] => B[15].IN1
+B[16] => B[16].IN1
+B[17] => B[17].IN1
+B[18] => B[18].IN1
+B[19] => B[19].IN1
+B[20] => B[20].IN1
+B[21] => B[21].IN1
+B[22] => B[22].IN1
+B[23] => B[23].IN1
+B[24] => B[24].IN1
+B[25] => B[25].IN1
+B[26] => B[26].IN1
+B[27] => B[27].IN1
+B[28] => B[28].IN1
+B[29] => B[29].IN1
+B[30] => B[30].IN1
+B[31] => B[31].IN1
+Y[0] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[1] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[2] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[3] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[4] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[5] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[6] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[7] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[8] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[9] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[10] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[11] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[12] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[13] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[14] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[15] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[16] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[17] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[18] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[19] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[20] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[21] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[22] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[23] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[24] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[25] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[26] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[27] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[28] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[29] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[30] <= THIRTYTWO_BIT_XOR:t_xor.port2
+Y[31] <= THIRTYTWO_BIT_XOR:t_xor.port2
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|XOR32:t_xor|THIRTYTWO_BIT_XOR:t_xor
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+A[4] => A[4].IN1
+A[5] => A[5].IN1
+A[6] => A[6].IN1
+A[7] => A[7].IN1
+A[8] => A[8].IN1
+A[9] => A[9].IN1
+A[10] => A[10].IN1
+A[11] => A[11].IN1
+A[12] => A[12].IN1
+A[13] => A[13].IN1
+A[14] => A[14].IN1
+A[15] => A[15].IN1
+A[16] => A[16].IN1
+A[17] => A[17].IN1
+A[18] => A[18].IN1
+A[19] => A[19].IN1
+A[20] => A[20].IN1
+A[21] => A[21].IN1
+A[22] => A[22].IN1
+A[23] => A[23].IN1
+A[24] => A[24].IN1
+A[25] => A[25].IN1
+A[26] => A[26].IN1
+A[27] => A[27].IN1
+A[28] => A[28].IN1
+A[29] => A[29].IN1
+A[30] => A[30].IN1
+A[31] => A[31].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+B[4] => B[4].IN1
+B[5] => B[5].IN1
+B[6] => B[6].IN1
+B[7] => B[7].IN1
+B[8] => B[8].IN1
+B[9] => B[9].IN1
+B[10] => B[10].IN1
+B[11] => B[11].IN1
+B[12] => B[12].IN1
+B[13] => B[13].IN1
+B[14] => B[14].IN1
+B[15] => B[15].IN1
+B[16] => B[16].IN1
+B[17] => B[17].IN1
+B[18] => B[18].IN1
+B[19] => B[19].IN1
+B[20] => B[20].IN1
+B[21] => B[21].IN1
+B[22] => B[22].IN1
+B[23] => B[23].IN1
+B[24] => B[24].IN1
+B[25] => B[25].IN1
+B[26] => B[26].IN1
+B[27] => B[27].IN1
+B[28] => B[28].IN1
+B[29] => B[29].IN1
+B[30] => B[30].IN1
+B[31] => B[31].IN1
+Y[0] <= FOUR_BIT_XOR:xor0.port2
+Y[1] <= FOUR_BIT_XOR:xor0.port2
+Y[2] <= FOUR_BIT_XOR:xor0.port2
+Y[3] <= FOUR_BIT_XOR:xor0.port2
+Y[4] <= FOUR_BIT_XOR:xor1.port2
+Y[5] <= FOUR_BIT_XOR:xor1.port2
+Y[6] <= FOUR_BIT_XOR:xor1.port2
+Y[7] <= FOUR_BIT_XOR:xor1.port2
+Y[8] <= FOUR_BIT_XOR:xor2.port2
+Y[9] <= FOUR_BIT_XOR:xor2.port2
+Y[10] <= FOUR_BIT_XOR:xor2.port2
+Y[11] <= FOUR_BIT_XOR:xor2.port2
+Y[12] <= FOUR_BIT_XOR:xor3.port2
+Y[13] <= FOUR_BIT_XOR:xor3.port2
+Y[14] <= FOUR_BIT_XOR:xor3.port2
+Y[15] <= FOUR_BIT_XOR:xor3.port2
+Y[16] <= FOUR_BIT_XOR:xor4.port2
+Y[17] <= FOUR_BIT_XOR:xor4.port2
+Y[18] <= FOUR_BIT_XOR:xor4.port2
+Y[19] <= FOUR_BIT_XOR:xor4.port2
+Y[20] <= FOUR_BIT_XOR:xor5.port2
+Y[21] <= FOUR_BIT_XOR:xor5.port2
+Y[22] <= FOUR_BIT_XOR:xor5.port2
+Y[23] <= FOUR_BIT_XOR:xor5.port2
+Y[24] <= FOUR_BIT_XOR:xor6.port2
+Y[25] <= FOUR_BIT_XOR:xor6.port2
+Y[26] <= FOUR_BIT_XOR:xor6.port2
+Y[27] <= FOUR_BIT_XOR:xor6.port2
+Y[28] <= FOUR_BIT_XOR:xor7.port2
+Y[29] <= FOUR_BIT_XOR:xor7.port2
+Y[30] <= FOUR_BIT_XOR:xor7.port2
+Y[31] <= FOUR_BIT_XOR:xor7.port2
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|XOR32:t_xor|THIRTYTWO_BIT_XOR:t_xor|FOUR_BIT_XOR:xor0
+A[0] => xor0.IN0
+A[1] => xor1.IN0
+A[2] => xor2.IN0
+A[3] => xor3.IN0
+B[0] => xor0.IN1
+B[1] => xor1.IN1
+B[2] => xor2.IN1
+B[3] => xor3.IN1
+Y[0] <= xor0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= xor3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|XOR32:t_xor|THIRTYTWO_BIT_XOR:t_xor|FOUR_BIT_XOR:xor1
+A[0] => xor0.IN0
+A[1] => xor1.IN0
+A[2] => xor2.IN0
+A[3] => xor3.IN0
+B[0] => xor0.IN1
+B[1] => xor1.IN1
+B[2] => xor2.IN1
+B[3] => xor3.IN1
+Y[0] <= xor0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= xor3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|XOR32:t_xor|THIRTYTWO_BIT_XOR:t_xor|FOUR_BIT_XOR:xor2
+A[0] => xor0.IN0
+A[1] => xor1.IN0
+A[2] => xor2.IN0
+A[3] => xor3.IN0
+B[0] => xor0.IN1
+B[1] => xor1.IN1
+B[2] => xor2.IN1
+B[3] => xor3.IN1
+Y[0] <= xor0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= xor3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|XOR32:t_xor|THIRTYTWO_BIT_XOR:t_xor|FOUR_BIT_XOR:xor3
+A[0] => xor0.IN0
+A[1] => xor1.IN0
+A[2] => xor2.IN0
+A[3] => xor3.IN0
+B[0] => xor0.IN1
+B[1] => xor1.IN1
+B[2] => xor2.IN1
+B[3] => xor3.IN1
+Y[0] <= xor0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= xor3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|XOR32:t_xor|THIRTYTWO_BIT_XOR:t_xor|FOUR_BIT_XOR:xor4
+A[0] => xor0.IN0
+A[1] => xor1.IN0
+A[2] => xor2.IN0
+A[3] => xor3.IN0
+B[0] => xor0.IN1
+B[1] => xor1.IN1
+B[2] => xor2.IN1
+B[3] => xor3.IN1
+Y[0] <= xor0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= xor3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|XOR32:t_xor|THIRTYTWO_BIT_XOR:t_xor|FOUR_BIT_XOR:xor5
+A[0] => xor0.IN0
+A[1] => xor1.IN0
+A[2] => xor2.IN0
+A[3] => xor3.IN0
+B[0] => xor0.IN1
+B[1] => xor1.IN1
+B[2] => xor2.IN1
+B[3] => xor3.IN1
+Y[0] <= xor0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= xor3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|XOR32:t_xor|THIRTYTWO_BIT_XOR:t_xor|FOUR_BIT_XOR:xor6
+A[0] => xor0.IN0
+A[1] => xor1.IN0
+A[2] => xor2.IN0
+A[3] => xor3.IN0
+B[0] => xor0.IN1
+B[1] => xor1.IN1
+B[2] => xor2.IN1
+B[3] => xor3.IN1
+Y[0] <= xor0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= xor3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|XOR32:t_xor|THIRTYTWO_BIT_XOR:t_xor|FOUR_BIT_XOR:xor7
+A[0] => xor0.IN0
+A[1] => xor1.IN0
+A[2] => xor2.IN0
+A[3] => xor3.IN0
+B[0] => xor0.IN1
+B[1] => xor1.IN1
+B[2] => xor2.IN1
+B[3] => xor3.IN1
+Y[0] <= xor0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= xor3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+a[4] => a[4].IN1
+a[5] => a[5].IN1
+a[6] => a[6].IN1
+a[7] => a[7].IN1
+a[8] => a[8].IN1
+a[9] => a[9].IN1
+a[10] => a[10].IN1
+a[11] => a[11].IN1
+a[12] => a[12].IN1
+a[13] => a[13].IN1
+a[14] => a[14].IN1
+a[15] => a[15].IN1
+a[16] => a[16].IN1
+a[17] => a[17].IN1
+a[18] => a[18].IN1
+a[19] => a[19].IN1
+a[20] => a[20].IN1
+a[21] => a[21].IN1
+a[22] => a[22].IN1
+a[23] => a[23].IN1
+a[24] => a[24].IN1
+a[25] => a[25].IN1
+a[26] => a[26].IN1
+a[27] => a[27].IN1
+a[28] => a[28].IN1
+a[29] => a[29].IN1
+a[30] => a[30].IN1
+a[31] => a[31].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+b[4] => b[4].IN1
+b[5] => b[5].IN1
+b[6] => b[6].IN1
+b[7] => b[7].IN1
+b[8] => b[8].IN1
+b[9] => b[9].IN1
+b[10] => b[10].IN1
+b[11] => b[11].IN1
+b[12] => b[12].IN1
+b[13] => b[13].IN1
+b[14] => b[14].IN1
+b[15] => b[15].IN1
+b[16] => b[16].IN1
+b[17] => b[17].IN1
+b[18] => b[18].IN1
+b[19] => b[19].IN1
+b[20] => b[20].IN1
+b[21] => b[21].IN1
+b[22] => b[22].IN1
+b[23] => b[23].IN1
+b[24] => b[24].IN1
+b[25] => b[25].IN1
+b[26] => b[26].IN1
+b[27] => b[27].IN1
+b[28] => b[28].IN1
+b[29] => b[29].IN1
+b[30] => b[30].IN1
+b[31] => b[31].IN1
+cin => cin.IN1
+sum[0] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[1] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[2] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[3] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[4] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[5] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[6] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[7] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[8] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[9] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[10] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[11] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[12] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[13] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[14] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[15] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[16] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[17] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[18] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[19] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[20] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[21] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[22] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[23] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[24] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[25] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[26] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[27] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[28] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[29] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[30] <= THIRTYTWO_BIT_ADDER:adder.port3
+sum[31] <= THIRTYTWO_BIT_ADDER:adder.port3
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+a[4] => a[4].IN1
+a[5] => a[5].IN1
+a[6] => a[6].IN1
+a[7] => a[7].IN1
+a[8] => a[8].IN1
+a[9] => a[9].IN1
+a[10] => a[10].IN1
+a[11] => a[11].IN1
+a[12] => a[12].IN1
+a[13] => a[13].IN1
+a[14] => a[14].IN1
+a[15] => a[15].IN1
+a[16] => a[16].IN1
+a[17] => a[17].IN1
+a[18] => a[18].IN1
+a[19] => a[19].IN1
+a[20] => a[20].IN1
+a[21] => a[21].IN1
+a[22] => a[22].IN1
+a[23] => a[23].IN1
+a[24] => a[24].IN1
+a[25] => a[25].IN1
+a[26] => a[26].IN1
+a[27] => a[27].IN1
+a[28] => a[28].IN1
+a[29] => a[29].IN1
+a[30] => a[30].IN1
+a[31] => a[31].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+b[4] => b[4].IN1
+b[5] => b[5].IN1
+b[6] => b[6].IN1
+b[7] => b[7].IN1
+b[8] => b[8].IN1
+b[9] => b[9].IN1
+b[10] => b[10].IN1
+b[11] => b[11].IN1
+b[12] => b[12].IN1
+b[13] => b[13].IN1
+b[14] => b[14].IN1
+b[15] => b[15].IN1
+b[16] => b[16].IN1
+b[17] => b[17].IN1
+b[18] => b[18].IN1
+b[19] => b[19].IN1
+b[20] => b[20].IN1
+b[21] => b[21].IN1
+b[22] => b[22].IN1
+b[23] => b[23].IN1
+b[24] => b[24].IN1
+b[25] => b[25].IN1
+b[26] => b[26].IN1
+b[27] => b[27].IN1
+b[28] => b[28].IN1
+b[29] => b[29].IN1
+b[30] => b[30].IN1
+b[31] => b[31].IN1
+cin => cin.IN1
+sum[0] <= FOUR_BIT_ADDER:adder0.port3
+sum[1] <= FOUR_BIT_ADDER:adder0.port3
+sum[2] <= FOUR_BIT_ADDER:adder0.port3
+sum[3] <= FOUR_BIT_ADDER:adder0.port3
+sum[4] <= FOUR_BIT_ADDER:adder1.port3
+sum[5] <= FOUR_BIT_ADDER:adder1.port3
+sum[6] <= FOUR_BIT_ADDER:adder1.port3
+sum[7] <= FOUR_BIT_ADDER:adder1.port3
+sum[8] <= FOUR_BIT_ADDER:adder2.port3
+sum[9] <= FOUR_BIT_ADDER:adder2.port3
+sum[10] <= FOUR_BIT_ADDER:adder2.port3
+sum[11] <= FOUR_BIT_ADDER:adder2.port3
+sum[12] <= FOUR_BIT_ADDER:adder3.port3
+sum[13] <= FOUR_BIT_ADDER:adder3.port3
+sum[14] <= FOUR_BIT_ADDER:adder3.port3
+sum[15] <= FOUR_BIT_ADDER:adder3.port3
+sum[16] <= FOUR_BIT_ADDER:adder4.port3
+sum[17] <= FOUR_BIT_ADDER:adder4.port3
+sum[18] <= FOUR_BIT_ADDER:adder4.port3
+sum[19] <= FOUR_BIT_ADDER:adder4.port3
+sum[20] <= FOUR_BIT_ADDER:adder5.port3
+sum[21] <= FOUR_BIT_ADDER:adder5.port3
+sum[22] <= FOUR_BIT_ADDER:adder5.port3
+sum[23] <= FOUR_BIT_ADDER:adder5.port3
+sum[24] <= FOUR_BIT_ADDER:adder6.port3
+sum[25] <= FOUR_BIT_ADDER:adder6.port3
+sum[26] <= FOUR_BIT_ADDER:adder6.port3
+sum[27] <= FOUR_BIT_ADDER:adder6.port3
+sum[28] <= FOUR_BIT_ADDER:adder7.port3
+sum[29] <= FOUR_BIT_ADDER:adder7.port3
+sum[30] <= FOUR_BIT_ADDER:adder7.port3
+sum[31] <= FOUR_BIT_ADDER:adder7.port3
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder0
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+cin => cin.IN1
+sum[0] <= ONE_BIT_ADDER:adder0.port3
+sum[1] <= ONE_BIT_ADDER:adder1.port3
+sum[2] <= ONE_BIT_ADDER:adder2.port3
+sum[3] <= ONE_BIT_ADDER:adder3.port3
+cout <= ONE_BIT_ADDER:adder3.port4
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder0|ONE_BIT_ADDER:adder0
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder0|ONE_BIT_ADDER:adder1
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder0|ONE_BIT_ADDER:adder2
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder0|ONE_BIT_ADDER:adder3
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder1
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+cin => cin.IN1
+sum[0] <= ONE_BIT_ADDER:adder0.port3
+sum[1] <= ONE_BIT_ADDER:adder1.port3
+sum[2] <= ONE_BIT_ADDER:adder2.port3
+sum[3] <= ONE_BIT_ADDER:adder3.port3
+cout <= ONE_BIT_ADDER:adder3.port4
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder1|ONE_BIT_ADDER:adder0
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder1|ONE_BIT_ADDER:adder1
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder1|ONE_BIT_ADDER:adder2
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder1|ONE_BIT_ADDER:adder3
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder2
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+cin => cin.IN1
+sum[0] <= ONE_BIT_ADDER:adder0.port3
+sum[1] <= ONE_BIT_ADDER:adder1.port3
+sum[2] <= ONE_BIT_ADDER:adder2.port3
+sum[3] <= ONE_BIT_ADDER:adder3.port3
+cout <= ONE_BIT_ADDER:adder3.port4
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder2|ONE_BIT_ADDER:adder0
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder2|ONE_BIT_ADDER:adder1
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder2|ONE_BIT_ADDER:adder2
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder2|ONE_BIT_ADDER:adder3
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder3
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+cin => cin.IN1
+sum[0] <= ONE_BIT_ADDER:adder0.port3
+sum[1] <= ONE_BIT_ADDER:adder1.port3
+sum[2] <= ONE_BIT_ADDER:adder2.port3
+sum[3] <= ONE_BIT_ADDER:adder3.port3
+cout <= ONE_BIT_ADDER:adder3.port4
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder3|ONE_BIT_ADDER:adder0
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder3|ONE_BIT_ADDER:adder1
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder3|ONE_BIT_ADDER:adder2
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder3|ONE_BIT_ADDER:adder3
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder4
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+cin => cin.IN1
+sum[0] <= ONE_BIT_ADDER:adder0.port3
+sum[1] <= ONE_BIT_ADDER:adder1.port3
+sum[2] <= ONE_BIT_ADDER:adder2.port3
+sum[3] <= ONE_BIT_ADDER:adder3.port3
+cout <= ONE_BIT_ADDER:adder3.port4
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder4|ONE_BIT_ADDER:adder0
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder4|ONE_BIT_ADDER:adder1
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder4|ONE_BIT_ADDER:adder2
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder4|ONE_BIT_ADDER:adder3
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder5
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+cin => cin.IN1
+sum[0] <= ONE_BIT_ADDER:adder0.port3
+sum[1] <= ONE_BIT_ADDER:adder1.port3
+sum[2] <= ONE_BIT_ADDER:adder2.port3
+sum[3] <= ONE_BIT_ADDER:adder3.port3
+cout <= ONE_BIT_ADDER:adder3.port4
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder5|ONE_BIT_ADDER:adder0
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder5|ONE_BIT_ADDER:adder1
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder5|ONE_BIT_ADDER:adder2
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder5|ONE_BIT_ADDER:adder3
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder6
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+cin => cin.IN1
+sum[0] <= ONE_BIT_ADDER:adder0.port3
+sum[1] <= ONE_BIT_ADDER:adder1.port3
+sum[2] <= ONE_BIT_ADDER:adder2.port3
+sum[3] <= ONE_BIT_ADDER:adder3.port3
+cout <= ONE_BIT_ADDER:adder3.port4
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder6|ONE_BIT_ADDER:adder0
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder6|ONE_BIT_ADDER:adder1
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder6|ONE_BIT_ADDER:adder2
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder6|ONE_BIT_ADDER:adder3
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder7
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+cin => cin.IN1
+sum[0] <= ONE_BIT_ADDER:adder0.port3
+sum[1] <= ONE_BIT_ADDER:adder1.port3
+sum[2] <= ONE_BIT_ADDER:adder2.port3
+sum[3] <= ONE_BIT_ADDER:adder3.port3
+cout <= ONE_BIT_ADDER:adder3.port4
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder7|ONE_BIT_ADDER:adder0
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder7|ONE_BIT_ADDER:adder1
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder7|ONE_BIT_ADDER:adder2
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SLT32:a7|SUBTRACTOR:_subtractor|THIRTYTWO_BIT_SUBTRACTOR:subtractor|ADDER:t_adder|THIRTYTWO_BIT_ADDER:adder|FOUR_BIT_ADDER:adder7|ONE_BIT_ADDER:adder3
+A => first_xor.IN0
+A => sec_and.IN0
+B => first_xor.IN1
+B => sec_and.IN1
+Cin => sec_xor.IN1
+Cin => first_and.IN1
+Sum <= sec_xor.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= first_or.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|SLT32:a7|ONE_TO_THIRTYTWO_EXTENDER_WITH_LSB:_extender
+lsb => out[0].DATAIN
+out[0] <= lsb.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= ONE_TO_32_EXTENDER:extender.port1
+out[2] <= ONE_TO_32_EXTENDER:extender.port1
+out[3] <= ONE_TO_32_EXTENDER:extender.port1
+out[4] <= ONE_TO_32_EXTENDER:extender.port1
+out[5] <= ONE_TO_32_EXTENDER:extender.port1
+out[6] <= ONE_TO_32_EXTENDER:extender.port1
+out[7] <= ONE_TO_32_EXTENDER:extender.port1
+out[8] <= ONE_TO_32_EXTENDER:extender.port1
+out[9] <= ONE_TO_32_EXTENDER:extender.port1
+out[10] <= ONE_TO_32_EXTENDER:extender.port1
+out[11] <= ONE_TO_32_EXTENDER:extender.port1
+out[12] <= ONE_TO_32_EXTENDER:extender.port1
+out[13] <= ONE_TO_32_EXTENDER:extender.port1
+out[14] <= ONE_TO_32_EXTENDER:extender.port1
+out[15] <= ONE_TO_32_EXTENDER:extender.port1
+out[16] <= ONE_TO_32_EXTENDER:extender.port1
+out[17] <= ONE_TO_32_EXTENDER:extender.port1
+out[18] <= ONE_TO_32_EXTENDER:extender.port1
+out[19] <= ONE_TO_32_EXTENDER:extender.port1
+out[20] <= ONE_TO_32_EXTENDER:extender.port1
+out[21] <= ONE_TO_32_EXTENDER:extender.port1
+out[22] <= ONE_TO_32_EXTENDER:extender.port1
+out[23] <= ONE_TO_32_EXTENDER:extender.port1
+out[24] <= ONE_TO_32_EXTENDER:extender.port1
+out[25] <= ONE_TO_32_EXTENDER:extender.port1
+out[26] <= ONE_TO_32_EXTENDER:extender.port1
+out[27] <= ONE_TO_32_EXTENDER:extender.port1
+out[28] <= ONE_TO_32_EXTENDER:extender.port1
+out[29] <= ONE_TO_32_EXTENDER:extender.port1
+out[30] <= ONE_TO_32_EXTENDER:extender.port1
+out[31] <= ONE_TO_32_EXTENDER:extender.port1
+
+
+|ALU32|SLT32:a7|ONE_TO_THIRTYTWO_EXTENDER_WITH_LSB:_extender|ONE_TO_32_EXTENDER:extender
+inp => out[0].DATAIN
+inp => out[1].DATAIN
+inp => out[2].DATAIN
+inp => out[3].DATAIN
+inp => out[4].DATAIN
+inp => out[5].DATAIN
+inp => out[6].DATAIN
+inp => out[7].DATAIN
+inp => out[8].DATAIN
+inp => out[9].DATAIN
+inp => out[10].DATAIN
+inp => out[11].DATAIN
+inp => out[12].DATAIN
+inp => out[13].DATAIN
+inp => out[14].DATAIN
+inp => out[15].DATAIN
+inp => out[16].DATAIN
+inp => out[17].DATAIN
+inp => out[18].DATAIN
+inp => out[19].DATAIN
+inp => out[20].DATAIN
+inp => out[21].DATAIN
+inp => out[22].DATAIN
+inp => out[23].DATAIN
+inp => out[24].DATAIN
+inp => out[25].DATAIN
+inp => out[26].DATAIN
+inp => out[27].DATAIN
+inp => out[28].DATAIN
+inp => out[29].DATAIN
+inp => out[30].DATAIN
+inp => out[31].DATAIN
+out[0] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[16] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[17] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[18] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[19] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[20] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[21] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[22] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[23] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[24] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[25] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[26] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[27] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[28] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[29] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[30] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+out[31] <= inp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|mod:a8
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+a[4] => a[4].IN1
+a[5] => a[5].IN1
+a[6] => a[6].IN1
+a[7] => a[7].IN1
+a[8] => a[8].IN1
+a[9] => a[9].IN1
+a[10] => a[10].IN1
+a[11] => a[11].IN1
+a[12] => a[12].IN1
+a[13] => a[13].IN1
+a[14] => a[14].IN1
+a[15] => a[15].IN1
+a[16] => a[16].IN1
+a[17] => a[17].IN1
+a[18] => a[18].IN1
+a[19] => a[19].IN1
+a[20] => a[20].IN1
+a[21] => a[21].IN1
+a[22] => a[22].IN1
+a[23] => a[23].IN1
+a[24] => a[24].IN1
+a[25] => a[25].IN1
+a[26] => a[26].IN1
+a[27] => a[27].IN1
+a[28] => a[28].IN1
+a[29] => a[29].IN1
+a[30] => a[30].IN1
+a[31] => a[31].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+b[4] => b[4].IN1
+b[5] => b[5].IN1
+b[6] => b[6].IN1
+b[7] => b[7].IN1
+b[8] => b[8].IN1
+b[9] => b[9].IN1
+b[10] => b[10].IN1
+b[11] => b[11].IN1
+b[12] => b[12].IN1
+b[13] => b[13].IN1
+b[14] => b[14].IN1
+b[15] => b[15].IN1
+b[16] => b[16].IN1
+b[17] => b[17].IN1
+b[18] => b[18].IN1
+b[19] => b[19].IN1
+b[20] => b[20].IN1
+b[21] => b[21].IN1
+b[22] => b[22].IN1
+b[23] => b[23].IN1
+b[24] => b[24].IN1
+b[25] => b[25].IN1
+b[26] => b[26].IN1
+b[27] => b[27].IN1
+b[28] => b[28].IN1
+b[29] => b[29].IN1
+b[30] => b[30].IN1
+b[31] => b[31].IN1
+result[0] <= mod_dp:mod_dp.temp
+result[1] <= mod_dp:mod_dp.temp
+result[2] <= mod_dp:mod_dp.temp
+result[3] <= mod_dp:mod_dp.temp
+result[4] <= mod_dp:mod_dp.temp
+result[5] <= mod_dp:mod_dp.temp
+result[6] <= mod_dp:mod_dp.temp
+result[7] <= mod_dp:mod_dp.temp
+result[8] <= mod_dp:mod_dp.temp
+result[9] <= mod_dp:mod_dp.temp
+result[10] <= mod_dp:mod_dp.temp
+result[11] <= mod_dp:mod_dp.temp
+result[12] <= mod_dp:mod_dp.temp
+result[13] <= mod_dp:mod_dp.temp
+result[14] <= mod_dp:mod_dp.temp
+result[15] <= mod_dp:mod_dp.temp
+result[16] <= mod_dp:mod_dp.temp
+result[17] <= mod_dp:mod_dp.temp
+result[18] <= mod_dp:mod_dp.temp
+result[19] <= mod_dp:mod_dp.temp
+result[20] <= mod_dp:mod_dp.temp
+result[21] <= mod_dp:mod_dp.temp
+result[22] <= mod_dp:mod_dp.temp
+result[23] <= mod_dp:mod_dp.temp
+result[24] <= mod_dp:mod_dp.temp
+result[25] <= mod_dp:mod_dp.temp
+result[26] <= mod_dp:mod_dp.temp
+result[27] <= mod_dp:mod_dp.temp
+result[28] <= mod_dp:mod_dp.temp
+result[29] <= mod_dp:mod_dp.temp
+result[30] <= mod_dp:mod_dp.temp
+result[31] <= mod_dp:mod_dp.temp
+clk => clk.IN1
+reset => reset.IN1
+
+
+|ALU32|mod:a8|mod_dp:mod_dp
+clk => done~reg0.CLK
+clk => temp[0]~reg0.CLK
+clk => temp[1]~reg0.CLK
+clk => temp[2]~reg0.CLK
+clk => temp[3]~reg0.CLK
+clk => temp[4]~reg0.CLK
+clk => temp[5]~reg0.CLK
+clk => temp[6]~reg0.CLK
+clk => temp[7]~reg0.CLK
+clk => temp[8]~reg0.CLK
+clk => temp[9]~reg0.CLK
+clk => temp[10]~reg0.CLK
+clk => temp[11]~reg0.CLK
+clk => temp[12]~reg0.CLK
+clk => temp[13]~reg0.CLK
+clk => temp[14]~reg0.CLK
+clk => temp[15]~reg0.CLK
+clk => temp[16]~reg0.CLK
+clk => temp[17]~reg0.CLK
+clk => temp[18]~reg0.CLK
+clk => temp[19]~reg0.CLK
+clk => temp[20]~reg0.CLK
+clk => temp[21]~reg0.CLK
+clk => temp[22]~reg0.CLK
+clk => temp[23]~reg0.CLK
+clk => temp[24]~reg0.CLK
+clk => temp[25]~reg0.CLK
+clk => temp[26]~reg0.CLK
+clk => temp[27]~reg0.CLK
+clk => temp[28]~reg0.CLK
+clk => temp[29]~reg0.CLK
+clk => temp[30]~reg0.CLK
+clk => temp[31]~reg0.CLK
+reset => done~reg0.ACLR
+reset => temp[0]~reg0.ACLR
+reset => temp[1]~reg0.ACLR
+reset => temp[2]~reg0.ACLR
+reset => temp[3]~reg0.ACLR
+reset => temp[4]~reg0.ACLR
+reset => temp[5]~reg0.ACLR
+reset => temp[6]~reg0.ACLR
+reset => temp[7]~reg0.ACLR
+reset => temp[8]~reg0.ACLR
+reset => temp[9]~reg0.ACLR
+reset => temp[10]~reg0.ACLR
+reset => temp[11]~reg0.ACLR
+reset => temp[12]~reg0.ACLR
+reset => temp[13]~reg0.ACLR
+reset => temp[14]~reg0.ACLR
+reset => temp[15]~reg0.ACLR
+reset => temp[16]~reg0.ACLR
+reset => temp[17]~reg0.ACLR
+reset => temp[18]~reg0.ACLR
+reset => temp[19]~reg0.ACLR
+reset => temp[20]~reg0.ACLR
+reset => temp[21]~reg0.ACLR
+reset => temp[22]~reg0.ACLR
+reset => temp[23]~reg0.ACLR
+reset => temp[24]~reg0.ACLR
+reset => temp[25]~reg0.ACLR
+reset => temp[26]~reg0.ACLR
+reset => temp[27]~reg0.ACLR
+reset => temp[28]~reg0.ACLR
+reset => temp[29]~reg0.ACLR
+reset => temp[30]~reg0.ACLR
+reset => temp[31]~reg0.ACLR
+A[0] => temp.DATAA
+A[1] => temp.DATAA
+A[2] => temp.DATAA
+A[3] => temp.DATAA
+A[4] => temp.DATAA
+A[5] => temp.DATAA
+A[6] => temp.DATAA
+A[7] => temp.DATAA
+A[8] => temp.DATAA
+A[9] => temp.DATAA
+A[10] => temp.DATAA
+A[11] => temp.DATAA
+A[12] => temp.DATAA
+A[13] => temp.DATAA
+A[14] => temp.DATAA
+A[15] => temp.DATAA
+A[16] => temp.DATAA
+A[17] => temp.DATAA
+A[18] => temp.DATAA
+A[19] => temp.DATAA
+A[20] => temp.DATAA
+A[21] => temp.DATAA
+A[22] => temp.DATAA
+A[23] => temp.DATAA
+A[24] => temp.DATAA
+A[25] => temp.DATAA
+A[26] => temp.DATAA
+A[27] => temp.DATAA
+A[28] => temp.DATAA
+A[29] => temp.DATAA
+A[30] => temp.DATAA
+A[31] => temp.DATAA
+B[0] => LessThan0.IN32
+B[0] => Add0.IN32
+B[1] => LessThan0.IN31
+B[1] => Add0.IN31
+B[2] => LessThan0.IN30
+B[2] => Add0.IN30
+B[3] => LessThan0.IN29
+B[3] => Add0.IN29
+B[4] => LessThan0.IN28
+B[4] => Add0.IN28
+B[5] => LessThan0.IN27
+B[5] => Add0.IN27
+B[6] => LessThan0.IN26
+B[6] => Add0.IN26
+B[7] => LessThan0.IN25
+B[7] => Add0.IN25
+B[8] => LessThan0.IN24
+B[8] => Add0.IN24
+B[9] => LessThan0.IN23
+B[9] => Add0.IN23
+B[10] => LessThan0.IN22
+B[10] => Add0.IN22
+B[11] => LessThan0.IN21
+B[11] => Add0.IN21
+B[12] => LessThan0.IN20
+B[12] => Add0.IN20
+B[13] => LessThan0.IN19
+B[13] => Add0.IN19
+B[14] => LessThan0.IN18
+B[14] => Add0.IN18
+B[15] => LessThan0.IN17
+B[15] => Add0.IN17
+B[16] => LessThan0.IN16
+B[16] => Add0.IN16
+B[17] => LessThan0.IN15
+B[17] => Add0.IN15
+B[18] => LessThan0.IN14
+B[18] => Add0.IN14
+B[19] => LessThan0.IN13
+B[19] => Add0.IN13
+B[20] => LessThan0.IN12
+B[20] => Add0.IN12
+B[21] => LessThan0.IN11
+B[21] => Add0.IN11
+B[22] => LessThan0.IN10
+B[22] => Add0.IN10
+B[23] => LessThan0.IN9
+B[23] => Add0.IN9
+B[24] => LessThan0.IN8
+B[24] => Add0.IN8
+B[25] => LessThan0.IN7
+B[25] => Add0.IN7
+B[26] => LessThan0.IN6
+B[26] => Add0.IN6
+B[27] => LessThan0.IN5
+B[27] => Add0.IN5
+B[28] => LessThan0.IN4
+B[28] => Add0.IN4
+B[29] => LessThan0.IN3
+B[29] => Add0.IN3
+B[30] => LessThan0.IN2
+B[30] => Add0.IN2
+B[31] => LessThan0.IN1
+B[31] => Add0.IN1
+start => temp[31]~reg0.ENA
+start => temp[30]~reg0.ENA
+start => temp[29]~reg0.ENA
+start => temp[28]~reg0.ENA
+start => temp[27]~reg0.ENA
+start => temp[26]~reg0.ENA
+start => temp[25]~reg0.ENA
+start => temp[24]~reg0.ENA
+start => temp[23]~reg0.ENA
+start => temp[22]~reg0.ENA
+start => temp[21]~reg0.ENA
+start => temp[20]~reg0.ENA
+start => temp[19]~reg0.ENA
+start => temp[18]~reg0.ENA
+start => temp[17]~reg0.ENA
+start => temp[16]~reg0.ENA
+start => temp[15]~reg0.ENA
+start => temp[14]~reg0.ENA
+start => temp[13]~reg0.ENA
+start => temp[12]~reg0.ENA
+start => temp[11]~reg0.ENA
+start => temp[10]~reg0.ENA
+start => temp[9]~reg0.ENA
+start => temp[8]~reg0.ENA
+start => temp[7]~reg0.ENA
+start => temp[6]~reg0.ENA
+start => temp[5]~reg0.ENA
+start => temp[4]~reg0.ENA
+start => temp[3]~reg0.ENA
+start => temp[2]~reg0.ENA
+start => temp[1]~reg0.ENA
+start => temp[0]~reg0.ENA
+start => done~reg0.ENA
+temp[0] <= temp[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+temp[1] <= temp[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+temp[2] <= temp[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+temp[3] <= temp[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+temp[4] <= temp[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+temp[5] <= temp[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+temp[6] <= temp[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+temp[7] <= temp[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+temp[8] <= temp[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+temp[9] <= temp[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+temp[10] <= temp[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+temp[11] <= temp[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+temp[12] <= temp[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+temp[13] <= temp[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+temp[14] <= temp[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+temp[15] <= temp[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+temp[16] <= temp[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+temp[17] <= temp[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+temp[18] <= temp[18]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+temp[19] <= temp[19]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+temp[20] <= temp[20]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+temp[21] <= temp[21]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+temp[22] <= temp[22]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+temp[23] <= temp[23]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+temp[24] <= temp[24]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+temp[25] <= temp[25]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+temp[26] <= temp[26]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+temp[27] <= temp[27]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+temp[28] <= temp[28]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+temp[29] <= temp[29]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+temp[30] <= temp[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+temp[31] <= temp[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+done <= done~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|MUX32:mux
+i0[0] => i0[0].IN1
+i0[1] => i0[1].IN1
+i0[2] => i0[2].IN1
+i0[3] => i0[3].IN1
+i0[4] => i0[4].IN1
+i0[5] => i0[5].IN1
+i0[6] => i0[6].IN1
+i0[7] => i0[7].IN1
+i0[8] => i0[8].IN1
+i0[9] => i0[9].IN1
+i0[10] => i0[10].IN1
+i0[11] => i0[11].IN1
+i0[12] => i0[12].IN1
+i0[13] => i0[13].IN1
+i0[14] => i0[14].IN1
+i0[15] => i0[15].IN1
+i0[16] => i0[16].IN1
+i0[17] => i0[17].IN1
+i0[18] => i0[18].IN1
+i0[19] => i0[19].IN1
+i0[20] => i0[20].IN1
+i0[21] => i0[21].IN1
+i0[22] => i0[22].IN1
+i0[23] => i0[23].IN1
+i0[24] => i0[24].IN1
+i0[25] => i0[25].IN1
+i0[26] => i0[26].IN1
+i0[27] => i0[27].IN1
+i0[28] => i0[28].IN1
+i0[29] => i0[29].IN1
+i0[30] => i0[30].IN1
+i0[31] => i0[31].IN1
+i1[0] => i1[0].IN1
+i1[1] => i1[1].IN1
+i1[2] => i1[2].IN1
+i1[3] => i1[3].IN1
+i1[4] => i1[4].IN1
+i1[5] => i1[5].IN1
+i1[6] => i1[6].IN1
+i1[7] => i1[7].IN1
+i1[8] => i1[8].IN1
+i1[9] => i1[9].IN1
+i1[10] => i1[10].IN1
+i1[11] => i1[11].IN1
+i1[12] => i1[12].IN1
+i1[13] => i1[13].IN1
+i1[14] => i1[14].IN1
+i1[15] => i1[15].IN1
+i1[16] => i1[16].IN1
+i1[17] => i1[17].IN1
+i1[18] => i1[18].IN1
+i1[19] => i1[19].IN1
+i1[20] => i1[20].IN1
+i1[21] => i1[21].IN1
+i1[22] => i1[22].IN1
+i1[23] => i1[23].IN1
+i1[24] => i1[24].IN1
+i1[25] => i1[25].IN1
+i1[26] => i1[26].IN1
+i1[27] => i1[27].IN1
+i1[28] => i1[28].IN1
+i1[29] => i1[29].IN1
+i1[30] => i1[30].IN1
+i1[31] => i1[31].IN1
+i2[0] => i2[0].IN1
+i2[1] => i2[1].IN1
+i2[2] => i2[2].IN1
+i2[3] => i2[3].IN1
+i2[4] => i2[4].IN1
+i2[5] => i2[5].IN1
+i2[6] => i2[6].IN1
+i2[7] => i2[7].IN1
+i2[8] => i2[8].IN1
+i2[9] => i2[9].IN1
+i2[10] => i2[10].IN1
+i2[11] => i2[11].IN1
+i2[12] => i2[12].IN1
+i2[13] => i2[13].IN1
+i2[14] => i2[14].IN1
+i2[15] => i2[15].IN1
+i2[16] => i2[16].IN1
+i2[17] => i2[17].IN1
+i2[18] => i2[18].IN1
+i2[19] => i2[19].IN1
+i2[20] => i2[20].IN1
+i2[21] => i2[21].IN1
+i2[22] => i2[22].IN1
+i2[23] => i2[23].IN1
+i2[24] => i2[24].IN1
+i2[25] => i2[25].IN1
+i2[26] => i2[26].IN1
+i2[27] => i2[27].IN1
+i2[28] => i2[28].IN1
+i2[29] => i2[29].IN1
+i2[30] => i2[30].IN1
+i2[31] => i2[31].IN1
+i3[0] => i3[0].IN1
+i3[1] => i3[1].IN1
+i3[2] => i3[2].IN1
+i3[3] => i3[3].IN1
+i3[4] => i3[4].IN1
+i3[5] => i3[5].IN1
+i3[6] => i3[6].IN1
+i3[7] => i3[7].IN1
+i3[8] => i3[8].IN1
+i3[9] => i3[9].IN1
+i3[10] => i3[10].IN1
+i3[11] => i3[11].IN1
+i3[12] => i3[12].IN1
+i3[13] => i3[13].IN1
+i3[14] => i3[14].IN1
+i3[15] => i3[15].IN1
+i3[16] => i3[16].IN1
+i3[17] => i3[17].IN1
+i3[18] => i3[18].IN1
+i3[19] => i3[19].IN1
+i3[20] => i3[20].IN1
+i3[21] => i3[21].IN1
+i3[22] => i3[22].IN1
+i3[23] => i3[23].IN1
+i3[24] => i3[24].IN1
+i3[25] => i3[25].IN1
+i3[26] => i3[26].IN1
+i3[27] => i3[27].IN1
+i3[28] => i3[28].IN1
+i3[29] => i3[29].IN1
+i3[30] => i3[30].IN1
+i3[31] => i3[31].IN1
+i4[0] => i4[0].IN1
+i4[1] => i4[1].IN1
+i4[2] => i4[2].IN1
+i4[3] => i4[3].IN1
+i4[4] => i4[4].IN1
+i4[5] => i4[5].IN1
+i4[6] => i4[6].IN1
+i4[7] => i4[7].IN1
+i4[8] => i4[8].IN1
+i4[9] => i4[9].IN1
+i4[10] => i4[10].IN1
+i4[11] => i4[11].IN1
+i4[12] => i4[12].IN1
+i4[13] => i4[13].IN1
+i4[14] => i4[14].IN1
+i4[15] => i4[15].IN1
+i4[16] => i4[16].IN1
+i4[17] => i4[17].IN1
+i4[18] => i4[18].IN1
+i4[19] => i4[19].IN1
+i4[20] => i4[20].IN1
+i4[21] => i4[21].IN1
+i4[22] => i4[22].IN1
+i4[23] => i4[23].IN1
+i4[24] => i4[24].IN1
+i4[25] => i4[25].IN1
+i4[26] => i4[26].IN1
+i4[27] => i4[27].IN1
+i4[28] => i4[28].IN1
+i4[29] => i4[29].IN1
+i4[30] => i4[30].IN1
+i4[31] => i4[31].IN1
+i5[0] => i5[0].IN1
+i5[1] => i5[1].IN1
+i5[2] => i5[2].IN1
+i5[3] => i5[3].IN1
+i5[4] => i5[4].IN1
+i5[5] => i5[5].IN1
+i5[6] => i5[6].IN1
+i5[7] => i5[7].IN1
+i5[8] => i5[8].IN1
+i5[9] => i5[9].IN1
+i5[10] => i5[10].IN1
+i5[11] => i5[11].IN1
+i5[12] => i5[12].IN1
+i5[13] => i5[13].IN1
+i5[14] => i5[14].IN1
+i5[15] => i5[15].IN1
+i5[16] => i5[16].IN1
+i5[17] => i5[17].IN1
+i5[18] => i5[18].IN1
+i5[19] => i5[19].IN1
+i5[20] => i5[20].IN1
+i5[21] => i5[21].IN1
+i5[22] => i5[22].IN1
+i5[23] => i5[23].IN1
+i5[24] => i5[24].IN1
+i5[25] => i5[25].IN1
+i5[26] => i5[26].IN1
+i5[27] => i5[27].IN1
+i5[28] => i5[28].IN1
+i5[29] => i5[29].IN1
+i5[30] => i5[30].IN1
+i5[31] => i5[31].IN1
+i6[0] => i6[0].IN1
+i6[1] => i6[1].IN1
+i6[2] => i6[2].IN1
+i6[3] => i6[3].IN1
+i6[4] => i6[4].IN1
+i6[5] => i6[5].IN1
+i6[6] => i6[6].IN1
+i6[7] => i6[7].IN1
+i6[8] => i6[8].IN1
+i6[9] => i6[9].IN1
+i6[10] => i6[10].IN1
+i6[11] => i6[11].IN1
+i6[12] => i6[12].IN1
+i6[13] => i6[13].IN1
+i6[14] => i6[14].IN1
+i6[15] => i6[15].IN1
+i6[16] => i6[16].IN1
+i6[17] => i6[17].IN1
+i6[18] => i6[18].IN1
+i6[19] => i6[19].IN1
+i6[20] => i6[20].IN1
+i6[21] => i6[21].IN1
+i6[22] => i6[22].IN1
+i6[23] => i6[23].IN1
+i6[24] => i6[24].IN1
+i6[25] => i6[25].IN1
+i6[26] => i6[26].IN1
+i6[27] => i6[27].IN1
+i6[28] => i6[28].IN1
+i6[29] => i6[29].IN1
+i6[30] => i6[30].IN1
+i6[31] => i6[31].IN1
+i7[0] => i7[0].IN1
+i7[1] => i7[1].IN1
+i7[2] => i7[2].IN1
+i7[3] => i7[3].IN1
+i7[4] => i7[4].IN1
+i7[5] => i7[5].IN1
+i7[6] => i7[6].IN1
+i7[7] => i7[7].IN1
+i7[8] => i7[8].IN1
+i7[9] => i7[9].IN1
+i7[10] => i7[10].IN1
+i7[11] => i7[11].IN1
+i7[12] => i7[12].IN1
+i7[13] => i7[13].IN1
+i7[14] => i7[14].IN1
+i7[15] => i7[15].IN1
+i7[16] => i7[16].IN1
+i7[17] => i7[17].IN1
+i7[18] => i7[18].IN1
+i7[19] => i7[19].IN1
+i7[20] => i7[20].IN1
+i7[21] => i7[21].IN1
+i7[22] => i7[22].IN1
+i7[23] => i7[23].IN1
+i7[24] => i7[24].IN1
+i7[25] => i7[25].IN1
+i7[26] => i7[26].IN1
+i7[27] => i7[27].IN1
+i7[28] => i7[28].IN1
+i7[29] => i7[29].IN1
+i7[30] => i7[30].IN1
+i7[31] => i7[31].IN1
+ALUop[0] => ALUop[0].IN32
+ALUop[1] => ALUop[1].IN32
+ALUop[2] => ALUop[2].IN32
+result[0] <= EIGHT_BIT_MUX:m0.port11
+result[1] <= EIGHT_BIT_MUX:m1.port11
+result[2] <= EIGHT_BIT_MUX:m2.port11
+result[3] <= EIGHT_BIT_MUX:m3.port11
+result[4] <= EIGHT_BIT_MUX:m4.port11
+result[5] <= EIGHT_BIT_MUX:m5.port11
+result[6] <= EIGHT_BIT_MUX:m6.port11
+result[7] <= EIGHT_BIT_MUX:m7.port11
+result[8] <= EIGHT_BIT_MUX:m8.port11
+result[9] <= EIGHT_BIT_MUX:m9.port11
+result[10] <= EIGHT_BIT_MUX:m10.port11
+result[11] <= EIGHT_BIT_MUX:m11.port11
+result[12] <= EIGHT_BIT_MUX:m12.port11
+result[13] <= EIGHT_BIT_MUX:m13.port11
+result[14] <= EIGHT_BIT_MUX:m14.port11
+result[15] <= EIGHT_BIT_MUX:m15.port11
+result[16] <= EIGHT_BIT_MUX:m16.port11
+result[17] <= EIGHT_BIT_MUX:m17.port11
+result[18] <= EIGHT_BIT_MUX:m18.port11
+result[19] <= EIGHT_BIT_MUX:m19.port11
+result[20] <= EIGHT_BIT_MUX:m20.port11
+result[21] <= EIGHT_BIT_MUX:m21.port11
+result[22] <= EIGHT_BIT_MUX:m22.port11
+result[23] <= EIGHT_BIT_MUX:m23.port11
+result[24] <= EIGHT_BIT_MUX:m24.port11
+result[25] <= EIGHT_BIT_MUX:m25.port11
+result[26] <= EIGHT_BIT_MUX:m26.port11
+result[27] <= EIGHT_BIT_MUX:m27.port11
+result[28] <= EIGHT_BIT_MUX:m28.port11
+result[29] <= EIGHT_BIT_MUX:m29.port11
+result[30] <= EIGHT_BIT_MUX:m30.port11
+result[31] <= EIGHT_BIT_MUX:m31.port11
+
+
+|ALU32|MUX32:mux|EIGHT_BIT_MUX:m0
+_s2 => exp1_and2.IN0
+_s2 => exp3_and2.IN0
+_s2 => exp5_and2.IN0
+_s2 => exp7_and2.IN0
+_s2 => exp0_and2.IN0
+_s2 => exp2_and2.IN0
+_s2 => exp4_and2.IN0
+_s2 => exp6_and2.IN0
+_s1 => exp2_and1.IN0
+_s1 => exp3_and1.IN0
+_s1 => exp6_and1.IN0
+_s1 => exp7_and1.IN0
+_s1 => exp0_and1.IN0
+_s1 => exp1_and1.IN0
+_s1 => exp4_and1.IN0
+_s1 => exp5_and1.IN0
+_s0 => exp4_and1.IN1
+_s0 => exp5_and1.IN1
+_s0 => exp6_and1.IN1
+_s0 => exp7_and1.IN1
+_s0 => exp0_and1.IN1
+_s0 => exp1_and1.IN1
+_s0 => exp2_and1.IN1
+_s0 => exp3_and1.IN1
+_o0 => exp0_and2.IN1
+_o1 => exp1_and2.IN1
+_o2 => exp2_and2.IN1
+_o3 => exp3_and2.IN1
+_o4 => exp4_and2.IN1
+_o5 => exp5_and2.IN1
+_o6 => exp6_and2.IN1
+_o7 => exp7_and2.IN1
+y <= or6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|MUX32:mux|EIGHT_BIT_MUX:m1
+_s2 => exp1_and2.IN0
+_s2 => exp3_and2.IN0
+_s2 => exp5_and2.IN0
+_s2 => exp7_and2.IN0
+_s2 => exp0_and2.IN0
+_s2 => exp2_and2.IN0
+_s2 => exp4_and2.IN0
+_s2 => exp6_and2.IN0
+_s1 => exp2_and1.IN0
+_s1 => exp3_and1.IN0
+_s1 => exp6_and1.IN0
+_s1 => exp7_and1.IN0
+_s1 => exp0_and1.IN0
+_s1 => exp1_and1.IN0
+_s1 => exp4_and1.IN0
+_s1 => exp5_and1.IN0
+_s0 => exp4_and1.IN1
+_s0 => exp5_and1.IN1
+_s0 => exp6_and1.IN1
+_s0 => exp7_and1.IN1
+_s0 => exp0_and1.IN1
+_s0 => exp1_and1.IN1
+_s0 => exp2_and1.IN1
+_s0 => exp3_and1.IN1
+_o0 => exp0_and2.IN1
+_o1 => exp1_and2.IN1
+_o2 => exp2_and2.IN1
+_o3 => exp3_and2.IN1
+_o4 => exp4_and2.IN1
+_o5 => exp5_and2.IN1
+_o6 => exp6_and2.IN1
+_o7 => exp7_and2.IN1
+y <= or6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|MUX32:mux|EIGHT_BIT_MUX:m2
+_s2 => exp1_and2.IN0
+_s2 => exp3_and2.IN0
+_s2 => exp5_and2.IN0
+_s2 => exp7_and2.IN0
+_s2 => exp0_and2.IN0
+_s2 => exp2_and2.IN0
+_s2 => exp4_and2.IN0
+_s2 => exp6_and2.IN0
+_s1 => exp2_and1.IN0
+_s1 => exp3_and1.IN0
+_s1 => exp6_and1.IN0
+_s1 => exp7_and1.IN0
+_s1 => exp0_and1.IN0
+_s1 => exp1_and1.IN0
+_s1 => exp4_and1.IN0
+_s1 => exp5_and1.IN0
+_s0 => exp4_and1.IN1
+_s0 => exp5_and1.IN1
+_s0 => exp6_and1.IN1
+_s0 => exp7_and1.IN1
+_s0 => exp0_and1.IN1
+_s0 => exp1_and1.IN1
+_s0 => exp2_and1.IN1
+_s0 => exp3_and1.IN1
+_o0 => exp0_and2.IN1
+_o1 => exp1_and2.IN1
+_o2 => exp2_and2.IN1
+_o3 => exp3_and2.IN1
+_o4 => exp4_and2.IN1
+_o5 => exp5_and2.IN1
+_o6 => exp6_and2.IN1
+_o7 => exp7_and2.IN1
+y <= or6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|MUX32:mux|EIGHT_BIT_MUX:m3
+_s2 => exp1_and2.IN0
+_s2 => exp3_and2.IN0
+_s2 => exp5_and2.IN0
+_s2 => exp7_and2.IN0
+_s2 => exp0_and2.IN0
+_s2 => exp2_and2.IN0
+_s2 => exp4_and2.IN0
+_s2 => exp6_and2.IN0
+_s1 => exp2_and1.IN0
+_s1 => exp3_and1.IN0
+_s1 => exp6_and1.IN0
+_s1 => exp7_and1.IN0
+_s1 => exp0_and1.IN0
+_s1 => exp1_and1.IN0
+_s1 => exp4_and1.IN0
+_s1 => exp5_and1.IN0
+_s0 => exp4_and1.IN1
+_s0 => exp5_and1.IN1
+_s0 => exp6_and1.IN1
+_s0 => exp7_and1.IN1
+_s0 => exp0_and1.IN1
+_s0 => exp1_and1.IN1
+_s0 => exp2_and1.IN1
+_s0 => exp3_and1.IN1
+_o0 => exp0_and2.IN1
+_o1 => exp1_and2.IN1
+_o2 => exp2_and2.IN1
+_o3 => exp3_and2.IN1
+_o4 => exp4_and2.IN1
+_o5 => exp5_and2.IN1
+_o6 => exp6_and2.IN1
+_o7 => exp7_and2.IN1
+y <= or6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|MUX32:mux|EIGHT_BIT_MUX:m4
+_s2 => exp1_and2.IN0
+_s2 => exp3_and2.IN0
+_s2 => exp5_and2.IN0
+_s2 => exp7_and2.IN0
+_s2 => exp0_and2.IN0
+_s2 => exp2_and2.IN0
+_s2 => exp4_and2.IN0
+_s2 => exp6_and2.IN0
+_s1 => exp2_and1.IN0
+_s1 => exp3_and1.IN0
+_s1 => exp6_and1.IN0
+_s1 => exp7_and1.IN0
+_s1 => exp0_and1.IN0
+_s1 => exp1_and1.IN0
+_s1 => exp4_and1.IN0
+_s1 => exp5_and1.IN0
+_s0 => exp4_and1.IN1
+_s0 => exp5_and1.IN1
+_s0 => exp6_and1.IN1
+_s0 => exp7_and1.IN1
+_s0 => exp0_and1.IN1
+_s0 => exp1_and1.IN1
+_s0 => exp2_and1.IN1
+_s0 => exp3_and1.IN1
+_o0 => exp0_and2.IN1
+_o1 => exp1_and2.IN1
+_o2 => exp2_and2.IN1
+_o3 => exp3_and2.IN1
+_o4 => exp4_and2.IN1
+_o5 => exp5_and2.IN1
+_o6 => exp6_and2.IN1
+_o7 => exp7_and2.IN1
+y <= or6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|MUX32:mux|EIGHT_BIT_MUX:m5
+_s2 => exp1_and2.IN0
+_s2 => exp3_and2.IN0
+_s2 => exp5_and2.IN0
+_s2 => exp7_and2.IN0
+_s2 => exp0_and2.IN0
+_s2 => exp2_and2.IN0
+_s2 => exp4_and2.IN0
+_s2 => exp6_and2.IN0
+_s1 => exp2_and1.IN0
+_s1 => exp3_and1.IN0
+_s1 => exp6_and1.IN0
+_s1 => exp7_and1.IN0
+_s1 => exp0_and1.IN0
+_s1 => exp1_and1.IN0
+_s1 => exp4_and1.IN0
+_s1 => exp5_and1.IN0
+_s0 => exp4_and1.IN1
+_s0 => exp5_and1.IN1
+_s0 => exp6_and1.IN1
+_s0 => exp7_and1.IN1
+_s0 => exp0_and1.IN1
+_s0 => exp1_and1.IN1
+_s0 => exp2_and1.IN1
+_s0 => exp3_and1.IN1
+_o0 => exp0_and2.IN1
+_o1 => exp1_and2.IN1
+_o2 => exp2_and2.IN1
+_o3 => exp3_and2.IN1
+_o4 => exp4_and2.IN1
+_o5 => exp5_and2.IN1
+_o6 => exp6_and2.IN1
+_o7 => exp7_and2.IN1
+y <= or6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|MUX32:mux|EIGHT_BIT_MUX:m6
+_s2 => exp1_and2.IN0
+_s2 => exp3_and2.IN0
+_s2 => exp5_and2.IN0
+_s2 => exp7_and2.IN0
+_s2 => exp0_and2.IN0
+_s2 => exp2_and2.IN0
+_s2 => exp4_and2.IN0
+_s2 => exp6_and2.IN0
+_s1 => exp2_and1.IN0
+_s1 => exp3_and1.IN0
+_s1 => exp6_and1.IN0
+_s1 => exp7_and1.IN0
+_s1 => exp0_and1.IN0
+_s1 => exp1_and1.IN0
+_s1 => exp4_and1.IN0
+_s1 => exp5_and1.IN0
+_s0 => exp4_and1.IN1
+_s0 => exp5_and1.IN1
+_s0 => exp6_and1.IN1
+_s0 => exp7_and1.IN1
+_s0 => exp0_and1.IN1
+_s0 => exp1_and1.IN1
+_s0 => exp2_and1.IN1
+_s0 => exp3_and1.IN1
+_o0 => exp0_and2.IN1
+_o1 => exp1_and2.IN1
+_o2 => exp2_and2.IN1
+_o3 => exp3_and2.IN1
+_o4 => exp4_and2.IN1
+_o5 => exp5_and2.IN1
+_o6 => exp6_and2.IN1
+_o7 => exp7_and2.IN1
+y <= or6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|MUX32:mux|EIGHT_BIT_MUX:m7
+_s2 => exp1_and2.IN0
+_s2 => exp3_and2.IN0
+_s2 => exp5_and2.IN0
+_s2 => exp7_and2.IN0
+_s2 => exp0_and2.IN0
+_s2 => exp2_and2.IN0
+_s2 => exp4_and2.IN0
+_s2 => exp6_and2.IN0
+_s1 => exp2_and1.IN0
+_s1 => exp3_and1.IN0
+_s1 => exp6_and1.IN0
+_s1 => exp7_and1.IN0
+_s1 => exp0_and1.IN0
+_s1 => exp1_and1.IN0
+_s1 => exp4_and1.IN0
+_s1 => exp5_and1.IN0
+_s0 => exp4_and1.IN1
+_s0 => exp5_and1.IN1
+_s0 => exp6_and1.IN1
+_s0 => exp7_and1.IN1
+_s0 => exp0_and1.IN1
+_s0 => exp1_and1.IN1
+_s0 => exp2_and1.IN1
+_s0 => exp3_and1.IN1
+_o0 => exp0_and2.IN1
+_o1 => exp1_and2.IN1
+_o2 => exp2_and2.IN1
+_o3 => exp3_and2.IN1
+_o4 => exp4_and2.IN1
+_o5 => exp5_and2.IN1
+_o6 => exp6_and2.IN1
+_o7 => exp7_and2.IN1
+y <= or6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|MUX32:mux|EIGHT_BIT_MUX:m8
+_s2 => exp1_and2.IN0
+_s2 => exp3_and2.IN0
+_s2 => exp5_and2.IN0
+_s2 => exp7_and2.IN0
+_s2 => exp0_and2.IN0
+_s2 => exp2_and2.IN0
+_s2 => exp4_and2.IN0
+_s2 => exp6_and2.IN0
+_s1 => exp2_and1.IN0
+_s1 => exp3_and1.IN0
+_s1 => exp6_and1.IN0
+_s1 => exp7_and1.IN0
+_s1 => exp0_and1.IN0
+_s1 => exp1_and1.IN0
+_s1 => exp4_and1.IN0
+_s1 => exp5_and1.IN0
+_s0 => exp4_and1.IN1
+_s0 => exp5_and1.IN1
+_s0 => exp6_and1.IN1
+_s0 => exp7_and1.IN1
+_s0 => exp0_and1.IN1
+_s0 => exp1_and1.IN1
+_s0 => exp2_and1.IN1
+_s0 => exp3_and1.IN1
+_o0 => exp0_and2.IN1
+_o1 => exp1_and2.IN1
+_o2 => exp2_and2.IN1
+_o3 => exp3_and2.IN1
+_o4 => exp4_and2.IN1
+_o5 => exp5_and2.IN1
+_o6 => exp6_and2.IN1
+_o7 => exp7_and2.IN1
+y <= or6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|MUX32:mux|EIGHT_BIT_MUX:m9
+_s2 => exp1_and2.IN0
+_s2 => exp3_and2.IN0
+_s2 => exp5_and2.IN0
+_s2 => exp7_and2.IN0
+_s2 => exp0_and2.IN0
+_s2 => exp2_and2.IN0
+_s2 => exp4_and2.IN0
+_s2 => exp6_and2.IN0
+_s1 => exp2_and1.IN0
+_s1 => exp3_and1.IN0
+_s1 => exp6_and1.IN0
+_s1 => exp7_and1.IN0
+_s1 => exp0_and1.IN0
+_s1 => exp1_and1.IN0
+_s1 => exp4_and1.IN0
+_s1 => exp5_and1.IN0
+_s0 => exp4_and1.IN1
+_s0 => exp5_and1.IN1
+_s0 => exp6_and1.IN1
+_s0 => exp7_and1.IN1
+_s0 => exp0_and1.IN1
+_s0 => exp1_and1.IN1
+_s0 => exp2_and1.IN1
+_s0 => exp3_and1.IN1
+_o0 => exp0_and2.IN1
+_o1 => exp1_and2.IN1
+_o2 => exp2_and2.IN1
+_o3 => exp3_and2.IN1
+_o4 => exp4_and2.IN1
+_o5 => exp5_and2.IN1
+_o6 => exp6_and2.IN1
+_o7 => exp7_and2.IN1
+y <= or6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|MUX32:mux|EIGHT_BIT_MUX:m10
+_s2 => exp1_and2.IN0
+_s2 => exp3_and2.IN0
+_s2 => exp5_and2.IN0
+_s2 => exp7_and2.IN0
+_s2 => exp0_and2.IN0
+_s2 => exp2_and2.IN0
+_s2 => exp4_and2.IN0
+_s2 => exp6_and2.IN0
+_s1 => exp2_and1.IN0
+_s1 => exp3_and1.IN0
+_s1 => exp6_and1.IN0
+_s1 => exp7_and1.IN0
+_s1 => exp0_and1.IN0
+_s1 => exp1_and1.IN0
+_s1 => exp4_and1.IN0
+_s1 => exp5_and1.IN0
+_s0 => exp4_and1.IN1
+_s0 => exp5_and1.IN1
+_s0 => exp6_and1.IN1
+_s0 => exp7_and1.IN1
+_s0 => exp0_and1.IN1
+_s0 => exp1_and1.IN1
+_s0 => exp2_and1.IN1
+_s0 => exp3_and1.IN1
+_o0 => exp0_and2.IN1
+_o1 => exp1_and2.IN1
+_o2 => exp2_and2.IN1
+_o3 => exp3_and2.IN1
+_o4 => exp4_and2.IN1
+_o5 => exp5_and2.IN1
+_o6 => exp6_and2.IN1
+_o7 => exp7_and2.IN1
+y <= or6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|MUX32:mux|EIGHT_BIT_MUX:m11
+_s2 => exp1_and2.IN0
+_s2 => exp3_and2.IN0
+_s2 => exp5_and2.IN0
+_s2 => exp7_and2.IN0
+_s2 => exp0_and2.IN0
+_s2 => exp2_and2.IN0
+_s2 => exp4_and2.IN0
+_s2 => exp6_and2.IN0
+_s1 => exp2_and1.IN0
+_s1 => exp3_and1.IN0
+_s1 => exp6_and1.IN0
+_s1 => exp7_and1.IN0
+_s1 => exp0_and1.IN0
+_s1 => exp1_and1.IN0
+_s1 => exp4_and1.IN0
+_s1 => exp5_and1.IN0
+_s0 => exp4_and1.IN1
+_s0 => exp5_and1.IN1
+_s0 => exp6_and1.IN1
+_s0 => exp7_and1.IN1
+_s0 => exp0_and1.IN1
+_s0 => exp1_and1.IN1
+_s0 => exp2_and1.IN1
+_s0 => exp3_and1.IN1
+_o0 => exp0_and2.IN1
+_o1 => exp1_and2.IN1
+_o2 => exp2_and2.IN1
+_o3 => exp3_and2.IN1
+_o4 => exp4_and2.IN1
+_o5 => exp5_and2.IN1
+_o6 => exp6_and2.IN1
+_o7 => exp7_and2.IN1
+y <= or6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|MUX32:mux|EIGHT_BIT_MUX:m12
+_s2 => exp1_and2.IN0
+_s2 => exp3_and2.IN0
+_s2 => exp5_and2.IN0
+_s2 => exp7_and2.IN0
+_s2 => exp0_and2.IN0
+_s2 => exp2_and2.IN0
+_s2 => exp4_and2.IN0
+_s2 => exp6_and2.IN0
+_s1 => exp2_and1.IN0
+_s1 => exp3_and1.IN0
+_s1 => exp6_and1.IN0
+_s1 => exp7_and1.IN0
+_s1 => exp0_and1.IN0
+_s1 => exp1_and1.IN0
+_s1 => exp4_and1.IN0
+_s1 => exp5_and1.IN0
+_s0 => exp4_and1.IN1
+_s0 => exp5_and1.IN1
+_s0 => exp6_and1.IN1
+_s0 => exp7_and1.IN1
+_s0 => exp0_and1.IN1
+_s0 => exp1_and1.IN1
+_s0 => exp2_and1.IN1
+_s0 => exp3_and1.IN1
+_o0 => exp0_and2.IN1
+_o1 => exp1_and2.IN1
+_o2 => exp2_and2.IN1
+_o3 => exp3_and2.IN1
+_o4 => exp4_and2.IN1
+_o5 => exp5_and2.IN1
+_o6 => exp6_and2.IN1
+_o7 => exp7_and2.IN1
+y <= or6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|MUX32:mux|EIGHT_BIT_MUX:m13
+_s2 => exp1_and2.IN0
+_s2 => exp3_and2.IN0
+_s2 => exp5_and2.IN0
+_s2 => exp7_and2.IN0
+_s2 => exp0_and2.IN0
+_s2 => exp2_and2.IN0
+_s2 => exp4_and2.IN0
+_s2 => exp6_and2.IN0
+_s1 => exp2_and1.IN0
+_s1 => exp3_and1.IN0
+_s1 => exp6_and1.IN0
+_s1 => exp7_and1.IN0
+_s1 => exp0_and1.IN0
+_s1 => exp1_and1.IN0
+_s1 => exp4_and1.IN0
+_s1 => exp5_and1.IN0
+_s0 => exp4_and1.IN1
+_s0 => exp5_and1.IN1
+_s0 => exp6_and1.IN1
+_s0 => exp7_and1.IN1
+_s0 => exp0_and1.IN1
+_s0 => exp1_and1.IN1
+_s0 => exp2_and1.IN1
+_s0 => exp3_and1.IN1
+_o0 => exp0_and2.IN1
+_o1 => exp1_and2.IN1
+_o2 => exp2_and2.IN1
+_o3 => exp3_and2.IN1
+_o4 => exp4_and2.IN1
+_o5 => exp5_and2.IN1
+_o6 => exp6_and2.IN1
+_o7 => exp7_and2.IN1
+y <= or6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|MUX32:mux|EIGHT_BIT_MUX:m14
+_s2 => exp1_and2.IN0
+_s2 => exp3_and2.IN0
+_s2 => exp5_and2.IN0
+_s2 => exp7_and2.IN0
+_s2 => exp0_and2.IN0
+_s2 => exp2_and2.IN0
+_s2 => exp4_and2.IN0
+_s2 => exp6_and2.IN0
+_s1 => exp2_and1.IN0
+_s1 => exp3_and1.IN0
+_s1 => exp6_and1.IN0
+_s1 => exp7_and1.IN0
+_s1 => exp0_and1.IN0
+_s1 => exp1_and1.IN0
+_s1 => exp4_and1.IN0
+_s1 => exp5_and1.IN0
+_s0 => exp4_and1.IN1
+_s0 => exp5_and1.IN1
+_s0 => exp6_and1.IN1
+_s0 => exp7_and1.IN1
+_s0 => exp0_and1.IN1
+_s0 => exp1_and1.IN1
+_s0 => exp2_and1.IN1
+_s0 => exp3_and1.IN1
+_o0 => exp0_and2.IN1
+_o1 => exp1_and2.IN1
+_o2 => exp2_and2.IN1
+_o3 => exp3_and2.IN1
+_o4 => exp4_and2.IN1
+_o5 => exp5_and2.IN1
+_o6 => exp6_and2.IN1
+_o7 => exp7_and2.IN1
+y <= or6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|MUX32:mux|EIGHT_BIT_MUX:m15
+_s2 => exp1_and2.IN0
+_s2 => exp3_and2.IN0
+_s2 => exp5_and2.IN0
+_s2 => exp7_and2.IN0
+_s2 => exp0_and2.IN0
+_s2 => exp2_and2.IN0
+_s2 => exp4_and2.IN0
+_s2 => exp6_and2.IN0
+_s1 => exp2_and1.IN0
+_s1 => exp3_and1.IN0
+_s1 => exp6_and1.IN0
+_s1 => exp7_and1.IN0
+_s1 => exp0_and1.IN0
+_s1 => exp1_and1.IN0
+_s1 => exp4_and1.IN0
+_s1 => exp5_and1.IN0
+_s0 => exp4_and1.IN1
+_s0 => exp5_and1.IN1
+_s0 => exp6_and1.IN1
+_s0 => exp7_and1.IN1
+_s0 => exp0_and1.IN1
+_s0 => exp1_and1.IN1
+_s0 => exp2_and1.IN1
+_s0 => exp3_and1.IN1
+_o0 => exp0_and2.IN1
+_o1 => exp1_and2.IN1
+_o2 => exp2_and2.IN1
+_o3 => exp3_and2.IN1
+_o4 => exp4_and2.IN1
+_o5 => exp5_and2.IN1
+_o6 => exp6_and2.IN1
+_o7 => exp7_and2.IN1
+y <= or6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|MUX32:mux|EIGHT_BIT_MUX:m16
+_s2 => exp1_and2.IN0
+_s2 => exp3_and2.IN0
+_s2 => exp5_and2.IN0
+_s2 => exp7_and2.IN0
+_s2 => exp0_and2.IN0
+_s2 => exp2_and2.IN0
+_s2 => exp4_and2.IN0
+_s2 => exp6_and2.IN0
+_s1 => exp2_and1.IN0
+_s1 => exp3_and1.IN0
+_s1 => exp6_and1.IN0
+_s1 => exp7_and1.IN0
+_s1 => exp0_and1.IN0
+_s1 => exp1_and1.IN0
+_s1 => exp4_and1.IN0
+_s1 => exp5_and1.IN0
+_s0 => exp4_and1.IN1
+_s0 => exp5_and1.IN1
+_s0 => exp6_and1.IN1
+_s0 => exp7_and1.IN1
+_s0 => exp0_and1.IN1
+_s0 => exp1_and1.IN1
+_s0 => exp2_and1.IN1
+_s0 => exp3_and1.IN1
+_o0 => exp0_and2.IN1
+_o1 => exp1_and2.IN1
+_o2 => exp2_and2.IN1
+_o3 => exp3_and2.IN1
+_o4 => exp4_and2.IN1
+_o5 => exp5_and2.IN1
+_o6 => exp6_and2.IN1
+_o7 => exp7_and2.IN1
+y <= or6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|MUX32:mux|EIGHT_BIT_MUX:m17
+_s2 => exp1_and2.IN0
+_s2 => exp3_and2.IN0
+_s2 => exp5_and2.IN0
+_s2 => exp7_and2.IN0
+_s2 => exp0_and2.IN0
+_s2 => exp2_and2.IN0
+_s2 => exp4_and2.IN0
+_s2 => exp6_and2.IN0
+_s1 => exp2_and1.IN0
+_s1 => exp3_and1.IN0
+_s1 => exp6_and1.IN0
+_s1 => exp7_and1.IN0
+_s1 => exp0_and1.IN0
+_s1 => exp1_and1.IN0
+_s1 => exp4_and1.IN0
+_s1 => exp5_and1.IN0
+_s0 => exp4_and1.IN1
+_s0 => exp5_and1.IN1
+_s0 => exp6_and1.IN1
+_s0 => exp7_and1.IN1
+_s0 => exp0_and1.IN1
+_s0 => exp1_and1.IN1
+_s0 => exp2_and1.IN1
+_s0 => exp3_and1.IN1
+_o0 => exp0_and2.IN1
+_o1 => exp1_and2.IN1
+_o2 => exp2_and2.IN1
+_o3 => exp3_and2.IN1
+_o4 => exp4_and2.IN1
+_o5 => exp5_and2.IN1
+_o6 => exp6_and2.IN1
+_o7 => exp7_and2.IN1
+y <= or6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|MUX32:mux|EIGHT_BIT_MUX:m18
+_s2 => exp1_and2.IN0
+_s2 => exp3_and2.IN0
+_s2 => exp5_and2.IN0
+_s2 => exp7_and2.IN0
+_s2 => exp0_and2.IN0
+_s2 => exp2_and2.IN0
+_s2 => exp4_and2.IN0
+_s2 => exp6_and2.IN0
+_s1 => exp2_and1.IN0
+_s1 => exp3_and1.IN0
+_s1 => exp6_and1.IN0
+_s1 => exp7_and1.IN0
+_s1 => exp0_and1.IN0
+_s1 => exp1_and1.IN0
+_s1 => exp4_and1.IN0
+_s1 => exp5_and1.IN0
+_s0 => exp4_and1.IN1
+_s0 => exp5_and1.IN1
+_s0 => exp6_and1.IN1
+_s0 => exp7_and1.IN1
+_s0 => exp0_and1.IN1
+_s0 => exp1_and1.IN1
+_s0 => exp2_and1.IN1
+_s0 => exp3_and1.IN1
+_o0 => exp0_and2.IN1
+_o1 => exp1_and2.IN1
+_o2 => exp2_and2.IN1
+_o3 => exp3_and2.IN1
+_o4 => exp4_and2.IN1
+_o5 => exp5_and2.IN1
+_o6 => exp6_and2.IN1
+_o7 => exp7_and2.IN1
+y <= or6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|MUX32:mux|EIGHT_BIT_MUX:m19
+_s2 => exp1_and2.IN0
+_s2 => exp3_and2.IN0
+_s2 => exp5_and2.IN0
+_s2 => exp7_and2.IN0
+_s2 => exp0_and2.IN0
+_s2 => exp2_and2.IN0
+_s2 => exp4_and2.IN0
+_s2 => exp6_and2.IN0
+_s1 => exp2_and1.IN0
+_s1 => exp3_and1.IN0
+_s1 => exp6_and1.IN0
+_s1 => exp7_and1.IN0
+_s1 => exp0_and1.IN0
+_s1 => exp1_and1.IN0
+_s1 => exp4_and1.IN0
+_s1 => exp5_and1.IN0
+_s0 => exp4_and1.IN1
+_s0 => exp5_and1.IN1
+_s0 => exp6_and1.IN1
+_s0 => exp7_and1.IN1
+_s0 => exp0_and1.IN1
+_s0 => exp1_and1.IN1
+_s0 => exp2_and1.IN1
+_s0 => exp3_and1.IN1
+_o0 => exp0_and2.IN1
+_o1 => exp1_and2.IN1
+_o2 => exp2_and2.IN1
+_o3 => exp3_and2.IN1
+_o4 => exp4_and2.IN1
+_o5 => exp5_and2.IN1
+_o6 => exp6_and2.IN1
+_o7 => exp7_and2.IN1
+y <= or6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|MUX32:mux|EIGHT_BIT_MUX:m20
+_s2 => exp1_and2.IN0
+_s2 => exp3_and2.IN0
+_s2 => exp5_and2.IN0
+_s2 => exp7_and2.IN0
+_s2 => exp0_and2.IN0
+_s2 => exp2_and2.IN0
+_s2 => exp4_and2.IN0
+_s2 => exp6_and2.IN0
+_s1 => exp2_and1.IN0
+_s1 => exp3_and1.IN0
+_s1 => exp6_and1.IN0
+_s1 => exp7_and1.IN0
+_s1 => exp0_and1.IN0
+_s1 => exp1_and1.IN0
+_s1 => exp4_and1.IN0
+_s1 => exp5_and1.IN0
+_s0 => exp4_and1.IN1
+_s0 => exp5_and1.IN1
+_s0 => exp6_and1.IN1
+_s0 => exp7_and1.IN1
+_s0 => exp0_and1.IN1
+_s0 => exp1_and1.IN1
+_s0 => exp2_and1.IN1
+_s0 => exp3_and1.IN1
+_o0 => exp0_and2.IN1
+_o1 => exp1_and2.IN1
+_o2 => exp2_and2.IN1
+_o3 => exp3_and2.IN1
+_o4 => exp4_and2.IN1
+_o5 => exp5_and2.IN1
+_o6 => exp6_and2.IN1
+_o7 => exp7_and2.IN1
+y <= or6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|MUX32:mux|EIGHT_BIT_MUX:m21
+_s2 => exp1_and2.IN0
+_s2 => exp3_and2.IN0
+_s2 => exp5_and2.IN0
+_s2 => exp7_and2.IN0
+_s2 => exp0_and2.IN0
+_s2 => exp2_and2.IN0
+_s2 => exp4_and2.IN0
+_s2 => exp6_and2.IN0
+_s1 => exp2_and1.IN0
+_s1 => exp3_and1.IN0
+_s1 => exp6_and1.IN0
+_s1 => exp7_and1.IN0
+_s1 => exp0_and1.IN0
+_s1 => exp1_and1.IN0
+_s1 => exp4_and1.IN0
+_s1 => exp5_and1.IN0
+_s0 => exp4_and1.IN1
+_s0 => exp5_and1.IN1
+_s0 => exp6_and1.IN1
+_s0 => exp7_and1.IN1
+_s0 => exp0_and1.IN1
+_s0 => exp1_and1.IN1
+_s0 => exp2_and1.IN1
+_s0 => exp3_and1.IN1
+_o0 => exp0_and2.IN1
+_o1 => exp1_and2.IN1
+_o2 => exp2_and2.IN1
+_o3 => exp3_and2.IN1
+_o4 => exp4_and2.IN1
+_o5 => exp5_and2.IN1
+_o6 => exp6_and2.IN1
+_o7 => exp7_and2.IN1
+y <= or6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|MUX32:mux|EIGHT_BIT_MUX:m22
+_s2 => exp1_and2.IN0
+_s2 => exp3_and2.IN0
+_s2 => exp5_and2.IN0
+_s2 => exp7_and2.IN0
+_s2 => exp0_and2.IN0
+_s2 => exp2_and2.IN0
+_s2 => exp4_and2.IN0
+_s2 => exp6_and2.IN0
+_s1 => exp2_and1.IN0
+_s1 => exp3_and1.IN0
+_s1 => exp6_and1.IN0
+_s1 => exp7_and1.IN0
+_s1 => exp0_and1.IN0
+_s1 => exp1_and1.IN0
+_s1 => exp4_and1.IN0
+_s1 => exp5_and1.IN0
+_s0 => exp4_and1.IN1
+_s0 => exp5_and1.IN1
+_s0 => exp6_and1.IN1
+_s0 => exp7_and1.IN1
+_s0 => exp0_and1.IN1
+_s0 => exp1_and1.IN1
+_s0 => exp2_and1.IN1
+_s0 => exp3_and1.IN1
+_o0 => exp0_and2.IN1
+_o1 => exp1_and2.IN1
+_o2 => exp2_and2.IN1
+_o3 => exp3_and2.IN1
+_o4 => exp4_and2.IN1
+_o5 => exp5_and2.IN1
+_o6 => exp6_and2.IN1
+_o7 => exp7_and2.IN1
+y <= or6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|MUX32:mux|EIGHT_BIT_MUX:m23
+_s2 => exp1_and2.IN0
+_s2 => exp3_and2.IN0
+_s2 => exp5_and2.IN0
+_s2 => exp7_and2.IN0
+_s2 => exp0_and2.IN0
+_s2 => exp2_and2.IN0
+_s2 => exp4_and2.IN0
+_s2 => exp6_and2.IN0
+_s1 => exp2_and1.IN0
+_s1 => exp3_and1.IN0
+_s1 => exp6_and1.IN0
+_s1 => exp7_and1.IN0
+_s1 => exp0_and1.IN0
+_s1 => exp1_and1.IN0
+_s1 => exp4_and1.IN0
+_s1 => exp5_and1.IN0
+_s0 => exp4_and1.IN1
+_s0 => exp5_and1.IN1
+_s0 => exp6_and1.IN1
+_s0 => exp7_and1.IN1
+_s0 => exp0_and1.IN1
+_s0 => exp1_and1.IN1
+_s0 => exp2_and1.IN1
+_s0 => exp3_and1.IN1
+_o0 => exp0_and2.IN1
+_o1 => exp1_and2.IN1
+_o2 => exp2_and2.IN1
+_o3 => exp3_and2.IN1
+_o4 => exp4_and2.IN1
+_o5 => exp5_and2.IN1
+_o6 => exp6_and2.IN1
+_o7 => exp7_and2.IN1
+y <= or6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|MUX32:mux|EIGHT_BIT_MUX:m24
+_s2 => exp1_and2.IN0
+_s2 => exp3_and2.IN0
+_s2 => exp5_and2.IN0
+_s2 => exp7_and2.IN0
+_s2 => exp0_and2.IN0
+_s2 => exp2_and2.IN0
+_s2 => exp4_and2.IN0
+_s2 => exp6_and2.IN0
+_s1 => exp2_and1.IN0
+_s1 => exp3_and1.IN0
+_s1 => exp6_and1.IN0
+_s1 => exp7_and1.IN0
+_s1 => exp0_and1.IN0
+_s1 => exp1_and1.IN0
+_s1 => exp4_and1.IN0
+_s1 => exp5_and1.IN0
+_s0 => exp4_and1.IN1
+_s0 => exp5_and1.IN1
+_s0 => exp6_and1.IN1
+_s0 => exp7_and1.IN1
+_s0 => exp0_and1.IN1
+_s0 => exp1_and1.IN1
+_s0 => exp2_and1.IN1
+_s0 => exp3_and1.IN1
+_o0 => exp0_and2.IN1
+_o1 => exp1_and2.IN1
+_o2 => exp2_and2.IN1
+_o3 => exp3_and2.IN1
+_o4 => exp4_and2.IN1
+_o5 => exp5_and2.IN1
+_o6 => exp6_and2.IN1
+_o7 => exp7_and2.IN1
+y <= or6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|MUX32:mux|EIGHT_BIT_MUX:m25
+_s2 => exp1_and2.IN0
+_s2 => exp3_and2.IN0
+_s2 => exp5_and2.IN0
+_s2 => exp7_and2.IN0
+_s2 => exp0_and2.IN0
+_s2 => exp2_and2.IN0
+_s2 => exp4_and2.IN0
+_s2 => exp6_and2.IN0
+_s1 => exp2_and1.IN0
+_s1 => exp3_and1.IN0
+_s1 => exp6_and1.IN0
+_s1 => exp7_and1.IN0
+_s1 => exp0_and1.IN0
+_s1 => exp1_and1.IN0
+_s1 => exp4_and1.IN0
+_s1 => exp5_and1.IN0
+_s0 => exp4_and1.IN1
+_s0 => exp5_and1.IN1
+_s0 => exp6_and1.IN1
+_s0 => exp7_and1.IN1
+_s0 => exp0_and1.IN1
+_s0 => exp1_and1.IN1
+_s0 => exp2_and1.IN1
+_s0 => exp3_and1.IN1
+_o0 => exp0_and2.IN1
+_o1 => exp1_and2.IN1
+_o2 => exp2_and2.IN1
+_o3 => exp3_and2.IN1
+_o4 => exp4_and2.IN1
+_o5 => exp5_and2.IN1
+_o6 => exp6_and2.IN1
+_o7 => exp7_and2.IN1
+y <= or6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|MUX32:mux|EIGHT_BIT_MUX:m26
+_s2 => exp1_and2.IN0
+_s2 => exp3_and2.IN0
+_s2 => exp5_and2.IN0
+_s2 => exp7_and2.IN0
+_s2 => exp0_and2.IN0
+_s2 => exp2_and2.IN0
+_s2 => exp4_and2.IN0
+_s2 => exp6_and2.IN0
+_s1 => exp2_and1.IN0
+_s1 => exp3_and1.IN0
+_s1 => exp6_and1.IN0
+_s1 => exp7_and1.IN0
+_s1 => exp0_and1.IN0
+_s1 => exp1_and1.IN0
+_s1 => exp4_and1.IN0
+_s1 => exp5_and1.IN0
+_s0 => exp4_and1.IN1
+_s0 => exp5_and1.IN1
+_s0 => exp6_and1.IN1
+_s0 => exp7_and1.IN1
+_s0 => exp0_and1.IN1
+_s0 => exp1_and1.IN1
+_s0 => exp2_and1.IN1
+_s0 => exp3_and1.IN1
+_o0 => exp0_and2.IN1
+_o1 => exp1_and2.IN1
+_o2 => exp2_and2.IN1
+_o3 => exp3_and2.IN1
+_o4 => exp4_and2.IN1
+_o5 => exp5_and2.IN1
+_o6 => exp6_and2.IN1
+_o7 => exp7_and2.IN1
+y <= or6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|MUX32:mux|EIGHT_BIT_MUX:m27
+_s2 => exp1_and2.IN0
+_s2 => exp3_and2.IN0
+_s2 => exp5_and2.IN0
+_s2 => exp7_and2.IN0
+_s2 => exp0_and2.IN0
+_s2 => exp2_and2.IN0
+_s2 => exp4_and2.IN0
+_s2 => exp6_and2.IN0
+_s1 => exp2_and1.IN0
+_s1 => exp3_and1.IN0
+_s1 => exp6_and1.IN0
+_s1 => exp7_and1.IN0
+_s1 => exp0_and1.IN0
+_s1 => exp1_and1.IN0
+_s1 => exp4_and1.IN0
+_s1 => exp5_and1.IN0
+_s0 => exp4_and1.IN1
+_s0 => exp5_and1.IN1
+_s0 => exp6_and1.IN1
+_s0 => exp7_and1.IN1
+_s0 => exp0_and1.IN1
+_s0 => exp1_and1.IN1
+_s0 => exp2_and1.IN1
+_s0 => exp3_and1.IN1
+_o0 => exp0_and2.IN1
+_o1 => exp1_and2.IN1
+_o2 => exp2_and2.IN1
+_o3 => exp3_and2.IN1
+_o4 => exp4_and2.IN1
+_o5 => exp5_and2.IN1
+_o6 => exp6_and2.IN1
+_o7 => exp7_and2.IN1
+y <= or6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|MUX32:mux|EIGHT_BIT_MUX:m28
+_s2 => exp1_and2.IN0
+_s2 => exp3_and2.IN0
+_s2 => exp5_and2.IN0
+_s2 => exp7_and2.IN0
+_s2 => exp0_and2.IN0
+_s2 => exp2_and2.IN0
+_s2 => exp4_and2.IN0
+_s2 => exp6_and2.IN0
+_s1 => exp2_and1.IN0
+_s1 => exp3_and1.IN0
+_s1 => exp6_and1.IN0
+_s1 => exp7_and1.IN0
+_s1 => exp0_and1.IN0
+_s1 => exp1_and1.IN0
+_s1 => exp4_and1.IN0
+_s1 => exp5_and1.IN0
+_s0 => exp4_and1.IN1
+_s0 => exp5_and1.IN1
+_s0 => exp6_and1.IN1
+_s0 => exp7_and1.IN1
+_s0 => exp0_and1.IN1
+_s0 => exp1_and1.IN1
+_s0 => exp2_and1.IN1
+_s0 => exp3_and1.IN1
+_o0 => exp0_and2.IN1
+_o1 => exp1_and2.IN1
+_o2 => exp2_and2.IN1
+_o3 => exp3_and2.IN1
+_o4 => exp4_and2.IN1
+_o5 => exp5_and2.IN1
+_o6 => exp6_and2.IN1
+_o7 => exp7_and2.IN1
+y <= or6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|MUX32:mux|EIGHT_BIT_MUX:m29
+_s2 => exp1_and2.IN0
+_s2 => exp3_and2.IN0
+_s2 => exp5_and2.IN0
+_s2 => exp7_and2.IN0
+_s2 => exp0_and2.IN0
+_s2 => exp2_and2.IN0
+_s2 => exp4_and2.IN0
+_s2 => exp6_and2.IN0
+_s1 => exp2_and1.IN0
+_s1 => exp3_and1.IN0
+_s1 => exp6_and1.IN0
+_s1 => exp7_and1.IN0
+_s1 => exp0_and1.IN0
+_s1 => exp1_and1.IN0
+_s1 => exp4_and1.IN0
+_s1 => exp5_and1.IN0
+_s0 => exp4_and1.IN1
+_s0 => exp5_and1.IN1
+_s0 => exp6_and1.IN1
+_s0 => exp7_and1.IN1
+_s0 => exp0_and1.IN1
+_s0 => exp1_and1.IN1
+_s0 => exp2_and1.IN1
+_s0 => exp3_and1.IN1
+_o0 => exp0_and2.IN1
+_o1 => exp1_and2.IN1
+_o2 => exp2_and2.IN1
+_o3 => exp3_and2.IN1
+_o4 => exp4_and2.IN1
+_o5 => exp5_and2.IN1
+_o6 => exp6_and2.IN1
+_o7 => exp7_and2.IN1
+y <= or6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|MUX32:mux|EIGHT_BIT_MUX:m30
+_s2 => exp1_and2.IN0
+_s2 => exp3_and2.IN0
+_s2 => exp5_and2.IN0
+_s2 => exp7_and2.IN0
+_s2 => exp0_and2.IN0
+_s2 => exp2_and2.IN0
+_s2 => exp4_and2.IN0
+_s2 => exp6_and2.IN0
+_s1 => exp2_and1.IN0
+_s1 => exp3_and1.IN0
+_s1 => exp6_and1.IN0
+_s1 => exp7_and1.IN0
+_s1 => exp0_and1.IN0
+_s1 => exp1_and1.IN0
+_s1 => exp4_and1.IN0
+_s1 => exp5_and1.IN0
+_s0 => exp4_and1.IN1
+_s0 => exp5_and1.IN1
+_s0 => exp6_and1.IN1
+_s0 => exp7_and1.IN1
+_s0 => exp0_and1.IN1
+_s0 => exp1_and1.IN1
+_s0 => exp2_and1.IN1
+_s0 => exp3_and1.IN1
+_o0 => exp0_and2.IN1
+_o1 => exp1_and2.IN1
+_o2 => exp2_and2.IN1
+_o3 => exp3_and2.IN1
+_o4 => exp4_and2.IN1
+_o5 => exp5_and2.IN1
+_o6 => exp6_and2.IN1
+_o7 => exp7_and2.IN1
+y <= or6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU32|MUX32:mux|EIGHT_BIT_MUX:m31
+_s2 => exp1_and2.IN0
+_s2 => exp3_and2.IN0
+_s2 => exp5_and2.IN0
+_s2 => exp7_and2.IN0
+_s2 => exp0_and2.IN0
+_s2 => exp2_and2.IN0
+_s2 => exp4_and2.IN0
+_s2 => exp6_and2.IN0
+_s1 => exp2_and1.IN0
+_s1 => exp3_and1.IN0
+_s1 => exp6_and1.IN0
+_s1 => exp7_and1.IN0
+_s1 => exp0_and1.IN0
+_s1 => exp1_and1.IN0
+_s1 => exp4_and1.IN0
+_s1 => exp5_and1.IN0
+_s0 => exp4_and1.IN1
+_s0 => exp5_and1.IN1
+_s0 => exp6_and1.IN1
+_s0 => exp7_and1.IN1
+_s0 => exp0_and1.IN1
+_s0 => exp1_and1.IN1
+_s0 => exp2_and1.IN1
+_s0 => exp3_and1.IN1
+_o0 => exp0_and2.IN1
+_o1 => exp1_and2.IN1
+_o2 => exp2_and2.IN1
+_o3 => exp3_and2.IN1
+_o4 => exp4_and2.IN1
+_o5 => exp5_and2.IN1
+_o6 => exp6_and2.IN1
+_o7 => exp7_and2.IN1
+y <= or6.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,12 @@
+
+State Machine - |ALU32|mod:a8|next_state
+Name next_state.IDLE next_state.RESULT next_state.SUBTRACT 
+next_state.IDLE 0 0 0 
+next_state.SUBTRACT 1 0 1 
+next_state.RESULT 1 1 0 
+
+State Machine - |ALU32|mod:a8|state
+Name state.IDLE state.RESULT state.SUBTRACT 
+state.IDLE 0 0 0 
+state.SUBTRACT 1 0 1 
+state.RESULT 1 1 0 

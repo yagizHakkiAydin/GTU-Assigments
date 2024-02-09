@@ -1,0 +1,17 @@
+module mux2x1 (
+  input wire a,
+  input wire b,
+  input wire select,
+  output wire y
+);
+
+  wire w0, w1;
+
+  // Implementing AND gates for input selection
+  and gate0(w0, a, not(select));
+  and gate1(w1, b, select);
+
+  // Implementing OR gate for output
+  or gate2(y, w0, w1);
+
+endmodule

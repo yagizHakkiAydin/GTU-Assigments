@@ -1,0 +1,2 @@
+final:
+	javac *.java
